@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: FacilityJournalsController
+  
+    &mdash; Documentation by YARD 0.9.12
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "FacilityJournalsController";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (F)</a> &raquo;
+    
+    
+    <span class="title">FacilityJournalsController</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: FacilityJournalsController
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ActionController::Base</li>
+          
+            <li class="next"><span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></li>
+          
+            <li class="next">FacilityJournalsController</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="CSVHelper.html" title="CSVHelper (module)">CSVHelper</a></span>, <span class='object_link'><a href="DateHelper.html" title="DateHelper (module)">DateHelper</a></span>, <span class='object_link'><a href="TransactionSearch.html" title="TransactionSearch (module)">TransactionSearch</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/controllers/facility_journals_controller.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+  <h2>Constant Summary</h2>
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="DateHelper.html" title="DateHelper (module)">DateHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DateHelper.html#USA_DATE_FORMAT-constant" title="DateHelper::USA_DATE_FORMAT (constant)">DateHelper::USA_DATE_FORMAT</a></span></p>
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="ApplicationController.html#active_tab-instance_method" title="ApplicationController#active_tab (method)">#active_tab</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_with_search-instance_method" title="#create_with_search (instance method)">#<strong>create_with_search</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>POST /facilities/journals.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#flash_error_messages-instance_method" title="#flash_error_messages (instance method)">#<strong>flash_error_messages</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#has_pending_journals%3F-instance_method" title="#has_pending_journals? (instance method)">#<strong>has_pending_journals?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#index-instance_method" title="#index (instance method)">#<strong>index</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>GET /facilities/journals.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#init_journals-instance_method" title="#init_journals (instance method)">#<strong>init_journals</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; FacilityJournalsController </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of FacilityJournalsController.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#new_journal_from_params-instance_method" title="#new_journal_from_params (instance method)">#<strong>new_journal_from_params</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new_with_search-instance_method" title="#new_with_search (instance method)">#<strong>new_with_search</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>GET /facilities/journals/new.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#order_details_for_creation-instance_method" title="#order_details_for_creation (instance method)">#<strong>order_details_for_creation</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reconcile-instance_method" title="#reconcile (instance method)">#<strong>reconcile</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#set_default_variables-instance_method" title="#set_default_variables (instance method)">#<strong>set_default_variables</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#set_earliest_journal_date-instance_method" title="#set_earliest_journal_date (instance method)">#<strong>set_earliest_journal_date</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#set_pending_journals-instance_method" title="#set_pending_journals (instance method)">#<strong>set_pending_journals</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#show-instance_method" title="#show (instance method)">#<strong>show</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>GET /facilities/journals/:id.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update-instance_method" title="#update (instance method)">#<strong>update</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>PUT /facilities/journals/:id.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#verify_journal_date_format-instance_method" title="#verify_journal_date_format (instance method)">#<strong>verify_journal_date_format</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="TransactionSearch.html" title="TransactionSearch (module)">TransactionSearch</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="TransactionSearch.html#add_optimizations-instance_method" title="TransactionSearch#add_optimizations (method)">#add_optimizations</a></span>, <span class='object_link'><a href="TransactionSearch.html#do_search-instance_method" title="TransactionSearch#do_search (method)">#do_search</a></span>, <span class='object_link'><a href="TransactionSearch.html#included-class_method" title="TransactionSearch.included (method)">included</a></span>, <span class='object_link'><a href="TransactionSearch.html#init_order_details-instance_method" title="TransactionSearch#init_order_details (method)">#init_order_details</a></span>, <span class='object_link'><a href="TransactionSearch.html#load_search_options-instance_method" title="TransactionSearch#load_search_options (method)">#load_search_options</a></span>, <span class='object_link'><a href="TransactionSearch.html#order_by_desc-instance_method" title="TransactionSearch#order_by_desc (method)">#order_by_desc</a></span>, <span class='object_link'><a href="TransactionSearch.html#order_details_sort-instance_method" title="TransactionSearch#order_details_sort (method)">#order_details_sort</a></span>, <span class='object_link'><a href="TransactionSearch.html#paginate_order_details-instance_method" title="TransactionSearch#paginate_order_details (method)">#paginate_order_details</a></span>, <span class='object_link'><a href="TransactionSearch.html#pagination_args-instance_method" title="TransactionSearch#pagination_args (method)">#pagination_args</a></span>, <span class='object_link'><a href="TransactionSearch.html#register-class_method" title="TransactionSearch.register (method)">register</a></span>, <span class='object_link'><a href="TransactionSearch.html#register_optimizer-class_method" title="TransactionSearch.register_optimizer (method)">register_optimizer</a></span>, <span class='object_link'><a href="TransactionSearch.html#searchers-class_method" title="TransactionSearch.searchers (method)">searchers</a></span>, <span class='object_link'><a href="TransactionSearch.html#set_default_start_date-instance_method" title="TransactionSearch#set_default_start_date (method)">#set_default_start_date</a></span>, <span class='object_link'><a href="TransactionSearch.html#sort_and_paginate-instance_method" title="TransactionSearch#sort_and_paginate (method)">#sort_and_paginate</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="OrderDetailsCsvExport.html" title="OrderDetailsCsvExport (module)">OrderDetailsCsvExport</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="OrderDetailsCsvExport.html#email_csv_export-instance_method" title="OrderDetailsCsvExport#email_csv_export (method)">#email_csv_export</a></span>, <span class='object_link'><a href="OrderDetailsCsvExport.html#handle_csv_search-instance_method" title="OrderDetailsCsvExport#handle_csv_search (method)">#handle_csv_search</a></span>, <span class='object_link'><a href="OrderDetailsCsvExport.html#to_email-instance_method" title="OrderDetailsCsvExport#to_email (method)">#to_email</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="CSVHelper.html" title="CSVHelper (module)">CSVHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="CSVHelper.html#set_csv_headers-instance_method" title="CSVHelper#set_csv_headers (method)">#set_csv_headers</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="DateHelper.html" title="DateHelper (module)">DateHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DateHelper.html#format_usa_date-instance_method" title="DateHelper#format_usa_date (method)">#format_usa_date</a></span>, <span class='object_link'><a href="DateHelper.html#format_usa_datetime-instance_method" title="DateHelper#format_usa_datetime (method)">#format_usa_datetime</a></span>, <span class='object_link'><a href="DateHelper.html#hour_options-instance_method" title="DateHelper#hour_options (method)">#hour_options</a></span>, <span class='object_link'><a href="DateHelper.html#human_date-instance_method" title="DateHelper#human_date (method)">#human_date</a></span>, <span class='object_link'><a href="DateHelper.html#human_time-instance_method" title="DateHelper#human_time (method)">#human_time</a></span>, <span class='object_link'><a href="DateHelper.html#join_time_select_values-instance_method" title="DateHelper#join_time_select_values (method)">#join_time_select_values</a></span>, <span class='object_link'><a href="DateHelper.html#minute_options-instance_method" title="DateHelper#minute_options (method)">#minute_options</a></span>, <span class='object_link'><a href="DateHelper.html#parse_mmddyyyy_in_current_zone!-instance_method" title="DateHelper#parse_mmddyyyy_in_current_zone! (method)">#parse_mmddyyyy_in_current_zone!</a></span>, <span class='object_link'><a href="DateHelper.html#parse_usa_date-instance_method" title="DateHelper#parse_usa_date (method)">#parse_usa_date</a></span>, <span class='object_link'><a href="DateHelper.html#parse_usa_import_date-instance_method" title="DateHelper#parse_usa_import_date (method)">#parse_usa_import_date</a></span>, <span class='object_link'><a href="DateHelper.html#time_ceil-instance_method" title="DateHelper#time_ceil (method)">#time_ceil</a></span>, <span class='object_link'><a href="DateHelper.html#time_floor-instance_method" title="DateHelper#time_floor (method)">#time_floor</a></span>, <span class='object_link'><a href="DateHelper.html#time_select-instance_method" title="DateHelper#time_select (method)">#time_select</a></span>, <span class='object_link'><a href="DateHelper.html#time_select24-instance_method" title="DateHelper#time_select24 (method)">#time_select24</a></span>, <span class='object_link'><a href="DateHelper.html#time_select_tag-instance_method" title="DateHelper#time_select_tag (method)">#time_select_tag</a></span>, <span class='object_link'><a href="DateHelper.html#usa_formatted_date%3F-instance_method" title="DateHelper#usa_formatted_date? (method)">#usa_formatted_date?</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="ApplicationController.html#ability_resource-instance_method" title="ApplicationController#ability_resource (method)">#ability_resource</a></span>, <span class='object_link'><a href="ApplicationController.html#acting_as%3F-instance_method" title="ApplicationController#acting_as? (method)">#acting_as?</a></span>, <span class='object_link'><a href="ApplicationController.html#acting_user-instance_method" title="ApplicationController#acting_user (method)">#acting_user</a></span>, <span class='object_link'><a href="ApplicationController.html#after_sign_out_path_for-instance_method" title="ApplicationController#after_sign_out_path_for (method)">#after_sign_out_path_for</a></span>, <span class='object_link'><a href="ApplicationController.html#backend%3F-instance_method" title="ApplicationController#backend? (method)">#backend?</a></span>, <span class='object_link'><a href="ApplicationController.html#check_acting_as-instance_method" title="ApplicationController#check_acting_as (method)">#check_acting_as</a></span>, <span class='object_link'><a href="ApplicationController.html#check_billing_access-instance_method" title="ApplicationController#check_billing_access (method)">#check_billing_access</a></span>, <span class='object_link'><a href="ApplicationController.html#cross_facility%3F-instance_method" title="ApplicationController#cross_facility? (method)">#cross_facility?</a></span>, <span class='object_link'><a href="ApplicationController.html#current_ability-instance_method" title="ApplicationController#current_ability (method)">#current_ability</a></span>, <span class='object_link'><a href="ApplicationController.html#current_cart-instance_method" title="ApplicationController#current_cart (method)">#current_cart</a></span>, <span class='object_link'><a href="ApplicationController.html#current_facility-instance_method" title="ApplicationController#current_facility (method)">#current_facility</a></span>, <span class='object_link'><a href="ApplicationController.html#empty_params-instance_method" title="ApplicationController#empty_params (method)">#empty_params</a></span>, <span class='object_link'><a href="ApplicationController.html#init_current_account-instance_method" title="ApplicationController#init_current_account (method)">#init_current_account</a></span>, <span class='object_link'><a href="ApplicationController.html#init_current_facility-instance_method" title="ApplicationController#init_current_facility (method)">#init_current_facility</a></span>, <span class='object_link'><a href="ApplicationController.html#manageable_facilities-instance_method" title="ApplicationController#manageable_facilities (method)">#manageable_facilities</a></span>, <span class='object_link'><a href="ApplicationController.html#open_or_facility_path-instance_method" title="ApplicationController#open_or_facility_path (method)">#open_or_facility_path</a></span>, <span class='object_link'><a href="ApplicationController.html#operable_facilities-instance_method" title="ApplicationController#operable_facilities (method)">#operable_facilities</a></span>, <span class='object_link'><a href="ApplicationController.html#render_403-instance_method" title="ApplicationController#render_403 (method)">#render_403</a></span>, <span class='object_link'><a href="ApplicationController.html#render_404-instance_method" title="ApplicationController#render_404 (method)">#render_404</a></span>, <span class='object_link'><a href="ApplicationController.html#render_acting_error-instance_method" title="ApplicationController#render_acting_error (method)">#render_acting_error</a></span>, <span class='object_link'><a href="ApplicationController.html#session_user-instance_method" title="ApplicationController#session_user (method)">#session_user</a></span>, <span class='object_link'><a href="ApplicationController.html#store_fullpath_in_session-instance_method" title="ApplicationController#store_fullpath_in_session (method)">#store_fullpath_in_session</a></span>, <span class='object_link'><a href="ApplicationController.html#with_dropped_params-instance_method" title="ApplicationController#with_dropped_params (method)">#with_dropped_params</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="NavTab.html" title="NavTab (module)">NavTab</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="NavTab.html#admin_tab%3F-instance_method" title="NavTab#admin_tab? (method)">#admin_tab?</a></span>, <span class='object_link'><a href="NavTab.html#global_link_collection-instance_method" title="NavTab#global_link_collection (method)">#global_link_collection</a></span>, <span class='object_link'><a href="NavTab.html#global_navigation_links-instance_method" title="NavTab#global_navigation_links (method)">#global_navigation_links</a></span>, <span class='object_link'><a href="NavTab.html#link_collection-instance_method" title="NavTab#link_collection (method)">#link_collection</a></span>, <span class='object_link'><a href="NavTab.html#navigation_links-instance_method" title="NavTab#navigation_links (method)">#navigation_links</a></span></p>
+
+  
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="FacilityJournalsController (class)">FacilityJournalsController</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of FacilityJournalsController</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+17
+18
+19
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/facility_journals_controller.rb', line 17</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
+  <span class='ivar'>@subnav</span>     <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>billing_nav</span><span class='tstring_end'>&quot;</span></span>
+  <span class='ivar'>@active_tab</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>admin_billing</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>super</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="create_with_search-instance_method">
+  
+    #<strong>create_with_search</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>POST /facilities/journals</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::RecordNotFound</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/facility_journals_controller.rb', line 74</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_with_search'>create_with_search</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ActiveRecord.html" title="ActiveRecord (module)">ActiveRecord</a></span></span><span class='op'>::</span><span class='const'>RecordNotFound</span> <span class='kw'>if</span> <span class='id identifier rubyid_current_facility'>current_facility</span><span class='period'>.</span><span class='id identifier rubyid_cross_facility?'>cross_facility?</span>
+
+  <span class='id identifier rubyid_new_journal_from_params'>new_journal_from_params</span>
+  <span class='id identifier rubyid_verify_journal_date_format'>verify_journal_date_format</span>
+
+  <span class='comment'># The referer can have a crazy long query string depending on how many checkboxes
+</span>  <span class='comment'># are selected. We&#39;ve seen Apache not like stuff like that and give a &quot;malformed
+</span>  <span class='comment'># header from script. Bad header&quot; error which causes the page to completely bomb out.
+</span>  <span class='comment'># (See Task #48311). This is just preventative.
+</span>  <span class='id identifier rubyid_referer'>referer</span> <span class='op'>=</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_headers'>headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Referer</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_headers'>headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Referer</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_referer'>referer</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='id identifier rubyid_referrer'>referrer</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_referer'>referer</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+
+  <span class='kw'>if</span> <span class='ivar'>@journal</span><span class='period'>.</span><span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_blank?'>blank?</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@journal</span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span>
+    <span class='ivar'>@journal</span><span class='period'>.</span><span class='id identifier rubyid_create_spreadsheet'>create_spreadsheet</span> <span class='kw'>if</span> <span class='const'>Settings</span><span class='period'>.</span><span class='id identifier rubyid_financial'>financial</span><span class='period'>.</span><span class='id identifier rubyid_journal_format'>journal_format</span><span class='period'>.</span><span class='id identifier rubyid_xls'>xls</span>
+    <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:notice</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>controllers.facility_journals.create.notice</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='id identifier rubyid_facility_journals_path'>facility_journals_path</span><span class='lparen'>(</span><span class='id identifier rubyid_current_facility'>current_facility</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_flash_error_messages'>flash_error_messages</span>
+    <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='id identifier rubyid_new_facility_journal_path'>new_facility_journal_path</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="flash_error_messages-instance_method">
+  
+    #<strong>flash_error_messages</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/facility_journals_controller.rb', line 186</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_flash_error_messages'>flash_error_messages</span>
+  <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='ivar'>@journal</span><span class='period'>.</span><span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_full_messages'>full_messages</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_error'>error</span><span class='op'>|</span>
+    <span class='id identifier rubyid_msg'>msg</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_error'>error</span><span class='embexpr_end'>}</span><span class='tstring_content'>&lt;br/&gt;</span><span class='tstring_end'>&quot;</span></span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>&gt;</span> <span class='int'>2000</span> <span class='comment'># don&#39;t overflow session (flash) cookie
+</span>      <span class='id identifier rubyid_msg'>msg</span> <span class='op'>+=</span> <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_t'>t</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>controllers.facility_journals.create_with_search.more_errors</span><span class='tstring_end'>&quot;</span></span>
+      <span class='kw'>break</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:error</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_html_safe'>html_safe</span> <span class='kw'>if</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="has_pending_journals?-instance_method">
+  
+    #<strong>has_pending_journals?</strong>  &#x21d2; <tt>Boolean</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+182
+183
+184</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/facility_journals_controller.rb', line 182</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_has_pending_journals?'>has_pending_journals?</span>
+  <span class='id identifier rubyid_current_facility'>current_facility</span><span class='period'>.</span><span class='id identifier rubyid_has_pending_journals?'>has_pending_journals?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="index-instance_method">
+  
+    #<strong>index</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>GET /facilities/journals</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+24
+25
+26</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/facility_journals_controller.rb', line 24</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span>
+  <span class='id identifier rubyid_set_pending_journals'>set_pending_journals</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="init_journals-instance_method">
+  
+    #<strong>init_journals</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+175
+176
+177
+178
+179
+180</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/facility_journals_controller.rb', line 175</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_init_journals'>init_journals</span>
+  <span class='ivar'>@journals</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Journal.html" title="Journal (class)">Journal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_for_facilities'><span class='object_link'><a href="Journal.html#for_facilities-class_method" title="Journal.for_facilities (method)">for_facilities</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_manageable_facilities'>manageable_facilities</span><span class='comma'>,</span> <span class='id identifier rubyid_manageable_facilities'>manageable_facilities</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>&gt;</span> <span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_includes'>includes</span><span class='lparen'>(</span><span class='symbol'>:journal_rows</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>journals.created_at DESC</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_jid'>jid</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:journal_id</span><span class='rbracket'>]</span>
+  <span class='ivar'>@journal</span> <span class='op'>=</span> <span class='ivar'>@journals</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_jid'>jid</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_jid'>jid</span>
+  <span class='ivar'>@journals</span> <span class='op'>=</span> <span class='ivar'>@journals</span><span class='period'>.</span><span class='id identifier rubyid_paginate'>paginate</span><span class='lparen'>(</span><span class='label'>page:</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:page</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>per_page:</span> <span class='int'>10</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="new_journal_from_params-instance_method">
+  
+    #<strong>new_journal_from_params</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+132
+133
+134
+135
+136
+137
+138</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/facility_journals_controller.rb', line 132</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_new_journal_from_params'>new_journal_from_params</span>
+  <span class='ivar'>@journal</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Journal.html" title="Journal (class)">Journal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+    <span class='label'>created_by:</span> <span class='id identifier rubyid_session_user'>session_user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span>
+    <span class='label'>journal_date:</span> <span class='id identifier rubyid_parse_usa_date'>parse_usa_date</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:journal_date</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='label'>order_details_for_creation:</span> <span class='id identifier rubyid_order_details_for_creation'>order_details_for_creation</span><span class='comma'>,</span>
+  <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="new_with_search-instance_method">
+  
+    #<strong>new_with_search</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>GET /facilities/journals/new</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::RecordNotFound</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/facility_journals_controller.rb', line 29</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_new_with_search'>new_with_search</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ActiveRecord.html" title="ActiveRecord (module)">ActiveRecord</a></span></span><span class='op'>::</span><span class='const'>RecordNotFound</span> <span class='kw'>if</span> <span class='id identifier rubyid_current_facility'>current_facility</span><span class='period'>.</span><span class='id identifier rubyid_cross_facility?'>cross_facility?</span>
+
+  <span class='id identifier rubyid_set_default_variables'>set_default_variables</span>
+  <span class='ivar'>@layout</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>two_column_head</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='ivar'>@after_search_hook</span> <span class='op'>=</span> <span class='id identifier rubyid_lambda'>lambda</span> <span class='kw'>do</span>
+    <span class='ivar'>@valid_order_details</span><span class='comma'>,</span> <span class='ivar'>@invalid_order_details</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ValidatorFactory.html" title="ValidatorFactory (class)">ValidatorFactory</a></span></span><span class='period'>.</span><span class='id identifier rubyid_partition_valid_order_details'><span class='object_link'><a href="ValidatorFactory.html#partition_valid_order_details-class_method" title="ValidatorFactory.partition_valid_order_details (method)">partition_valid_order_details</a></span></span><span class='lparen'>(</span><span class='ivar'>@order_details</span><span class='period'>.</span><span class='id identifier rubyid_unexpired_account'>unexpired_account</span><span class='rparen'>)</span>
+    <span class='ivar'>@invalid_order_details</span> <span class='op'>+=</span> <span class='ivar'>@order_details</span><span class='period'>.</span><span class='id identifier rubyid_expired_account'>expired_account</span>
+
+    <span class='id identifier rubyid_respond_to'>respond_to</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_format'>format</span><span class='op'>|</span>
+      <span class='id identifier rubyid_format'>format</span><span class='period'>.</span><span class='id identifier rubyid_csv'>csv</span> <span class='kw'>do</span>
+        <span class='comment'># used for &quot;Export as CSV&quot; link for order details with expired accounts
+</span>        <span class='ivar'>@order_details</span> <span class='op'>=</span> <span class='ivar'>@invalid_order_details</span>
+      <span class='kw'>end</span>
+      <span class='id identifier rubyid_format'>format</span><span class='period'>.</span><span class='id identifier rubyid_any'>any</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="order_details_for_creation-instance_method">
+  
+    #<strong>order_details_for_creation</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+146
+147
+148
+149</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/facility_journals_controller.rb', line 146</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_order_details_for_creation'>order_details_for_creation</span>
+  <span class='kw'>return</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='kw'>unless</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:order_detail_ids</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+  <span class='ivar'>@order_details</span><span class='period'>.</span><span class='id identifier rubyid_includes'>includes</span><span class='lparen'>(</span><span class='symbol'>:account</span><span class='comma'>,</span> <span class='symbol'>:product</span><span class='comma'>,</span> <span class='label'>order:</span> <span class='symbol'>:user</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_where_ids_in'>where_ids_in</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:order_detail_ids</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reconcile-instance_method">
+  
+    #<strong>reconcile</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/facility_journals_controller.rb', line 118</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reconcile'>reconcile</span>
+  <span class='id identifier rubyid_reconciler'>reconciler</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="OrderDetails.html" title="OrderDetails (module)">OrderDetails</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="OrderDetails/Reconciler.html" title="OrderDetails::Reconciler (class)">Reconciler</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="OrderDetails/Reconciler.html#initialize-instance_method" title="OrderDetails::Reconciler#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='ivar'>@journal</span><span class='period'>.</span><span class='id identifier rubyid_order_details'>order_details</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:order_detail</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='ivar'>@journal</span><span class='period'>.</span><span class='id identifier rubyid_journal_date'>journal_date</span><span class='rparen'>)</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_reconciler'>reconciler</span><span class='period'>.</span><span class='id identifier rubyid_reconcile_all'>reconcile_all</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_count'>count</span> <span class='op'>=</span> <span class='id identifier rubyid_reconciler'>reconciler</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span>
+    <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:notice</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_count'>count</span><span class='embexpr_end'>}</span><span class='tstring_content'> payment</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_count'>count</span> <span class='op'>==</span> <span class='int'>1</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>s</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'> successfully reconciled</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_count'>count</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:error</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_reconciler'>reconciler</span><span class='period'>.</span><span class='id identifier rubyid_full_errors'>full_errors</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;br /&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_html_safe'>html_safe</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='lbracket'>[</span><span class='id identifier rubyid_current_facility'>current_facility</span><span class='comma'>,</span> <span class='ivar'>@journal</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="set_default_variables-instance_method">
+  
+    #<strong>set_default_variables</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/facility_journals_controller.rb', line 162</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_set_default_variables'>set_default_variables</span>
+  <span class='ivar'>@order_details</span> <span class='op'>=</span> <span class='ivar'>@order_details</span><span class='period'>.</span><span class='id identifier rubyid_need_journal'>need_journal</span>
+
+  <span class='id identifier rubyid_set_pending_journals'>set_pending_journals</span>
+  <span class='id identifier rubyid_set_earliest_journal_date'>set_earliest_journal_date</span>
+
+  <span class='id identifier rubyid_blocked_facility_ids'>blocked_facility_ids</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Journal.html" title="Journal (class)">Journal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_facility_ids_with_pending_journals'><span class='object_link'><a href="Journal.html#facility_ids_with_pending_journals-class_method" title="Journal.facility_ids_with_pending_journals (method)">facility_ids_with_pending_journals</a></span></span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_cross_facility?'>cross_facility?</span> <span class='op'>||</span> <span class='op'>!</span><span class='id identifier rubyid_has_pending_journals?'>has_pending_journals?</span>
+    <span class='ivar'>@order_detail_action</span> <span class='op'>=</span> <span class='symbol'>:create</span>
+    <span class='ivar'>@action_date_field</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>journal_date:</span> <span class='ivar'>@earliest_journal_date</span> <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="set_earliest_journal_date-instance_method">
+  
+    #<strong>set_earliest_journal_date</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+155
+156
+157
+158
+159
+160</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/facility_journals_controller.rb', line 155</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_set_earliest_journal_date'>set_earliest_journal_date</span>
+  <span class='ivar'>@earliest_journal_date</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='ivar'>@order_details</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:fulfilled_at</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_max'>max</span><span class='comma'>,</span>
+    <span class='const'><span class='object_link'><a href="JournalCutoffDate.html" title="JournalCutoffDate (class)">JournalCutoffDate</a></span></span><span class='period'>.</span><span class='id identifier rubyid_first_valid_date'><span class='object_link'><a href="JournalCutoffDate.html#first_valid_date-class_method" title="JournalCutoffDate.first_valid_date (method)">first_valid_date</a></span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span><span class='period'>.</span><span class='id identifier rubyid_max'>max</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="set_pending_journals-instance_method">
+  
+    #<strong>set_pending_journals</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+151
+152
+153</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/facility_journals_controller.rb', line 151</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_set_pending_journals'>set_pending_journals</span>
+  <span class='ivar'>@pending_journals</span> <span class='op'>=</span> <span class='ivar'>@journals</span><span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='label'>is_successful:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="show-instance_method">
+  
+    #<strong>show</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>GET /facilities/journals/:id</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/facility_journals_controller.rb', line 98</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_show'>show</span>
+  <span class='ivar'>@journal_rows</span> <span class='op'>=</span> <span class='ivar'>@journal</span><span class='period'>.</span><span class='id identifier rubyid_journal_rows'>journal_rows</span>
+  <span class='ivar'>@filename</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>journal_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@journal</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_content'>_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@journal</span><span class='period'>.</span><span class='id identifier rubyid_created_at'>created_at</span><span class='period'>.</span><span class='id identifier rubyid_strftime'>strftime</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>%Y%m%d</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='id identifier rubyid_respond_to'>respond_to</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_format'>format</span><span class='op'>|</span>
+    <span class='id identifier rubyid_format'>format</span><span class='period'>.</span><span class='id identifier rubyid_xml'>xml</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_headers'>headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Content-Disposition</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>attachment; filename=\&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@filename</span><span class='embexpr_end'>}</span><span class='tstring_content'>.xml\&quot;</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_format'>format</span><span class='period'>.</span><span class='id identifier rubyid_csv'>csv</span> <span class='kw'>do</span>
+      <span class='ivar'>@show_uid</span> <span class='op'>=</span> <span class='ivar'>@journal_rows</span><span class='period'>.</span><span class='id identifier rubyid_joins'>joins</span><span class='lparen'>(</span><span class='label'>order_detail:</span> <span class='lbrace'>{</span> <span class='label'>order:</span> <span class='symbol'>:user</span> <span class='rbrace'>}</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>users.uid IS NOT NULL</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span>
+      <span class='id identifier rubyid_set_csv_headers'>set_csv_headers</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@filename</span><span class='embexpr_end'>}</span><span class='tstring_content'>.csv</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_format'>format</span><span class='period'>.</span><span class='id identifier rubyid_xls'>xls</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='ivar'>@journal</span><span class='period'>.</span><span class='id identifier rubyid_download_url'>download_url</span> <span class='rbrace'>}</span>
+
+    <span class='id identifier rubyid_format'>format</span><span class='period'>.</span><span class='id identifier rubyid_any'>any</span> <span class='lbrace'>{</span> <span class='ivar'>@order_details</span> <span class='op'>=</span> <span class='ivar'>@journal</span><span class='period'>.</span><span class='id identifier rubyid_order_details'>order_details</span> <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update-instance_method">
+  
+    #<strong>update</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>PUT /facilities/journals/:id</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/facility_journals_controller.rb', line 50</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span>
+  <span class='ivar'>@pending_journal</span> <span class='op'>=</span> <span class='ivar'>@journal</span>
+
+  <span class='id identifier rubyid_action'>action</span> <span class='op'>=</span> <span class='const'>Journals</span><span class='op'>::</span><span class='const'>Closer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@pending_journal</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:journal</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='label'>updated_by:</span> <span class='id identifier rubyid_session_user'>session_user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_action'>action</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:journal_status</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:notice</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_t'>t</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>controllers.facility_journals.update.notice</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='id identifier rubyid_facility_journals_path'>facility_journals_path</span><span class='lparen'>(</span><span class='id identifier rubyid_current_facility'>current_facility</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@order_details</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="OrderDetail.html" title="OrderDetail (class)">OrderDetail</a></span></span><span class='period'>.</span><span class='id identifier rubyid_for_facility'><span class='object_link'><a href="OrderDetail.html#for_facility-class_method" title="OrderDetail.for_facility (method)">for_facility</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_current_facility'>current_facility</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_need_journal'>need_journal</span>
+    <span class='id identifier rubyid_set_earliest_journal_date'>set_earliest_journal_date</span>
+    <span class='id identifier rubyid_set_pending_journals'>set_pending_journals</span>
+
+    <span class='comment'># move error messages for pending journal into the flash
+</span>    <span class='kw'>if</span> <span class='ivar'>@pending_journal</span><span class='period'>.</span><span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span>
+      <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:error</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@journal</span><span class='period'>.</span><span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_full_messages'>full_messages</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;br/&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_html_safe'>html_safe</span>
+    <span class='kw'>end</span>
+
+    <span class='ivar'>@earliest_journal_date</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:journal_date</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='ivar'>@earliest_journal_date</span>
+    <span class='id identifier rubyid_render'>render</span> <span class='label'>action:</span> <span class='symbol'>:index</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="verify_journal_date_format-instance_method">
+  
+    #<strong>verify_journal_date_format</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+140
+141
+142
+143
+144</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/facility_journals_controller.rb', line 140</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_verify_journal_date_format'>verify_journal_date_format</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:journal_date</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_usa_formatted_date?'>usa_formatted_date?</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:journal_date</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='ivar'>@journal</span><span class='period'>.</span><span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='symbol'>:journal_date</span><span class='comma'>,</span> <span class='symbol'>:blank</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr 13 09:52:12 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.12 (ruby-2.4.1).
+</div>
+
+    </div>
+  </body>
+</html>

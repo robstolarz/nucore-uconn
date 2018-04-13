@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: SearchController
+  
+    &mdash; Documentation by YARD 0.9.12
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "SearchController";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (S)</a> &raquo;
+    
+    
+    <span class="title">SearchController</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: SearchController
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ActionController::Base</li>
+          
+            <li class="next"><span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></li>
+          
+            <li class="next">SearchController</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/controllers/search_controller.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+  <h2>Constant Summary</h2>
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="DateHelper.html" title="DateHelper (module)">DateHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DateHelper.html#USA_DATE_FORMAT-constant" title="DateHelper::USA_DATE_FORMAT (constant)">DateHelper::USA_DATE_FORMAT</a></span></p>
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="ApplicationController.html#active_tab-instance_method" title="ApplicationController#active_tab (method)">#active_tab</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#current_facility-instance_method" title="#current_facility (instance method)">#<strong>current_facility</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>ApplicationController#current_ability depends on current_facility being set
+correctly.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#load_facility-instance_method" title="#load_facility (instance method)">#<strong>load_facility</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#user_search_results-instance_method" title="#user_search_results (instance method)">#<strong>user_search_results</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>return users of portal &#39;nucore&#39;.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#valid_search_types-instance_method" title="#valid_search_types (instance method)">#<strong>valid_search_types</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="ApplicationController.html#ability_resource-instance_method" title="ApplicationController#ability_resource (method)">#ability_resource</a></span>, <span class='object_link'><a href="ApplicationController.html#acting_as%3F-instance_method" title="ApplicationController#acting_as? (method)">#acting_as?</a></span>, <span class='object_link'><a href="ApplicationController.html#acting_user-instance_method" title="ApplicationController#acting_user (method)">#acting_user</a></span>, <span class='object_link'><a href="ApplicationController.html#after_sign_out_path_for-instance_method" title="ApplicationController#after_sign_out_path_for (method)">#after_sign_out_path_for</a></span>, <span class='object_link'><a href="ApplicationController.html#backend%3F-instance_method" title="ApplicationController#backend? (method)">#backend?</a></span>, <span class='object_link'><a href="ApplicationController.html#check_acting_as-instance_method" title="ApplicationController#check_acting_as (method)">#check_acting_as</a></span>, <span class='object_link'><a href="ApplicationController.html#check_billing_access-instance_method" title="ApplicationController#check_billing_access (method)">#check_billing_access</a></span>, <span class='object_link'><a href="ApplicationController.html#cross_facility%3F-instance_method" title="ApplicationController#cross_facility? (method)">#cross_facility?</a></span>, <span class='object_link'><a href="ApplicationController.html#current_ability-instance_method" title="ApplicationController#current_ability (method)">#current_ability</a></span>, <span class='object_link'><a href="ApplicationController.html#current_cart-instance_method" title="ApplicationController#current_cart (method)">#current_cart</a></span>, <span class='object_link'><a href="ApplicationController.html#empty_params-instance_method" title="ApplicationController#empty_params (method)">#empty_params</a></span>, <span class='object_link'><a href="ApplicationController.html#init_current_account-instance_method" title="ApplicationController#init_current_account (method)">#init_current_account</a></span>, <span class='object_link'><a href="ApplicationController.html#init_current_facility-instance_method" title="ApplicationController#init_current_facility (method)">#init_current_facility</a></span>, <span class='object_link'><a href="ApplicationController.html#manageable_facilities-instance_method" title="ApplicationController#manageable_facilities (method)">#manageable_facilities</a></span>, <span class='object_link'><a href="ApplicationController.html#open_or_facility_path-instance_method" title="ApplicationController#open_or_facility_path (method)">#open_or_facility_path</a></span>, <span class='object_link'><a href="ApplicationController.html#operable_facilities-instance_method" title="ApplicationController#operable_facilities (method)">#operable_facilities</a></span>, <span class='object_link'><a href="ApplicationController.html#render_403-instance_method" title="ApplicationController#render_403 (method)">#render_403</a></span>, <span class='object_link'><a href="ApplicationController.html#render_404-instance_method" title="ApplicationController#render_404 (method)">#render_404</a></span>, <span class='object_link'><a href="ApplicationController.html#render_acting_error-instance_method" title="ApplicationController#render_acting_error (method)">#render_acting_error</a></span>, <span class='object_link'><a href="ApplicationController.html#session_user-instance_method" title="ApplicationController#session_user (method)">#session_user</a></span>, <span class='object_link'><a href="ApplicationController.html#store_fullpath_in_session-instance_method" title="ApplicationController#store_fullpath_in_session (method)">#store_fullpath_in_session</a></span>, <span class='object_link'><a href="ApplicationController.html#with_dropped_params-instance_method" title="ApplicationController#with_dropped_params (method)">#with_dropped_params</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="NavTab.html" title="NavTab (module)">NavTab</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="NavTab.html#admin_tab%3F-instance_method" title="NavTab#admin_tab? (method)">#admin_tab?</a></span>, <span class='object_link'><a href="NavTab.html#global_link_collection-instance_method" title="NavTab#global_link_collection (method)">#global_link_collection</a></span>, <span class='object_link'><a href="NavTab.html#global_navigation_links-instance_method" title="NavTab#global_navigation_links (method)">#global_navigation_links</a></span>, <span class='object_link'><a href="NavTab.html#link_collection-instance_method" title="NavTab#link_collection (method)">#link_collection</a></span>, <span class='object_link'><a href="NavTab.html#navigation_links-instance_method" title="NavTab#navigation_links (method)">#navigation_links</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="DateHelper.html" title="DateHelper (module)">DateHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DateHelper.html#format_usa_date-instance_method" title="DateHelper#format_usa_date (method)">#format_usa_date</a></span>, <span class='object_link'><a href="DateHelper.html#format_usa_datetime-instance_method" title="DateHelper#format_usa_datetime (method)">#format_usa_datetime</a></span>, <span class='object_link'><a href="DateHelper.html#hour_options-instance_method" title="DateHelper#hour_options (method)">#hour_options</a></span>, <span class='object_link'><a href="DateHelper.html#human_date-instance_method" title="DateHelper#human_date (method)">#human_date</a></span>, <span class='object_link'><a href="DateHelper.html#human_time-instance_method" title="DateHelper#human_time (method)">#human_time</a></span>, <span class='object_link'><a href="DateHelper.html#join_time_select_values-instance_method" title="DateHelper#join_time_select_values (method)">#join_time_select_values</a></span>, <span class='object_link'><a href="DateHelper.html#minute_options-instance_method" title="DateHelper#minute_options (method)">#minute_options</a></span>, <span class='object_link'><a href="DateHelper.html#parse_mmddyyyy_in_current_zone!-instance_method" title="DateHelper#parse_mmddyyyy_in_current_zone! (method)">#parse_mmddyyyy_in_current_zone!</a></span>, <span class='object_link'><a href="DateHelper.html#parse_usa_date-instance_method" title="DateHelper#parse_usa_date (method)">#parse_usa_date</a></span>, <span class='object_link'><a href="DateHelper.html#parse_usa_import_date-instance_method" title="DateHelper#parse_usa_import_date (method)">#parse_usa_import_date</a></span>, <span class='object_link'><a href="DateHelper.html#time_ceil-instance_method" title="DateHelper#time_ceil (method)">#time_ceil</a></span>, <span class='object_link'><a href="DateHelper.html#time_floor-instance_method" title="DateHelper#time_floor (method)">#time_floor</a></span>, <span class='object_link'><a href="DateHelper.html#time_select-instance_method" title="DateHelper#time_select (method)">#time_select</a></span>, <span class='object_link'><a href="DateHelper.html#time_select24-instance_method" title="DateHelper#time_select24 (method)">#time_select24</a></span>, <span class='object_link'><a href="DateHelper.html#time_select_tag-instance_method" title="DateHelper#time_select_tag (method)">#time_select_tag</a></span>, <span class='object_link'><a href="DateHelper.html#usa_formatted_date%3F-instance_method" title="DateHelper#usa_formatted_date? (method)">#usa_formatted_date?</a></span></p>
+
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="current_facility-instance_method">
+  
+    #<strong>current_facility</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>ApplicationController#current_ability depends on current_facility being set
+correctly. Since ApplicationController#current_facility loads based on the
+facility&#39;s url_name, we need to override to load it through its id
+instead.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/search_controller.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_current_facility'>current_facility</span>
+  <span class='ivar'>@facility</span> <span class='op'>||=</span> <span class='id identifier rubyid_load_facility'>load_facility</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load_facility-instance_method">
+  
+    #<strong>load_facility</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34
+35
+36
+37
+38
+39
+40
+41</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/search_controller.rb', line 34</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_load_facility'>load_facility</span>
+  <span class='ivar'>@facility</span> <span class='op'>=</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:facility_id</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+      <span class='const'><span class='object_link'><a href="Facility.html" title="Facility (class)">Facility</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:facility_id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='const'><span class='object_link'><a href="Facility.html" title="Facility (class)">Facility</a></span></span><span class='period'>.</span><span class='id identifier rubyid_cross_facility'><span class='object_link'><a href="Facility.html#cross_facility-class_method" title="Facility.cross_facility (method)">cross_facility</a></span></span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="user_search_results-instance_method">
+  
+    #<strong>user_search_results</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>return users of portal &#39;nucore&#39;</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/search_controller.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_user_search_results'>user_search_results</span>
+  <span class='ivar'>@limit</span> <span class='op'>=</span> <span class='int'>25</span>
+  <span class='id identifier rubyid_load_facility'>load_facility</span>
+  <span class='ivar'>@price_group</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="PriceGroup.html" title="PriceGroup (class)">PriceGroup</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:price_group_id</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:price_group_id</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+  <span class='ivar'>@account</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Account.html" title="Account (class)">Account</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:account_id</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:account_id</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+  <span class='ivar'>@product</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Product.html" title="Product (class)">Product</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:product_id</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:product_id</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+  <span class='ivar'>@search_type</span> <span class='op'>=</span> <span class='id identifier rubyid_valid_search_types'>valid_search_types</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span> <span class='id identifier rubyid_t'>t</span> <span class='op'>==</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:search_type</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+  <span class='ivar'>@users</span><span class='comma'>,</span> <span class='ivar'>@count</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="UserFinder.html" title="UserFinder (class)">UserFinder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_search'><span class='object_link'><a href="UserFinder.html#search-class_method" title="UserFinder.search (method)">search</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:search_term</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='ivar'>@limit</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_render'>render</span> <span class='label'>layout:</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="valid_search_types-instance_method">
+  
+    #<strong>valid_search_types</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30
+31
+32</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/search_controller.rb', line 28</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_valid_search_types'>valid_search_types</span>
+  <span class='qwords_beg'>%w(</span><span class='tstring_content'>account_account_user</span><span class='words_sep'> </span><span class='tstring_content'>create_new_user</span><span class='words_sep'> </span><span class='tstring_content'>facility_account_account_user</span><span class='words_sep'>
+</span><span class='tstring_content'>     global_user_role</span><span class='words_sep'> </span><span class='tstring_content'>manage_user</span><span class='words_sep'> </span><span class='tstring_content'>map_user</span><span class='words_sep'> </span><span class='tstring_content'>user_accounts</span><span class='words_sep'> </span><span class='tstring_content'>user_new_account</span><span class='words_sep'>
+</span><span class='tstring_content'>     user_price_group_member</span><span class='words_sep'> </span><span class='tstring_content'>user_product_approval</span><span class='words_sep'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr 13 09:52:05 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.12 (ruby-2.4.1).
+</div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Reservations::CalendarPresenter
+  
+    &mdash; Documentation by YARD 0.9.12
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Reservations::CalendarPresenter";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Reservations.html" title="Reservations (module)">Reservations</a></span></span>
+     &raquo; 
+    <span class="title">CalendarPresenter</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Reservations::CalendarPresenter
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Reservation.html" title="Reservation (class)">Reservation</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ActiveRecord::Base</li>
+          
+            <li class="next"><span class='object_link'><a href="../Reservation.html" title="Reservation (class)">Reservation</a></span></li>
+          
+            <li class="next">Reservations::CalendarPresenter</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/presenters/reservations/calendar_presenter.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+  <h2>Constant Summary</h2>
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="../DateHelper.html" title="DateHelper (module)">DateHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../DateHelper.html#USA_DATE_FORMAT-constant" title="DateHelper::USA_DATE_FORMAT (constant)">DateHelper::USA_DATE_FORMAT</a></span></p>
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Reservation.html" title="Reservation (class)">Reservation</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Reservation.html#blackout-instance_method" title="Reservation#blackout (method)">#blackout</a></span>, <span class='object_link'><a href="../Reservation.html#reserved_by_admin-instance_method" title="Reservation#reserved_by_admin (method)">#reserved_by_admin</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#as_calendar_object-instance_method" title="#as_calendar_object (instance method)">#<strong>as_calendar_object</strong>(options = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#calendar_object_default-instance_method" title="#calendar_object_default (instance method)">#<strong>calendar_object_default</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#reservation_options-instance_method" title="#reservation_options (instance method)">#<strong>reservation_options</strong>(options)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Reservation.html" title="Reservation (class)">Reservation</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Reservation.html#active-class_method" title="Reservation.active (method)">active</a></span>, <span class='object_link'><a href="../Reservation.html#admin%3F-instance_method" title="Reservation#admin? (method)">#admin?</a></span>, <span class='object_link'><a href="../Reservation.html#admin_editable%3F-instance_method" title="Reservation#admin_editable? (method)">#admin_editable?</a></span>, <span class='object_link'><a href="../Reservation.html#admin_removable%3F-instance_method" title="Reservation#admin_removable? (method)">#admin_removable?</a></span>, <span class='object_link'><a href="../Reservation.html#assign_actuals_off_reserve-instance_method" title="Reservation#assign_actuals_off_reserve (method)">#assign_actuals_off_reserve</a></span>, <span class='object_link'><a href="../Reservation.html#auto_save_order_detail-instance_method" title="Reservation#auto_save_order_detail (method)">#auto_save_order_detail</a></span>, <span class='object_link'><a href="../Reservation.html#before_lock_window%3F-instance_method" title="Reservation#before_lock_window? (method)">#before_lock_window?</a></span>, <span class='object_link'><a href="../Reservation.html#blackout%3F-instance_method" title="Reservation#blackout? (method)">#blackout?</a></span>, <span class='object_link'><a href="../Reservation.html#can_cancel%3F-instance_method" title="Reservation#can_cancel? (method)">#can_cancel?</a></span>, <span class='object_link'><a href="../Reservation.html#can_customer_edit%3F-instance_method" title="Reservation#can_customer_edit? (method)">#can_customer_edit?</a></span>, <span class='object_link'><a href="../Reservation.html#can_edit_actuals%3F-instance_method" title="Reservation#can_edit_actuals? (method)">#can_edit_actuals?</a></span>, <span class='object_link'><a href="../Reservation.html#can_start_early%3F-instance_method" title="Reservation#can_start_early? (method)">#can_start_early?</a></span>, <span class='object_link'><a href="../Reservation.html#canceled%3F-instance_method" title="Reservation#canceled? (method)">#canceled?</a></span>, <span class='object_link'><a href="../Reservation.html#end_at_required%3F-instance_method" title="Reservation#end_at_required? (method)">#end_at_required?</a></span>, <span class='object_link'><a href="../Reservation.html#end_reservation!-instance_method" title="Reservation#end_reservation! (method)">#end_reservation!</a></span>, <span class='object_link'><a href="../Reservation.html#extendable%3F-instance_method" title="Reservation#extendable? (method)">#extendable?</a></span>, <span class='object_link'><a href="../Reservation.html#for_date-class_method" title="Reservation.for_date (method)">for_date</a></span>, <span class='object_link'><a href="../Reservation.html#grace_period_duration-instance_method" title="Reservation#grace_period_duration (method)">#grace_period_duration</a></span>, <span class='object_link'><a href="../Reservation.html#has_actuals%3F-instance_method" title="Reservation#has_actuals? (method)">#has_actuals?</a></span>, <span class='object_link'><a href="../Reservation.html#in_grace_period%3F-instance_method" title="Reservation#in_grace_period? (method)">#in_grace_period?</a></span>, <span class='object_link'><a href="../Reservation.html#in_range-class_method" title="Reservation.in_range (method)">in_range</a></span>, <span class='object_link'><a href="../Reservation.html#inside_lock_window%3F-instance_method" title="Reservation#inside_lock_window? (method)">#inside_lock_window?</a></span>, <span class='object_link'><a href="../Reservation.html#joins_order-class_method" title="Reservation.joins_order (method)">joins_order</a></span>, <span class='object_link'><a href="../Reservation.html#locked%3F-instance_method" title="Reservation#locked? (method)">#locked?</a></span>, <span class='object_link'><a href="../Reservation.html#not_this_reservation-class_method" title="Reservation.not_this_reservation (method)">not_this_reservation</a></span>, <span class='object_link'><a href="../Reservation.html#offline%3F-instance_method" title="Reservation#offline? (method)">#offline?</a></span>, <span class='object_link'><a href="../Reservation.html#ongoing%3F-instance_method" title="Reservation#ongoing? (method)">#ongoing?</a></span>, <span class='object_link'><a href="../Reservation.html#order_completable%3F-instance_method" title="Reservation#order_completable? (method)">#order_completable?</a></span>, <span class='object_link'><a href="../Reservation.html#outside_lock_window%3F-instance_method" title="Reservation#outside_lock_window? (method)">#outside_lock_window?</a></span>, <span class='object_link'><a href="../Reservation.html#overlapping-class_method" title="Reservation.overlapping (method)">overlapping</a></span>, <span class='object_link'><a href="../Reservation.html#problem_description_key-instance_method" title="Reservation#problem_description_key (method)">#problem_description_key</a></span>, <span class='object_link'><a href="../Reservation.html#quantity-instance_method" title="Reservation#quantity (method)">#quantity</a></span>, <span class='object_link'><a href="../Reservation.html#relay_in_progress-class_method" title="Reservation.relay_in_progress (method)">relay_in_progress</a></span>, <span class='object_link'><a href="../Reservation.html#requires_but_missing_actuals%3F-instance_method" title="Reservation#requires_but_missing_actuals? (method)">#requires_but_missing_actuals?</a></span>, <span class='object_link'><a href="../Reservation.html#reservation_changed%3F-instance_method" title="Reservation#reservation_changed? (method)">#reservation_changed?</a></span>, <span class='object_link'><a href="../Reservation.html#reserve_end_at_editable%3F-instance_method" title="Reservation#reserve_end_at_editable? (method)">#reserve_end_at_editable?</a></span>, <span class='object_link'><a href="../Reservation.html#reserve_start_at_editable%3F-instance_method" title="Reservation#reserve_start_at_editable? (method)">#reserve_start_at_editable?</a></span>, <span class='object_link'><a href="../Reservation.html#round_reservation_times-instance_method" title="Reservation#round_reservation_times (method)">#round_reservation_times</a></span>, <span class='object_link'><a href="../Reservation.html#save_as_user-instance_method" title="Reservation#save_as_user (method)">#save_as_user</a></span>, <span class='object_link'><a href="../Reservation.html#save_as_user!-instance_method" title="Reservation#save_as_user! (method)">#save_as_user!</a></span>, <span class='object_link'><a href="../Reservation.html#start_reservation!-instance_method" title="Reservation#start_reservation! (method)">#start_reservation!</a></span>, <span class='object_link'><a href="../Reservation.html#started%3F-instance_method" title="Reservation#started? (method)">#started?</a></span>, <span class='object_link'><a href="../Reservation.html#today-class_method" title="Reservation.today (method)">today</a></span>, <span class='object_link'><a href="../Reservation.html#upcoming-class_method" title="Reservation.upcoming (method)">upcoming</a></span>, <span class='object_link'><a href="../Reservation.html#upcoming_offline-class_method" title="Reservation.upcoming_offline (method)">upcoming_offline</a></span>, <span class='object_link'><a href="../Reservation.html#valid_before_purchase%3F-instance_method" title="Reservation#valid_before_purchase? (method)">#valid_before_purchase?</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="MovingUp.html" title="Reservations::MovingUp (module)">MovingUp</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="MovingUp.html#earliest_possible-instance_method" title="Reservations::MovingUp#earliest_possible (method)">#earliest_possible</a></span>, <span class='object_link'><a href="MovingUp.html#move_to_earliest-instance_method" title="Reservations::MovingUp#move_to_earliest (method)">#move_to_earliest</a></span>, <span class='object_link'><a href="MovingUp.html#startable_now%3F-instance_method" title="Reservations::MovingUp#startable_now? (method)">#startable_now?</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="RelaySupport.html" title="Reservations::RelaySupport (module)">RelaySupport</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="RelaySupport.html#can_kill_power%3F-instance_method" title="Reservations::RelaySupport#can_kill_power? (method)">#can_kill_power?</a></span>, <span class='object_link'><a href="RelaySupport.html#can_switch_instrument%3F-instance_method" title="Reservations::RelaySupport#can_switch_instrument? (method)">#can_switch_instrument?</a></span>, <span class='object_link'><a href="RelaySupport.html#can_switch_instrument_off%3F-instance_method" title="Reservations::RelaySupport#can_switch_instrument_off? (method)">#can_switch_instrument_off?</a></span>, <span class='object_link'><a href="RelaySupport.html#can_switch_instrument_on%3F-instance_method" title="Reservations::RelaySupport#can_switch_instrument_on? (method)">#can_switch_instrument_on?</a></span>, <span class='object_link'><a href="RelaySupport.html#other_reservation_using_relay%3F-instance_method" title="Reservations::RelaySupport#other_reservation_using_relay? (method)">#other_reservation_using_relay?</a></span>, <span class='object_link'><a href="RelaySupport.html#other_reservations_using_relay-instance_method" title="Reservations::RelaySupport#other_reservations_using_relay (method)">#other_reservations_using_relay</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Rendering.html" title="Reservations::Rendering (module)">Rendering</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Rendering.html#calendar_presenter-instance_method" title="Reservations::Rendering#calendar_presenter (method)">#calendar_presenter</a></span>, <span class='object_link'><a href="Rendering.html#display_end_at-instance_method" title="Reservations::Rendering#display_end_at (method)">#display_end_at</a></span>, <span class='object_link'><a href="Rendering.html#display_start_at-instance_method" title="Reservations::Rendering#display_start_at (method)">#display_start_at</a></span>, <span class='object_link'><a href="Rendering.html#time_presenter-instance_method" title="Reservations::Rendering#time_presenter (method)">#time_presenter</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Validations.html" title="Reservations::Validations (module)">Validations</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Validations.html#conflicting_admin_reservation-instance_method" title="Reservations::Validations#conflicting_admin_reservation (method)">#conflicting_admin_reservation</a></span>, <span class='object_link'><a href="Validations.html#conflicting_admin_reservation%3F-instance_method" title="Reservations::Validations#conflicting_admin_reservation? (method)">#conflicting_admin_reservation?</a></span>, <span class='object_link'><a href="Validations.html#conflicting_user_reservation-instance_method" title="Reservations::Validations#conflicting_user_reservation (method)">#conflicting_user_reservation</a></span>, <span class='object_link'><a href="Validations.html#default_reservation_window-instance_method" title="Reservations::Validations#default_reservation_window (method)">#default_reservation_window</a></span>, <span class='object_link'><a href="Validations.html#does_not_conflict_with_admin_reservation-instance_method" title="Reservations::Validations#does_not_conflict_with_admin_reservation (method)">#does_not_conflict_with_admin_reservation</a></span>, <span class='object_link'><a href="Validations.html#does_not_conflict_with_admin_reservation%3F-instance_method" title="Reservations::Validations#does_not_conflict_with_admin_reservation? (method)">#does_not_conflict_with_admin_reservation?</a></span>, <span class='object_link'><a href="Validations.html#does_not_conflict_with_other_user_reservation-instance_method" title="Reservations::Validations#does_not_conflict_with_other_user_reservation (method)">#does_not_conflict_with_other_user_reservation</a></span>, <span class='object_link'><a href="Validations.html#does_not_conflict_with_other_user_reservation%3F-instance_method" title="Reservations::Validations#does_not_conflict_with_other_user_reservation? (method)">#does_not_conflict_with_other_user_reservation?</a></span>, <span class='object_link'><a href="Validations.html#duration_is_interval-instance_method" title="Reservations::Validations#duration_is_interval (method)">#duration_is_interval</a></span>, <span class='object_link'><a href="Validations.html#in_the_future-instance_method" title="Reservations::Validations#in_the_future (method)">#in_the_future</a></span>, <span class='object_link'><a href="Validations.html#in_the_future%3F-instance_method" title="Reservations::Validations#in_the_future? (method)">#in_the_future?</a></span>, <span class='object_link'><a href="Validations.html#in_window-instance_method" title="Reservations::Validations#in_window (method)">#in_window</a></span>, <span class='object_link'><a href="Validations.html#in_window%3F-instance_method" title="Reservations::Validations#in_window? (method)">#in_window?</a></span>, <span class='object_link'><a href="Validations.html#instrument_is_available_to_reserve-instance_method" title="Reservations::Validations#instrument_is_available_to_reserve (method)">#instrument_is_available_to_reserve</a></span>, <span class='object_link'><a href="Validations.html#instrument_is_available_to_reserve%3F-instance_method" title="Reservations::Validations#instrument_is_available_to_reserve? (method)">#instrument_is_available_to_reserve?</a></span>, <span class='object_link'><a href="Validations.html#longest_reservation_window-instance_method" title="Reservations::Validations#longest_reservation_window (method)">#longest_reservation_window</a></span>, <span class='object_link'><a href="Validations.html#requires_cutoff_validation%3F-instance_method" title="Reservations::Validations#requires_cutoff_validation? (method)">#requires_cutoff_validation?</a></span>, <span class='object_link'><a href="Validations.html#satisfies_maximum_length-instance_method" title="Reservations::Validations#satisfies_maximum_length (method)">#satisfies_maximum_length</a></span>, <span class='object_link'><a href="Validations.html#satisfies_maximum_length%3F-instance_method" title="Reservations::Validations#satisfies_maximum_length? (method)">#satisfies_maximum_length?</a></span>, <span class='object_link'><a href="Validations.html#satisfies_minimum_length-instance_method" title="Reservations::Validations#satisfies_minimum_length (method)">#satisfies_minimum_length</a></span>, <span class='object_link'><a href="Validations.html#satisfies_minimum_length%3F-instance_method" title="Reservations::Validations#satisfies_minimum_length? (method)">#satisfies_minimum_length?</a></span>, <span class='object_link'><a href="Validations.html#starts_before_cutoff-instance_method" title="Reservations::Validations#starts_before_cutoff (method)">#starts_before_cutoff</a></span>, <span class='object_link'><a href="Validations.html#starts_before_cutoff%3F-instance_method" title="Reservations::Validations#starts_before_cutoff? (method)">#starts_before_cutoff?</a></span>, <span class='object_link'><a href="Validations.html#starts_before_ends-instance_method" title="Reservations::Validations#starts_before_ends (method)">#starts_before_ends</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="DateSupport.html" title="Reservations::DateSupport (module)">DateSupport</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DateSupport.html#actual_duration_mins-instance_method" title="Reservations::DateSupport#actual_duration_mins (method)">#actual_duration_mins</a></span>, <span class='object_link'><a href="DateSupport.html#actual_end_date-instance_method" title="Reservations::DateSupport#actual_end_date (method)">#actual_end_date</a></span>, <span class='object_link'><a href="DateSupport.html#actual_end_hour-instance_method" title="Reservations::DateSupport#actual_end_hour (method)">#actual_end_hour</a></span>, <span class='object_link'><a href="DateSupport.html#actual_end_meridian-instance_method" title="Reservations::DateSupport#actual_end_meridian (method)">#actual_end_meridian</a></span>, <span class='object_link'><a href="DateSupport.html#actual_end_min-instance_method" title="Reservations::DateSupport#actual_end_min (method)">#actual_end_min</a></span>, <span class='object_link'><a href="DateSupport.html#actual_or_current_duration_mins-instance_method" title="Reservations::DateSupport#actual_or_current_duration_mins (method)">#actual_or_current_duration_mins</a></span>, <span class='object_link'><a href="DateSupport.html#actual_start_date-instance_method" title="Reservations::DateSupport#actual_start_date (method)">#actual_start_date</a></span>, <span class='object_link'><a href="DateSupport.html#actual_start_hour-instance_method" title="Reservations::DateSupport#actual_start_hour (method)">#actual_start_hour</a></span>, <span class='object_link'><a href="DateSupport.html#actual_start_meridian-instance_method" title="Reservations::DateSupport#actual_start_meridian (method)">#actual_start_meridian</a></span>, <span class='object_link'><a href="DateSupport.html#actual_start_min-instance_method" title="Reservations::DateSupport#actual_start_min (method)">#actual_start_min</a></span>, <span class='object_link'><a href="DateSupport.html#assign_actuals_from_params-instance_method" title="Reservations::DateSupport#assign_actuals_from_params (method)">#assign_actuals_from_params</a></span>, <span class='object_link'><a href="DateSupport.html#assign_reserve_from_params-instance_method" title="Reservations::DateSupport#assign_reserve_from_params (method)">#assign_reserve_from_params</a></span>, <span class='object_link'><a href="DateSupport.html#assign_times_from_params-instance_method" title="Reservations::DateSupport#assign_times_from_params (method)">#assign_times_from_params</a></span>, <span class='object_link'><a href="DateSupport.html#date_field-instance_method" title="Reservations::DateSupport#date_field (method)">#date_field</a></span>, <span class='object_link'><a href="DateSupport.html#duration_mins-instance_method" title="Reservations::DateSupport#duration_mins (method)">#duration_mins</a></span>, <span class='object_link'><a href="DateSupport.html#hour_field-instance_method" title="Reservations::DateSupport#hour_field (method)">#hour_field</a></span>, <span class='object_link'><a href="DateSupport.html#human_hour-instance_method" title="Reservations::DateSupport#human_hour (method)">#human_hour</a></span>, <span class='object_link'><a href="DateSupport.html#instance_variable_fetch-instance_method" title="Reservations::DateSupport#instance_variable_fetch (method)">#instance_variable_fetch</a></span>, <span class='object_link'><a href="DateSupport.html#meridian_field-instance_method" title="Reservations::DateSupport#meridian_field (method)">#meridian_field</a></span>, <span class='object_link'><a href="DateSupport.html#min_field-instance_method" title="Reservations::DateSupport#min_field (method)">#min_field</a></span>, <span class='object_link'><a href="DateSupport.html#reserve_end_date-instance_method" title="Reservations::DateSupport#reserve_end_date (method)">#reserve_end_date</a></span>, <span class='object_link'><a href="DateSupport.html#reserve_end_hour-instance_method" title="Reservations::DateSupport#reserve_end_hour (method)">#reserve_end_hour</a></span>, <span class='object_link'><a href="DateSupport.html#reserve_end_meridian-instance_method" title="Reservations::DateSupport#reserve_end_meridian (method)">#reserve_end_meridian</a></span>, <span class='object_link'><a href="DateSupport.html#reserve_end_min-instance_method" title="Reservations::DateSupport#reserve_end_min (method)">#reserve_end_min</a></span>, <span class='object_link'><a href="DateSupport.html#reserve_start_date-instance_method" title="Reservations::DateSupport#reserve_start_date (method)">#reserve_start_date</a></span>, <span class='object_link'><a href="DateSupport.html#reserve_start_hour-instance_method" title="Reservations::DateSupport#reserve_start_hour (method)">#reserve_start_hour</a></span>, <span class='object_link'><a href="DateSupport.html#reserve_start_meridian-instance_method" title="Reservations::DateSupport#reserve_start_meridian (method)">#reserve_start_meridian</a></span>, <span class='object_link'><a href="DateSupport.html#reserve_start_min-instance_method" title="Reservations::DateSupport#reserve_start_min (method)">#reserve_start_min</a></span>, <span class='object_link'><a href="DateSupport.html#set_actual_end_at-instance_method" title="Reservations::DateSupport#set_actual_end_at (method)">#set_actual_end_at</a></span>, <span class='object_link'><a href="DateSupport.html#set_actual_start_at-instance_method" title="Reservations::DateSupport#set_actual_start_at (method)">#set_actual_start_at</a></span>, <span class='object_link'><a href="DateSupport.html#set_all_split_times-instance_method" title="Reservations::DateSupport#set_all_split_times (method)">#set_all_split_times</a></span>, <span class='object_link'><a href="DateSupport.html#set_reserve_end_at-instance_method" title="Reservations::DateSupport#set_reserve_end_at (method)">#set_reserve_end_at</a></span>, <span class='object_link'><a href="DateSupport.html#set_reserve_start_at-instance_method" title="Reservations::DateSupport#set_reserve_start_at (method)">#set_reserve_start_at</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../DateHelper.html" title="DateHelper (module)">DateHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../DateHelper.html#format_usa_date-instance_method" title="DateHelper#format_usa_date (method)">#format_usa_date</a></span>, <span class='object_link'><a href="../DateHelper.html#format_usa_datetime-instance_method" title="DateHelper#format_usa_datetime (method)">#format_usa_datetime</a></span>, <span class='object_link'><a href="../DateHelper.html#hour_options-instance_method" title="DateHelper#hour_options (method)">#hour_options</a></span>, <span class='object_link'><a href="../DateHelper.html#human_date-instance_method" title="DateHelper#human_date (method)">#human_date</a></span>, <span class='object_link'><a href="../DateHelper.html#human_time-instance_method" title="DateHelper#human_time (method)">#human_time</a></span>, <span class='object_link'><a href="../DateHelper.html#join_time_select_values-instance_method" title="DateHelper#join_time_select_values (method)">#join_time_select_values</a></span>, <span class='object_link'><a href="../DateHelper.html#minute_options-instance_method" title="DateHelper#minute_options (method)">#minute_options</a></span>, <span class='object_link'><a href="../DateHelper.html#parse_mmddyyyy_in_current_zone!-instance_method" title="DateHelper#parse_mmddyyyy_in_current_zone! (method)">#parse_mmddyyyy_in_current_zone!</a></span>, <span class='object_link'><a href="../DateHelper.html#parse_usa_date-instance_method" title="DateHelper#parse_usa_date (method)">#parse_usa_date</a></span>, <span class='object_link'><a href="../DateHelper.html#parse_usa_import_date-instance_method" title="DateHelper#parse_usa_import_date (method)">#parse_usa_import_date</a></span>, <span class='object_link'><a href="../DateHelper.html#time_ceil-instance_method" title="DateHelper#time_ceil (method)">#time_ceil</a></span>, <span class='object_link'><a href="../DateHelper.html#time_floor-instance_method" title="DateHelper#time_floor (method)">#time_floor</a></span>, <span class='object_link'><a href="../DateHelper.html#time_select-instance_method" title="DateHelper#time_select (method)">#time_select</a></span>, <span class='object_link'><a href="../DateHelper.html#time_select24-instance_method" title="DateHelper#time_select24 (method)">#time_select24</a></span>, <span class='object_link'><a href="../DateHelper.html#time_select_tag-instance_method" title="DateHelper#time_select_tag (method)">#time_select_tag</a></span>, <span class='object_link'><a href="../DateHelper.html#usa_formatted_date%3F-instance_method" title="DateHelper#usa_formatted_date? (method)">#usa_formatted_date?</a></span></p>
+
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="as_calendar_object-instance_method">
+  
+    #<strong>as_calendar_object</strong>(options = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5
+6
+7</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/presenters/reservations/calendar_presenter.rb', line 5</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_as_calendar_object'>as_calendar_object</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_calendar_object_default'>calendar_object_default</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_reservation_options'>reservation_options</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="calendar_object_default-instance_method">
+  
+    #<strong>calendar_object_default</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+36
+37
+38
+39
+40
+41
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/presenters/reservations/calendar_presenter.rb', line 36</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_calendar_object_default'>calendar_object_default</span>
+  <span class='lbrace'>{</span>
+    <span class='label'>start:</span> <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_l'>l</span><span class='lparen'>(</span><span class='id identifier rubyid_display_start_at'>display_start_at</span><span class='comma'>,</span> <span class='label'>format:</span> <span class='symbol'>:calendar</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='label'>end:</span> <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_l'>l</span><span class='lparen'>(</span><span class='id identifier rubyid_display_end_at'>display_end_at</span><span class='comma'>,</span> <span class='label'>format:</span> <span class='symbol'>:calendar</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='label'>allDay:</span> <span class='kw'>false</span><span class='comma'>,</span>
+    <span class='label'>title:</span> <span class='id identifier rubyid_model_name'>model_name</span><span class='period'>.</span><span class='id identifier rubyid_human'>human</span><span class='comma'>,</span>
+    <span class='label'>product:</span> <span class='id identifier rubyid_product'>product</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reservation_options-instance_method">
+  
+    #<strong>reservation_options</strong>(options)  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/presenters/reservations/calendar_presenter.rb', line 11</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reservation_options'>reservation_options</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_order'>order</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:with_details</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+      <span class='lbrace'>{</span>
+        <span class='label'>title:</span> <span class='id identifier rubyid_order'>order</span><span class='period'>.</span><span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_full_name'>full_name</span><span class='comma'>,</span>
+        <span class='label'>email:</span> <span class='id identifier rubyid_order'>order</span><span class='period'>.</span><span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_email'>email</span><span class='comma'>,</span>
+      <span class='rbrace'>}</span>
+    <span class='kw'>else</span>
+      <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_offline?'>offline?</span>
+    <span class='lbrace'>{</span>
+      <span class='label'>title:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Instrument Offline</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='label'>email:</span> <span class='id identifier rubyid_created_by'>created_by</span><span class='period'>.</span><span class='id identifier rubyid_try'>try</span><span class='lparen'>(</span><span class='symbol'>:full_name</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='rbrace'>}</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_hash'>hash</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+      <span class='label'>title:</span> <span class='id identifier rubyid_model_name'>model_name</span><span class='period'>.</span><span class='id identifier rubyid_human'>human</span><span class='comma'>,</span>
+      <span class='label'>email:</span> <span class='id identifier rubyid_created_by'>created_by</span><span class='period'>.</span><span class='id identifier rubyid_try'>try</span><span class='lparen'>(</span><span class='symbol'>:full_name</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='symbol'>:expiration</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Expires </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="../MinutesToTimeFormatter.html" title="MinutesToTimeFormatter (class)">MinutesToTimeFormatter</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../MinutesToTimeFormatter.html#initialize-instance_method" title="MinutesToTimeFormatter#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_expires_mins_before'>expires_mins_before</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> prior</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_expires_mins_before'>expires_mins_before</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+    <span class='id identifier rubyid_hash'>hash</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr 13 09:52:14 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.12 (ruby-2.4.1).
+</div>
+
+    </div>
+  </body>
+</html>

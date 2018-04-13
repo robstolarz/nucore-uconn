@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Reports::StatusFilterParams
+  
+    &mdash; Documentation by YARD 0.9.12
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Reports::StatusFilterParams";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Reports.html" title="Reports (module)">Reports</a></span></span>
+     &raquo; 
+    <span class="title">StatusFilterParams</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: Reports::StatusFilterParams
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  <dl>
+      <dt>Extended by:</dt>
+      <dd>ActiveSupport::Concern</dd>
+  </dl>
+  
+  
+  
+  
+
+  
+  <dl>
+    <dt>Included in:</dt>
+    <dd><span class='object_link'><a href="ExportRawReportsController.html" title="Reports::ExportRawReportsController (class)">ExportRawReportsController</a></span>, <span class='object_link'><a href="GeneralReportsController.html" title="Reports::GeneralReportsController (class)">GeneralReportsController</a></span></dd>
+  </dl>
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/controllers/concerns/reports/status_filter_params.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#init_status_filter_report_params-instance_method" title="#init_status_filter_report_params (instance method)">#<strong>init_status_filter_report_params</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="init_status_filter_report_params-instance_method">
+  
+    #<strong>init_status_filter_report_params</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/concerns/reports/status_filter_params.rb', line 11</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_init_status_filter_report_params'>init_status_filter_report_params</span>
+  <span class='id identifier rubyid_status_ids'>status_ids</span> <span class='op'>=</span> <span class='const'>Array</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:status_filter</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_stati'>stati</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:date_start</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_blank?'>blank?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:date_end</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_blank?'>blank?</span>
+            <span class='comment'># page load -- default to most interesting/common statuses
+</span>            <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="../OrderStatus.html" title="OrderStatus (class)">OrderStatus</a></span></span><span class='period'>.</span><span class='id identifier rubyid_complete'><span class='object_link'><a href="../OrderStatus.html#complete-class_method" title="OrderStatus.complete (method)">complete</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="../OrderStatus.html" title="OrderStatus (class)">OrderStatus</a></span></span><span class='period'>.</span><span class='id identifier rubyid_reconciled'><span class='object_link'><a href="../OrderStatus.html#reconciled-class_method" title="OrderStatus.reconciled (method)">reconciled</a></span></span><span class='rbracket'>]</span>
+          <span class='kw'>elsif</span> <span class='id identifier rubyid_status_ids'>status_ids</span><span class='period'>.</span><span class='id identifier rubyid_blank?'>blank?</span>
+            <span class='comment'># user removed all status filters. They will get nothing back but that&#39;s what they want!
+</span>            <span class='lbracket'>[</span><span class='rbracket'>]</span>
+          <span class='kw'>else</span>
+            <span class='comment'># user filters
+</span>            <span class='id identifier rubyid_status_ids'>status_ids</span><span class='period'>.</span><span class='id identifier rubyid_reject'>reject</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:blank?</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_si'>si</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="../OrderStatus.html" title="OrderStatus (class)">OrderStatus</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_si'>si</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+          <span class='kw'>end</span>
+
+  <span class='ivar'>@status_ids</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_stati'>stati</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_stat'>stat</span><span class='op'>|</span>
+    <span class='ivar'>@status_ids</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_stat'>stat</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span>
+    <span class='ivar'>@status_ids</span> <span class='op'>+=</span> <span class='id identifier rubyid_stat'>stat</span><span class='period'>.</span><span class='id identifier rubyid_children'>children</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:id</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_stat'>stat</span><span class='period'>.</span><span class='id identifier rubyid_root?'>root?</span>
+  <span class='kw'>end</span>
+
+  <span class='ivar'>@date_range_field</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:date_range_field</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>journal_or_statement_date</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr 13 09:51:54 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.12 (ruby-2.4.1).
+</div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,3570 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Reservation
+  
+    &mdash; Documentation by YARD 0.9.12
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Reservation";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (R)</a> &raquo;
+    
+    
+    <span class="title">Reservation</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Reservation
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">ActiveRecord::Base</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ActiveRecord::Base</li>
+          
+            <li class="next">Reservation</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="DateHelper.html" title="DateHelper (module)">DateHelper</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html" title="Reservations::DateSupport (module)">Reservations::DateSupport</a></span>, <span class='object_link'><a href="Reservations/MovingUp.html" title="Reservations::MovingUp (module)">Reservations::MovingUp</a></span>, <span class='object_link'><a href="Reservations/RelaySupport.html" title="Reservations::RelaySupport (module)">Reservations::RelaySupport</a></span>, <span class='object_link'><a href="Reservations/Rendering.html" title="Reservations::Rendering (module)">Reservations::Rendering</a></span>, <span class='object_link'><a href="Reservations/Validations.html" title="Reservations::Validations (module)">Reservations::Validations</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/models/reservation.rb</dd>
+  </dl>
+  
+</div>
+
+<div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="AdminReservation.html" title="AdminReservation (class)">AdminReservation</a></span>, <span class='object_link'><a href="OfflineReservation.html" title="OfflineReservation (class)">OfflineReservation</a></span>, <span class='object_link'><a href="Reservations/CalendarPresenter.html" title="Reservations::CalendarPresenter (class)">Reservations::CalendarPresenter</a></span>, <span class='object_link'><a href="Reservations/TimesPresenter.html" title="Reservations::TimesPresenter (class)">Reservations::TimesPresenter</a></span></p>
+</div>
+
+
+
+  <h2>Constant Summary</h2>
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="DateHelper.html" title="DateHelper (module)">DateHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DateHelper.html#USA_DATE_FORMAT-constant" title="DateHelper::USA_DATE_FORMAT (constant)">DateHelper::USA_DATE_FORMAT</a></span></p>
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#blackout-instance_method" title="#blackout (instance method)">#<strong>blackout</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Represents a resevation time that is unavailable, but is not an admin
+reservation Used by timeline view.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reserved_by_admin-instance_method" title="#reserved_by_admin (instance method)">#<strong>reserved_by_admin</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>used for overriding certain restrictions.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#active-class_method" title="active (class method)">.<strong>active</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#for_date-class_method" title="for_date (class method)">.<strong>for_date</strong>(date)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#in_range-class_method" title="in_range (class method)">.<strong>in_range</strong>(start_time, end_time)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#joins_order-class_method" title="joins_order (class method)">.<strong>joins_order</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#not_this_reservation-class_method" title="not_this_reservation (class method)">.<strong>not_this_reservation</strong>(reservation)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#overlapping-class_method" title="overlapping (class method)">.<strong>overlapping</strong>(start_at, end_at)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#relay_in_progress-class_method" title="relay_in_progress (class method)">.<strong>relay_in_progress</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#today-class_method" title="today (class method)">.<strong>today</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#upcoming-class_method" title="upcoming (class method)">.<strong>upcoming</strong>(t = Time.current)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#upcoming_offline-class_method" title="upcoming_offline (class method)">.<strong>upcoming_offline</strong>(start_at_limit)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#admin%3F-instance_method" title="#admin? (instance method)">#<strong>admin?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#admin_editable%3F-instance_method" title="#admin_editable? (instance method)">#<strong>admin_editable?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#admin_removable%3F-instance_method" title="#admin_removable? (instance method)">#<strong>admin_removable?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#assign_actuals_off_reserve-instance_method" title="#assign_actuals_off_reserve (instance method)">#<strong>assign_actuals_off_reserve</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#auto_save_order_detail-instance_method" title="#auto_save_order_detail (instance method)">#<strong>auto_save_order_detail</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>AR Hooks.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#before_lock_window%3F-instance_method" title="#before_lock_window? (instance method)">#<strong>before_lock_window?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#blackout%3F-instance_method" title="#blackout? (instance method)">#<strong>blackout?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#can_cancel%3F-instance_method" title="#can_cancel? (instance method)">#<strong>can_cancel?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>can the CUSTOMER cancel the order.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#can_customer_edit%3F-instance_method" title="#can_customer_edit? (instance method)">#<strong>can_customer_edit?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#can_edit_actuals%3F-instance_method" title="#can_edit_actuals? (instance method)">#<strong>can_edit_actuals?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>TODO: does this need to be more robust?.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#can_start_early%3F-instance_method" title="#can_start_early? (instance method)">#<strong>can_start_early?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#canceled%3F-instance_method" title="#canceled? (instance method)">#<strong>canceled?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#end_at_required%3F-instance_method" title="#end_at_required? (instance method)">#<strong>end_at_required?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Instance Methods.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#end_reservation!-instance_method" title="#end_reservation! (instance method)">#<strong>end_reservation!</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#extendable%3F-instance_method" title="#extendable? (instance method)">#<strong>extendable?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#grace_period_duration-instance_method" title="#grace_period_duration (instance method)">#<strong>grace_period_duration</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_actuals%3F-instance_method" title="#has_actuals? (instance method)">#<strong>has_actuals?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#in_grace_period%3F-instance_method" title="#in_grace_period? (instance method)">#<strong>in_grace_period?</strong>(at = Time.current)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#inside_lock_window%3F-instance_method" title="#inside_lock_window? (instance method)">#<strong>inside_lock_window?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#locked%3F-instance_method" title="#locked? (instance method)">#<strong>locked?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#offline%3F-instance_method" title="#offline? (instance method)">#<strong>offline?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ongoing%3F-instance_method" title="#ongoing? (instance method)">#<strong>ongoing?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#order_completable%3F-instance_method" title="#order_completable? (instance method)">#<strong>order_completable?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Is there enough information to move an associated order to
+complete/problem?.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#outside_lock_window%3F-instance_method" title="#outside_lock_window? (instance method)">#<strong>outside_lock_window?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#problem_description_key-instance_method" title="#problem_description_key (instance method)">#<strong>problem_description_key</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#quantity-instance_method" title="#quantity (instance method)">#<strong>quantity</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Used in instrument utilization reports.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#requires_but_missing_actuals%3F-instance_method" title="#requires_but_missing_actuals? (instance method)">#<strong>requires_but_missing_actuals?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reservation_changed%3F-instance_method" title="#reservation_changed? (instance method)">#<strong>reservation_changed?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reserve_end_at_editable%3F-instance_method" title="#reserve_end_at_editable? (instance method)">#<strong>reserve_end_at_editable?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reserve_start_at_editable%3F-instance_method" title="#reserve_start_at_editable? (instance method)">#<strong>reserve_start_at_editable?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#round_reservation_times-instance_method" title="#round_reservation_times (instance method)">#<strong>round_reservation_times</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#save_as_user-instance_method" title="#save_as_user (instance method)">#<strong>save_as_user</strong>(user)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#save_as_user!-instance_method" title="#save_as_user! (instance method)">#<strong>save_as_user!</strong>(user)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start_reservation!-instance_method" title="#start_reservation! (instance method)">#<strong>start_reservation!</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#started%3F-instance_method" title="#started? (instance method)">#<strong>started?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#valid_before_purchase%3F-instance_method" title="#valid_before_purchase? (instance method)">#<strong>valid_before_purchase?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Reservations/MovingUp.html" title="Reservations::MovingUp (module)">Reservations::MovingUp</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Reservations/MovingUp.html#earliest_possible-instance_method" title="Reservations::MovingUp#earliest_possible (method)">#earliest_possible</a></span>, <span class='object_link'><a href="Reservations/MovingUp.html#move_to_earliest-instance_method" title="Reservations::MovingUp#move_to_earliest (method)">#move_to_earliest</a></span>, <span class='object_link'><a href="Reservations/MovingUp.html#startable_now%3F-instance_method" title="Reservations::MovingUp#startable_now? (method)">#startable_now?</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Reservations/RelaySupport.html" title="Reservations::RelaySupport (module)">Reservations::RelaySupport</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Reservations/RelaySupport.html#can_kill_power%3F-instance_method" title="Reservations::RelaySupport#can_kill_power? (method)">#can_kill_power?</a></span>, <span class='object_link'><a href="Reservations/RelaySupport.html#can_switch_instrument%3F-instance_method" title="Reservations::RelaySupport#can_switch_instrument? (method)">#can_switch_instrument?</a></span>, <span class='object_link'><a href="Reservations/RelaySupport.html#can_switch_instrument_off%3F-instance_method" title="Reservations::RelaySupport#can_switch_instrument_off? (method)">#can_switch_instrument_off?</a></span>, <span class='object_link'><a href="Reservations/RelaySupport.html#can_switch_instrument_on%3F-instance_method" title="Reservations::RelaySupport#can_switch_instrument_on? (method)">#can_switch_instrument_on?</a></span>, <span class='object_link'><a href="Reservations/RelaySupport.html#other_reservation_using_relay%3F-instance_method" title="Reservations::RelaySupport#other_reservation_using_relay? (method)">#other_reservation_using_relay?</a></span>, <span class='object_link'><a href="Reservations/RelaySupport.html#other_reservations_using_relay-instance_method" title="Reservations::RelaySupport#other_reservations_using_relay (method)">#other_reservations_using_relay</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Reservations/Rendering.html" title="Reservations::Rendering (module)">Reservations::Rendering</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Reservations/Rendering.html#calendar_presenter-instance_method" title="Reservations::Rendering#calendar_presenter (method)">#calendar_presenter</a></span>, <span class='object_link'><a href="Reservations/Rendering.html#display_end_at-instance_method" title="Reservations::Rendering#display_end_at (method)">#display_end_at</a></span>, <span class='object_link'><a href="Reservations/Rendering.html#display_start_at-instance_method" title="Reservations::Rendering#display_start_at (method)">#display_start_at</a></span>, <span class='object_link'><a href="Reservations/Rendering.html#time_presenter-instance_method" title="Reservations::Rendering#time_presenter (method)">#time_presenter</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Reservations/Validations.html" title="Reservations::Validations (module)">Reservations::Validations</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Reservations/Validations.html#conflicting_admin_reservation-instance_method" title="Reservations::Validations#conflicting_admin_reservation (method)">#conflicting_admin_reservation</a></span>, <span class='object_link'><a href="Reservations/Validations.html#conflicting_admin_reservation%3F-instance_method" title="Reservations::Validations#conflicting_admin_reservation? (method)">#conflicting_admin_reservation?</a></span>, <span class='object_link'><a href="Reservations/Validations.html#conflicting_user_reservation-instance_method" title="Reservations::Validations#conflicting_user_reservation (method)">#conflicting_user_reservation</a></span>, <span class='object_link'><a href="Reservations/Validations.html#default_reservation_window-instance_method" title="Reservations::Validations#default_reservation_window (method)">#default_reservation_window</a></span>, <span class='object_link'><a href="Reservations/Validations.html#does_not_conflict_with_admin_reservation-instance_method" title="Reservations::Validations#does_not_conflict_with_admin_reservation (method)">#does_not_conflict_with_admin_reservation</a></span>, <span class='object_link'><a href="Reservations/Validations.html#does_not_conflict_with_admin_reservation%3F-instance_method" title="Reservations::Validations#does_not_conflict_with_admin_reservation? (method)">#does_not_conflict_with_admin_reservation?</a></span>, <span class='object_link'><a href="Reservations/Validations.html#does_not_conflict_with_other_user_reservation-instance_method" title="Reservations::Validations#does_not_conflict_with_other_user_reservation (method)">#does_not_conflict_with_other_user_reservation</a></span>, <span class='object_link'><a href="Reservations/Validations.html#does_not_conflict_with_other_user_reservation%3F-instance_method" title="Reservations::Validations#does_not_conflict_with_other_user_reservation? (method)">#does_not_conflict_with_other_user_reservation?</a></span>, <span class='object_link'><a href="Reservations/Validations.html#duration_is_interval-instance_method" title="Reservations::Validations#duration_is_interval (method)">#duration_is_interval</a></span>, <span class='object_link'><a href="Reservations/Validations.html#in_the_future-instance_method" title="Reservations::Validations#in_the_future (method)">#in_the_future</a></span>, <span class='object_link'><a href="Reservations/Validations.html#in_the_future%3F-instance_method" title="Reservations::Validations#in_the_future? (method)">#in_the_future?</a></span>, <span class='object_link'><a href="Reservations/Validations.html#in_window-instance_method" title="Reservations::Validations#in_window (method)">#in_window</a></span>, <span class='object_link'><a href="Reservations/Validations.html#in_window%3F-instance_method" title="Reservations::Validations#in_window? (method)">#in_window?</a></span>, <span class='object_link'><a href="Reservations/Validations.html#instrument_is_available_to_reserve-instance_method" title="Reservations::Validations#instrument_is_available_to_reserve (method)">#instrument_is_available_to_reserve</a></span>, <span class='object_link'><a href="Reservations/Validations.html#instrument_is_available_to_reserve%3F-instance_method" title="Reservations::Validations#instrument_is_available_to_reserve? (method)">#instrument_is_available_to_reserve?</a></span>, <span class='object_link'><a href="Reservations/Validations.html#longest_reservation_window-instance_method" title="Reservations::Validations#longest_reservation_window (method)">#longest_reservation_window</a></span>, <span class='object_link'><a href="Reservations/Validations.html#requires_cutoff_validation%3F-instance_method" title="Reservations::Validations#requires_cutoff_validation? (method)">#requires_cutoff_validation?</a></span>, <span class='object_link'><a href="Reservations/Validations.html#satisfies_maximum_length-instance_method" title="Reservations::Validations#satisfies_maximum_length (method)">#satisfies_maximum_length</a></span>, <span class='object_link'><a href="Reservations/Validations.html#satisfies_maximum_length%3F-instance_method" title="Reservations::Validations#satisfies_maximum_length? (method)">#satisfies_maximum_length?</a></span>, <span class='object_link'><a href="Reservations/Validations.html#satisfies_minimum_length-instance_method" title="Reservations::Validations#satisfies_minimum_length (method)">#satisfies_minimum_length</a></span>, <span class='object_link'><a href="Reservations/Validations.html#satisfies_minimum_length%3F-instance_method" title="Reservations::Validations#satisfies_minimum_length? (method)">#satisfies_minimum_length?</a></span>, <span class='object_link'><a href="Reservations/Validations.html#starts_before_cutoff-instance_method" title="Reservations::Validations#starts_before_cutoff (method)">#starts_before_cutoff</a></span>, <span class='object_link'><a href="Reservations/Validations.html#starts_before_cutoff%3F-instance_method" title="Reservations::Validations#starts_before_cutoff? (method)">#starts_before_cutoff?</a></span>, <span class='object_link'><a href="Reservations/Validations.html#starts_before_ends-instance_method" title="Reservations::Validations#starts_before_ends (method)">#starts_before_ends</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Reservations/DateSupport.html" title="Reservations::DateSupport (module)">Reservations::DateSupport</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Reservations/DateSupport.html#actual_duration_mins-instance_method" title="Reservations::DateSupport#actual_duration_mins (method)">#actual_duration_mins</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#actual_end_date-instance_method" title="Reservations::DateSupport#actual_end_date (method)">#actual_end_date</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#actual_end_hour-instance_method" title="Reservations::DateSupport#actual_end_hour (method)">#actual_end_hour</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#actual_end_meridian-instance_method" title="Reservations::DateSupport#actual_end_meridian (method)">#actual_end_meridian</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#actual_end_min-instance_method" title="Reservations::DateSupport#actual_end_min (method)">#actual_end_min</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#actual_or_current_duration_mins-instance_method" title="Reservations::DateSupport#actual_or_current_duration_mins (method)">#actual_or_current_duration_mins</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#actual_start_date-instance_method" title="Reservations::DateSupport#actual_start_date (method)">#actual_start_date</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#actual_start_hour-instance_method" title="Reservations::DateSupport#actual_start_hour (method)">#actual_start_hour</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#actual_start_meridian-instance_method" title="Reservations::DateSupport#actual_start_meridian (method)">#actual_start_meridian</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#actual_start_min-instance_method" title="Reservations::DateSupport#actual_start_min (method)">#actual_start_min</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#assign_actuals_from_params-instance_method" title="Reservations::DateSupport#assign_actuals_from_params (method)">#assign_actuals_from_params</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#assign_reserve_from_params-instance_method" title="Reservations::DateSupport#assign_reserve_from_params (method)">#assign_reserve_from_params</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#assign_times_from_params-instance_method" title="Reservations::DateSupport#assign_times_from_params (method)">#assign_times_from_params</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#date_field-instance_method" title="Reservations::DateSupport#date_field (method)">#date_field</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#duration_mins-instance_method" title="Reservations::DateSupport#duration_mins (method)">#duration_mins</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#hour_field-instance_method" title="Reservations::DateSupport#hour_field (method)">#hour_field</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#human_hour-instance_method" title="Reservations::DateSupport#human_hour (method)">#human_hour</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#instance_variable_fetch-instance_method" title="Reservations::DateSupport#instance_variable_fetch (method)">#instance_variable_fetch</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#meridian_field-instance_method" title="Reservations::DateSupport#meridian_field (method)">#meridian_field</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#min_field-instance_method" title="Reservations::DateSupport#min_field (method)">#min_field</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#reserve_end_date-instance_method" title="Reservations::DateSupport#reserve_end_date (method)">#reserve_end_date</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#reserve_end_hour-instance_method" title="Reservations::DateSupport#reserve_end_hour (method)">#reserve_end_hour</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#reserve_end_meridian-instance_method" title="Reservations::DateSupport#reserve_end_meridian (method)">#reserve_end_meridian</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#reserve_end_min-instance_method" title="Reservations::DateSupport#reserve_end_min (method)">#reserve_end_min</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#reserve_start_date-instance_method" title="Reservations::DateSupport#reserve_start_date (method)">#reserve_start_date</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#reserve_start_hour-instance_method" title="Reservations::DateSupport#reserve_start_hour (method)">#reserve_start_hour</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#reserve_start_meridian-instance_method" title="Reservations::DateSupport#reserve_start_meridian (method)">#reserve_start_meridian</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#reserve_start_min-instance_method" title="Reservations::DateSupport#reserve_start_min (method)">#reserve_start_min</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#set_actual_end_at-instance_method" title="Reservations::DateSupport#set_actual_end_at (method)">#set_actual_end_at</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#set_actual_start_at-instance_method" title="Reservations::DateSupport#set_actual_start_at (method)">#set_actual_start_at</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#set_all_split_times-instance_method" title="Reservations::DateSupport#set_all_split_times (method)">#set_all_split_times</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#set_reserve_end_at-instance_method" title="Reservations::DateSupport#set_reserve_end_at (method)">#set_reserve_end_at</a></span>, <span class='object_link'><a href="Reservations/DateSupport.html#set_reserve_start_at-instance_method" title="Reservations::DateSupport#set_reserve_start_at (method)">#set_reserve_start_at</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="DateHelper.html" title="DateHelper (module)">DateHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DateHelper.html#format_usa_date-instance_method" title="DateHelper#format_usa_date (method)">#format_usa_date</a></span>, <span class='object_link'><a href="DateHelper.html#format_usa_datetime-instance_method" title="DateHelper#format_usa_datetime (method)">#format_usa_datetime</a></span>, <span class='object_link'><a href="DateHelper.html#hour_options-instance_method" title="DateHelper#hour_options (method)">#hour_options</a></span>, <span class='object_link'><a href="DateHelper.html#human_date-instance_method" title="DateHelper#human_date (method)">#human_date</a></span>, <span class='object_link'><a href="DateHelper.html#human_time-instance_method" title="DateHelper#human_time (method)">#human_time</a></span>, <span class='object_link'><a href="DateHelper.html#join_time_select_values-instance_method" title="DateHelper#join_time_select_values (method)">#join_time_select_values</a></span>, <span class='object_link'><a href="DateHelper.html#minute_options-instance_method" title="DateHelper#minute_options (method)">#minute_options</a></span>, <span class='object_link'><a href="DateHelper.html#parse_mmddyyyy_in_current_zone!-instance_method" title="DateHelper#parse_mmddyyyy_in_current_zone! (method)">#parse_mmddyyyy_in_current_zone!</a></span>, <span class='object_link'><a href="DateHelper.html#parse_usa_date-instance_method" title="DateHelper#parse_usa_date (method)">#parse_usa_date</a></span>, <span class='object_link'><a href="DateHelper.html#parse_usa_import_date-instance_method" title="DateHelper#parse_usa_import_date (method)">#parse_usa_import_date</a></span>, <span class='object_link'><a href="DateHelper.html#time_ceil-instance_method" title="DateHelper#time_ceil (method)">#time_ceil</a></span>, <span class='object_link'><a href="DateHelper.html#time_floor-instance_method" title="DateHelper#time_floor (method)">#time_floor</a></span>, <span class='object_link'><a href="DateHelper.html#time_select-instance_method" title="DateHelper#time_select (method)">#time_select</a></span>, <span class='object_link'><a href="DateHelper.html#time_select24-instance_method" title="DateHelper#time_select24 (method)">#time_select24</a></span>, <span class='object_link'><a href="DateHelper.html#time_select_tag-instance_method" title="DateHelper#time_select_tag (method)">#time_select_tag</a></span>, <span class='object_link'><a href="DateHelper.html#usa_formatted_date%3F-instance_method" title="DateHelper#usa_formatted_date? (method)">#usa_formatted_date?</a></span></p>
+
+  
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="blackout=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="blackout-instance_method">
+  
+    #<strong>blackout</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Represents a resevation time that is unavailable, but is not an admin
+reservation Used by timeline view</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26
+27
+28</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 26</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_blackout'>blackout</span>
+  <span class='ivar'>@blackout</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="reserved_by_admin=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="reserved_by_admin-instance_method">
+  
+    #<strong>reserved_by_admin</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>used for overriding certain restrictions</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 29</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reserved_by_admin'>reserved_by_admin</span>
+  <span class='ivar'>@reserved_by_admin</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="active-class_method">
+  
+    .<strong>active</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+54
+55
+56
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 54</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_active'>active</span>
+  <span class='id identifier rubyid_not_canceled'>not_canceled</span>
+    <span class='period'>.</span><span class='id identifier rubyid_user'>user</span>
+    <span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='label'>orders:</span> <span class='lbrace'>{</span> <span class='label'>state:</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>purchased</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rbracket'>]</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+    <span class='period'>.</span><span class='id identifier rubyid_joins_order'>joins_order</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="for_date-class_method">
+  
+    .<strong>for_date</strong>(date)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+88
+89
+90</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 88</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_for_date'>for_date</span><span class='lparen'>(</span><span class='id identifier rubyid_date'>date</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_in_range'>in_range</span><span class='lparen'>(</span><span class='id identifier rubyid_date'>date</span><span class='period'>.</span><span class='id identifier rubyid_beginning_of_day'>beginning_of_day</span><span class='comma'>,</span> <span class='id identifier rubyid_date'>date</span><span class='period'>.</span><span class='id identifier rubyid_end_of_day'>end_of_day</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="in_range-class_method">
+  
+    .<strong>in_range</strong>(start_time, end_time)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 92</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_in_range'>in_range</span><span class='lparen'>(</span><span class='id identifier rubyid_start_time'>start_time</span><span class='comma'>,</span> <span class='id identifier rubyid_end_time'>end_time</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>reserve_end_at &gt;= ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_start_time'>start_time</span><span class='rparen'>)</span>
+    <span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>reserve_start_at &lt; ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_end_time'>end_time</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="joins_order-class_method">
+  
+    .<strong>joins_order</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+65
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 65</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_joins_order'>joins_order</span>
+  <span class='id identifier rubyid_joins'>joins</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LEFT JOIN order_details ON order_details.id = reservations.order_detail_id</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='period'>.</span><span class='id identifier rubyid_joins'>joins</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LEFT JOIN orders ON orders.id = order_details.order_id</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="not_this_reservation-class_method">
+  
+    .<strong>not_this_reservation</strong>(reservation)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+74
+75
+76
+77
+78
+79
+80</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 74</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_not_this_reservation'>not_this_reservation</span><span class='lparen'>(</span><span class='id identifier rubyid_reservation'>reservation</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_reservation'>reservation</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span>
+    <span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>reservations.id &lt;&gt; ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_reservation'>reservation</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_all'>all</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="overlapping-class_method">
+  
+    .<strong>overlapping</strong>(start_at, end_at)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 109</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_overlapping'>overlapping</span><span class='lparen'>(</span><span class='id identifier rubyid_start_at'>start_at</span><span class='comma'>,</span> <span class='id identifier rubyid_end_at'>end_at</span><span class='rparen'>)</span>
+  <span class='comment'># remove millisecond precision from time
+</span>  <span class='id identifier rubyid_tstart_at'>tstart_at</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_zone'>zone</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_start_at'>start_at</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_tend_at'>tend_at</span>   <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_zone'>zone</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_end_at'>end_at</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>((reserve_start_at &lt;= :start AND reserve_end_at &gt;= :end) OR
+        (reserve_start_at &gt;= :start AND reserve_end_at &lt;= :end) OR
+        (reserve_start_at &lt;= :start AND reserve_end_at &gt; :start) OR
+        (reserve_start_at &lt; :end AND reserve_end_at &gt;= :end) OR
+        (reserve_start_at = :start AND reserve_end_at = :end))</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>start:</span> <span class='id identifier rubyid_tstart_at'>tstart_at</span><span class='comma'>,</span> <span class='label'>end:</span> <span class='id identifier rubyid_tend_at'>tend_at</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="relay_in_progress-class_method">
+  
+    .<strong>relay_in_progress</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+122
+123
+124</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 122</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_relay_in_progress'>relay_in_progress</span>
+  <span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>actual_start_at IS NOT NULL AND actual_end_at IS NULL</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="today-class_method">
+  
+    .<strong>today</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+84
+85
+86</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 84</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_today'>today</span>
+  <span class='id identifier rubyid_for_date'>for_date</span><span class='lparen'>(</span><span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_current'>current</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="upcoming-class_method">
+  
+    .<strong>upcoming</strong>(t = Time.current)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 97</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_upcoming'>upcoming</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_current'>current</span><span class='rparen'>)</span>
+  <span class='comment'># If this is a named scope differences emerge between Oracle &amp; MySQL on #reserve_end_at querying.
+</span>  <span class='comment'># Eliminate by letting Rails filter by #reserve_end_at
+</span>  <span class='id identifier rubyid_joins'>joins</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LEFT JOIN order_details ON order_details.id = reservations.order_detail_id</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='period'>.</span><span class='id identifier rubyid_joins'>joins</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LEFT JOIN orders ON orders.id = order_details.order_id</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='period'>.</span><span class='id identifier rubyid_not_canceled'>not_canceled</span>
+    <span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>orders.state</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>purchased</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='lparen'>(</span><span class='label'>reserve_end_at:</span> <span class='symbol'>:asc</span><span class='rparen'>)</span>
+    <span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span>
+    <span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_reservation'>reservation</span><span class='op'>|</span> <span class='id identifier rubyid_reservation'>reservation</span><span class='period'>.</span><span class='id identifier rubyid_reserve_end_at'>reserve_end_at</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_t'>t</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="upcoming_offline-class_method">
+  
+    .<strong>upcoming_offline</strong>(start_at_limit)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 126</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_upcoming_offline'>upcoming_offline</span><span class='lparen'>(</span><span class='id identifier rubyid_start_at_limit'>start_at_limit</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_user'>user</span>
+    <span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='label'>product_id:</span> <span class='const'><span class='object_link'><a href="OfflineReservation.html" title="OfflineReservation (class)">OfflineReservation</a></span></span><span class='period'>.</span><span class='id identifier rubyid_current'>current</span><span class='period'>.</span><span class='id identifier rubyid_pluck'>pluck</span><span class='lparen'>(</span><span class='symbol'>:product_id</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='period'>.</span><span class='id identifier rubyid_not_canceled'>not_canceled</span>
+    <span class='period'>.</span><span class='id identifier rubyid_not_ended'>not_ended</span>
+    <span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="OrderDetail.html" title="OrderDetail (class)">OrderDetail</a></span></span><span class='period'>.</span><span class='id identifier rubyid_purchased'>purchased</span><span class='rparen'>)</span>
+    <span class='period'>.</span><span class='id identifier rubyid_joins'>joins</span><span class='lparen'>(</span><span class='symbol'>:order_detail</span><span class='rparen'>)</span>
+    <span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='label'>order_details:</span> <span class='lbrace'>{</span> <span class='label'>state:</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>new</span><span class='words_sep'> </span><span class='tstring_content'>inprocess</span><span class='words_sep'>)</span><span class='comma'>,</span> <span class='label'>problem:</span> <span class='kw'>false</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+    <span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>reserve_start_at &lt;= ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_start_at_limit'>start_at_limit</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="admin?-instance_method">
+  
+    #<strong>admin?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+193
+194
+195</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 193</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_admin?'>admin?</span>
+  <span class='id identifier rubyid_order'>order</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_blackout?'>blackout?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="admin_editable?-instance_method">
+  
+    #<strong>admin_editable?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+259
+260
+261</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 259</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_admin_editable?'>admin_editable?</span>
+  <span class='id identifier rubyid_new_record?'>new_record?</span> <span class='op'>||</span> <span class='op'>!</span><span class='id identifier rubyid_canceled?'>canceled?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="admin_removable?-instance_method">
+  
+    #<strong>admin_removable?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+197
+198
+199</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 197</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_admin_removable?'>admin_removable?</span>
+  <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="assign_actuals_off_reserve-instance_method">
+  
+    #<strong>assign_actuals_off_reserve</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+170
+171
+172
+173</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 170</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_assign_actuals_off_reserve'>assign_actuals_off_reserve</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_actual_start_at'>actual_start_at</span> <span class='op'>||=</span> <span class='id identifier rubyid_reserve_start_at'>reserve_start_at</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_actual_end_at'>actual_end_at</span>   <span class='op'>||=</span> <span class='id identifier rubyid_reserve_end_at'>reserve_end_at</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="auto_save_order_detail-instance_method">
+  
+    #<strong>auto_save_order_detail</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>AR Hooks</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 47</span>
+
+<span class='id identifier rubyid_after_update'>after_update</span> <span class='symbol'>:auto_save_order_detail</span><span class='comma'>,</span> <span class='label'>if:</span> <span class='symbol'>:order_detail</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="before_lock_window?-instance_method">
+  
+    #<strong>before_lock_window?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+247
+248
+249</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 247</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_before_lock_window?'>before_lock_window?</span>
+  <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_current'>current</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_reserve_start_at'>reserve_start_at</span> <span class='op'>-</span> <span class='id identifier rubyid_product_lock_window'>product_lock_window</span><span class='period'>.</span><span class='id identifier rubyid_hours'>hours</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="blackout?-instance_method">
+  
+    #<strong>blackout?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+201
+202
+203</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 201</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_blackout?'>blackout?</span>
+  <span class='id identifier rubyid_blackout'>blackout</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="can_cancel?-instance_method">
+  
+    #<strong>can_cancel?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>can the CUSTOMER cancel the order</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+220
+221
+222</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 220</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_can_cancel?'>can_cancel?</span>
+  <span class='op'>!</span><span class='id identifier rubyid_canceled?'>canceled?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_reserve_start_at'>reserve_start_at</span> <span class='op'>&gt;</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_current'>current</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_actual_start_at'>actual_start_at</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_actual_end_at'>actual_end_at</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="can_customer_edit?-instance_method">
+  
+    #<strong>can_customer_edit?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+224
+225
+226</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 224</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_can_customer_edit?'>can_customer_edit?</span>
+  <span class='op'>!</span><span class='id identifier rubyid_canceled?'>canceled?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_complete?'>complete?</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_reserve_start_at_editable?'>reserve_start_at_editable?</span> <span class='op'>||</span> <span class='id identifier rubyid_reserve_end_at_editable?'>reserve_end_at_editable?</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="can_edit_actuals?-instance_method">
+  
+    #<strong>can_edit_actuals?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>TODO: does this need to be more robust?</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+264
+265
+266
+267</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 264</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_can_edit_actuals?'>can_edit_actuals?</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id identifier rubyid_order_detail'>order_detail</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+  <span class='id identifier rubyid_complete?'>complete?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="can_start_early?-instance_method">
+  
+    #<strong>can_start_early?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 205</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_can_start_early?'>can_start_early?</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_in_grace_period?'>in_grace_period?</span>
+  <span class='comment'># no other reservation ongoing; no res between now and reserve_start;
+</span>
+  <span class='const'><span class='object_link'><a href="" title="Reservation (class)">Reservation</a></span></span>
+    <span class='period'>.</span><span class='id identifier rubyid_not_started'>not_started</span>
+    <span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>reserve_start_at &gt; :now</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>now:</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_current'>current</span><span class='rparen'>)</span>
+    <span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>reserve_start_at &lt; :reserve_start_at</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>reserve_start_at:</span> <span class='id identifier rubyid_reserve_start_at'>reserve_start_at</span><span class='rparen'>)</span>
+    <span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='label'>product_id:</span> <span class='id identifier rubyid_product_id'>product_id</span><span class='rparen'>)</span>
+    <span class='period'>.</span><span class='id identifier rubyid_joins'>joins</span><span class='lparen'>(</span><span class='symbol'>:order_detail</span><span class='rparen'>)</span>
+    <span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>order_detail_id IS NULL OR order_details.state IN (&#39;new&#39;, &#39;inprocess&#39;)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='period'>.</span><span class='id identifier rubyid_none?'>none?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="canceled?-instance_method">
+  
+    #<strong>canceled?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_canceled?'>canceled?</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_order_detail'>order_detail</span>
+  <span class='id identifier rubyid_order_detail'>order_detail</span><span class='period'>.</span><span class='id identifier rubyid_canceled_at?'>canceled_at?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="end_at_required?-instance_method">
+  
+    #<strong>end_at_required?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Instance Methods</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+142
+143
+144</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 142</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_end_at_required?'>end_at_required?</span>
+  <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="end_reservation!-instance_method">
+  
+    #<strong>end_reservation!</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+157
+158
+159
+160
+161</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 157</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_end_reservation!'>end_reservation!</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_actual_end_at'>actual_end_at</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_current'>current</span>
+  <span class='id identifier rubyid_save!'>save!</span>
+  <span class='id identifier rubyid_order_detail'>order_detail</span><span class='period'>.</span><span class='id identifier rubyid_complete!'>complete!</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="extendable?-instance_method">
+  
+    #<strong>extendable?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 236</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_extendable?'>extendable?</span>
+  <span class='id identifier rubyid_next_available'>next_available</span> <span class='op'>=</span> <span class='id identifier rubyid_product'>product</span><span class='period'>.</span><span class='id identifier rubyid_next_available_reservation'>next_available_reservation</span><span class='lparen'>(</span><span class='label'>after:</span> <span class='id identifier rubyid_reserve_end_at'>reserve_end_at</span><span class='comma'>,</span> <span class='label'>options:</span> <span class='lbrace'>{</span> <span class='label'>ignore_cutoff:</span> <span class='kw'>true</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_next_available'>next_available</span>
+
+  <span class='id identifier rubyid_current_end_at'>current_end_at</span> <span class='op'>=</span> <span class='id identifier rubyid_reserve_end_at'>reserve_end_at</span><span class='period'>.</span><span class='id identifier rubyid_change'>change</span><span class='lparen'>(</span><span class='label'>sec:</span> <span class='int'>0</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_next_start_at'>next_start_at</span> <span class='op'>=</span> <span class='id identifier rubyid_next_available'>next_available</span><span class='period'>.</span><span class='id identifier rubyid_reserve_start_at'>reserve_start_at</span><span class='period'>.</span><span class='id identifier rubyid_change'>change</span><span class='lparen'>(</span><span class='label'>sec:</span> <span class='int'>0</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_current_end_at'>current_end_at</span> <span class='op'>==</span> <span class='id identifier rubyid_next_start_at'>next_start_at</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="grace_period_duration-instance_method">
+  
+    #<strong>grace_period_duration</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+334
+335
+336</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 334</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_grace_period_duration'>grace_period_duration</span>
+  <span class='const'><span class='object_link'><a href="SettingsHelper.html" title="SettingsHelper (module)">SettingsHelper</a></span></span><span class='period'>.</span><span class='id identifier rubyid_setting'><span class='object_link'><a href="SettingsHelper.html#setting-class_method" title="SettingsHelper.setting (method)">setting</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>reservations.grace_period</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>||</span> <span class='int'>5</span><span class='period'>.</span><span class='id identifier rubyid_minutes'>minutes</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="has_actuals?-instance_method">
+  
+    #<strong>has_actuals?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+281
+282
+283</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 281</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_has_actuals?'>has_actuals?</span>
+  <span class='id identifier rubyid_actual_start_at'>actual_start_at</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_actual_end_at'>actual_end_at</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="in_grace_period?-instance_method">
+  
+    #<strong>in_grace_period?</strong>(at = Time.current)  &#x21d2; <tt>Boolean</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+324
+325
+326
+327
+328
+329
+330
+331
+332</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 324</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_in_grace_period?'>in_grace_period?</span><span class='lparen'>(</span><span class='id identifier rubyid_at'>at</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_current'>current</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_at'>at</span> <span class='op'>=</span> <span class='id identifier rubyid_at'>at</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='id identifier rubyid_grace_period_end'>grace_period_end</span> <span class='op'>=</span> <span class='id identifier rubyid_reserve_start_at'>reserve_start_at</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='id identifier rubyid_grace_period_begin'>grace_period_begin</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_reserve_start_at'>reserve_start_at</span> <span class='op'>-</span> <span class='id identifier rubyid_grace_period_duration'>grace_period_duration</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+
+  <span class='comment'># Compare int values, not timestamps. If you do the
+</span>  <span class='comment'># latter fractions of a second can cause false positives.
+</span>  <span class='id identifier rubyid_at'>at</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_grace_period_begin'>grace_period_begin</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_at'>at</span> <span class='op'>&lt;=</span> <span class='id identifier rubyid_grace_period_end'>grace_period_end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="inside_lock_window?-instance_method">
+  
+    #<strong>inside_lock_window?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+255
+256
+257</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 255</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_inside_lock_window?'>inside_lock_window?</span>
+  <span class='op'>!</span><span class='id identifier rubyid_before_lock_window?'>before_lock_window?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="locked?-instance_method">
+  
+    #<strong>locked?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+301
+302
+303</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 301</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_locked?'>locked?</span>
+  <span class='op'>!</span><span class='lparen'>(</span><span class='id identifier rubyid_admin_editable?'>admin_editable?</span> <span class='op'>||</span> <span class='id identifier rubyid_can_edit_actuals?'>can_edit_actuals?</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="offline?-instance_method">
+  
+    #<strong>offline?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+189
+190
+191</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 189</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_offline?'>offline?</span>
+  <span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>OfflineReservation</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ongoing?-instance_method">
+  
+    #<strong>ongoing?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+289
+290
+291</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 289</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ongoing?'>ongoing?</span>
+  <span class='op'>!</span><span class='id identifier rubyid_complete?'>complete?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_started?'>started?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_actual_end_at'>actual_end_at</span><span class='period'>.</span><span class='id identifier rubyid_blank?'>blank?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="order_completable?-instance_method">
+  
+    #<strong>order_completable?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Is there enough information to move an associated order to
+complete/problem?</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+147
+148
+149</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 147</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_order_completable?'>order_completable?</span>
+  <span class='id identifier rubyid_actual_end_at'>actual_end_at</span> <span class='op'>||</span> <span class='id identifier rubyid_reserve_end_at'>reserve_end_at</span> <span class='op'>&lt;</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_current'>current</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="outside_lock_window?-instance_method">
+  
+    #<strong>outside_lock_window?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+251
+252
+253</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 251</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_outside_lock_window?'>outside_lock_window?</span>
+  <span class='id identifier rubyid_before_lock_window?'>before_lock_window?</span> <span class='op'>||</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_current'>current</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_reserve_start_at'>reserve_start_at</span> <span class='op'>||</span> <span class='id identifier rubyid_in_grace_period?'>in_grace_period?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="problem_description_key-instance_method">
+  
+    #<strong>problem_description_key</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+297
+298
+299</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 297</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_problem_description_key'>problem_description_key</span>
+  <span class='symbol'>:missing_actuals</span> <span class='kw'>if</span> <span class='id identifier rubyid_requires_but_missing_actuals?'>requires_but_missing_actuals?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="quantity-instance_method">
+  
+    #<strong>quantity</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Used in instrument utilization reports</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+306
+307
+308</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 306</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_quantity'>quantity</span>
+  <span class='int'>1</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="requires_but_missing_actuals?-instance_method">
+  
+    #<strong>requires_but_missing_actuals?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+293
+294
+295</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 293</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_requires_but_missing_actuals?'>requires_but_missing_actuals?</span>
+  <span class='op'>!</span><span class='op'>!</span><span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_canceled?'>canceled?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_product'>product</span><span class='period'>.</span><span class='id identifier rubyid_control_mechanism'>control_mechanism</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="Relay.html" title="Relay (class)">Relay</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Relay.html#CONTROL_MECHANISMS-constant" title="Relay::CONTROL_MECHANISMS (constant)">CONTROL_MECHANISMS</a></span></span><span class='lbracket'>[</span><span class='symbol'>:manual</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_has_actuals?'>has_actuals?</span><span class='rparen'>)</span> <span class='comment'># TODO: refactor?
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reservation_changed?-instance_method">
+  
+    #<strong>reservation_changed?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+269
+270
+271</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 269</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reservation_changed?'>reservation_changed?</span>
+  <span class='id identifier rubyid_reserve_start_at_changed?'>reserve_start_at_changed?</span> <span class='op'>||</span> <span class='id identifier rubyid_reserve_end_at_changed?'>reserve_end_at_changed?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reserve_end_at_editable?-instance_method">
+  
+    #<strong>reserve_end_at_editable?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+232
+233
+234</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 232</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reserve_end_at_editable?'>reserve_end_at_editable?</span>
+  <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_current'>current</span> <span class='op'>&lt;=</span> <span class='id identifier rubyid_reserve_end_at'>reserve_end_at</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_extendable?'>extendable?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_actual_end_at'>actual_end_at</span><span class='period'>.</span><span class='id identifier rubyid_blank?'>blank?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reserve_start_at_editable?-instance_method">
+  
+    #<strong>reserve_start_at_editable?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+228
+229
+230</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 228</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reserve_start_at_editable?'>reserve_start_at_editable?</span>
+  <span class='id identifier rubyid_before_lock_window?'>before_lock_window?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_started?'>started?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="round_reservation_times-instance_method">
+  
+    #<strong>round_reservation_times</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+163
+164
+165
+166
+167
+168</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 163</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_round_reservation_times'>round_reservation_times</span>
+  <span class='id identifier rubyid_interval'>interval</span> <span class='op'>=</span> <span class='id identifier rubyid_product'>product</span><span class='period'>.</span><span class='id identifier rubyid_reserve_interval'>reserve_interval</span><span class='period'>.</span><span class='id identifier rubyid_minutes'>minutes</span> <span class='comment'># Round to the nearest reservation interval
+</span>  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_reserve_start_at'>reserve_start_at</span> <span class='op'>=</span> <span class='id identifier rubyid_time_ceil'>time_ceil</span><span class='lparen'>(</span><span class='id identifier rubyid_reserve_start_at'>reserve_start_at</span><span class='comma'>,</span> <span class='id identifier rubyid_interval'>interval</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_reserve_start_at'>reserve_start_at</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_reserve_end_at'>reserve_end_at</span>   <span class='op'>=</span> <span class='id identifier rubyid_time_ceil'>time_ceil</span><span class='lparen'>(</span><span class='id identifier rubyid_reserve_end_at'>reserve_end_at</span><span class='comma'>,</span> <span class='id identifier rubyid_interval'>interval</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_reserve_end_at'>reserve_end_at</span>
+  <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="save_as_user-instance_method">
+  
+    #<strong>save_as_user</strong>(user)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+175
+176
+177
+178
+179
+180
+181
+182
+183</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 175</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_save_as_user'>save_as_user</span><span class='lparen'>(</span><span class='id identifier rubyid_user'>user</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_operator_of?'>operator_of?</span><span class='lparen'>(</span><span class='id identifier rubyid_product'>product</span><span class='period'>.</span><span class='id identifier rubyid_facility'>facility</span><span class='rparen'>)</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_reserved_by_admin'>reserved_by_admin</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='id identifier rubyid_save'>save</span>
+  <span class='kw'>else</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_reserved_by_admin'>reserved_by_admin</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='id identifier rubyid_save'>save</span><span class='lparen'>(</span><span class='label'>context:</span> <span class='symbol'>:user_purchase</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="save_as_user!-instance_method">
+  
+    #<strong>save_as_user!</strong>(user)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::RecordInvalid</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+185
+186
+187</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 185</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_save_as_user!'>save_as_user!</span><span class='lparen'>(</span><span class='id identifier rubyid_user'>user</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ActiveRecord.html" title="ActiveRecord (module)">ActiveRecord</a></span></span><span class='op'>::</span><span class='const'>RecordInvalid</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_save_as_user'>save_as_user</span><span class='lparen'>(</span><span class='id identifier rubyid_user'>user</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="start_reservation!-instance_method">
+  
+    #<strong>start_reservation!</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+151
+152
+153
+154
+155</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 151</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_start_reservation!'>start_reservation!</span>
+  <span class='id identifier rubyid_product'>product</span><span class='period'>.</span><span class='id identifier rubyid_schedule'>schedule</span><span class='period'>.</span><span class='id identifier rubyid_products'>products</span><span class='period'>.</span><span class='id identifier rubyid_flat_map'>flat_map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:started_reservations</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:complete!</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_actual_start_at'>actual_start_at</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_current'>current</span>
+  <span class='id identifier rubyid_save!'>save!</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="started?-instance_method">
+  
+    #<strong>started?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+285
+286
+287</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 285</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_started?'>started?</span>
+  <span class='id identifier rubyid_actual_start_at'>actual_start_at</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="valid_before_purchase?-instance_method">
+  
+    #<strong>valid_before_purchase?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+273
+274
+275
+276
+277
+278
+279</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/reservation.rb', line 273</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_valid_before_purchase?'>valid_before_purchase?</span>
+  <span class='id identifier rubyid_satisfies_minimum_length?'>satisfies_minimum_length?</span> <span class='op'>&amp;&amp;</span>
+    <span class='id identifier rubyid_satisfies_maximum_length?'>satisfies_maximum_length?</span> <span class='op'>&amp;&amp;</span>
+    <span class='id identifier rubyid_instrument_is_available_to_reserve?'>instrument_is_available_to_reserve?</span> <span class='op'>&amp;&amp;</span>
+    <span class='id identifier rubyid_does_not_conflict_with_other_user_reservation?'>does_not_conflict_with_other_user_reservation?</span> <span class='op'>&amp;&amp;</span>
+    <span class='lparen'>(</span><span class='id identifier rubyid_reserved_by_admin'>reserved_by_admin</span> <span class='op'>||</span> <span class='id identifier rubyid_does_not_conflict_with_admin_reservation?'>does_not_conflict_with_admin_reservation?</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr 13 09:51:58 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.12 (ruby-2.4.1).
+</div>
+
+    </div>
+  </body>
+</html>

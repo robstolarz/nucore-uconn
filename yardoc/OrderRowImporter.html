@@ -1,0 +1,2283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: OrderRowImporter
+  
+    &mdash; Documentation by YARD 0.9.12
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "OrderRowImporter";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (O)</a> &raquo;
+    
+    
+    <span class="title">OrderRowImporter</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: OrderRowImporter
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">OrderRowImporter</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="DateHelper.html" title="DateHelper (module)">DateHelper</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/support/order_row_importer.rb</dd>
+  </dl>
+  
+</div>
+
+
+  <h2>Constant Summary</h2>
+  <dl class="constants">
+    
+      <dt id="HEADERS-constant" class="">HEADERS =
+        
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='label'>user:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Netid / Email</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='label'>chart_string:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Chart String</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='label'>product_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Product Name</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='label'>quantity:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Quantity</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='label'>order_date:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Order Date</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='label'>fulfillment_date:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Fulfillment Date</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='label'>notes:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Note</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='label'>errors:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Errors</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+    
+      <dt id="REQUIRED_HEADERS-constant" class="">REQUIRED_HEADERS =
+        
+      </dt>
+      <dd><pre class="code"><span class='lbracket'>[</span>
+  <span class='symbol'>:user</span><span class='comma'>,</span>
+  <span class='symbol'>:chart_string</span><span class='comma'>,</span>
+  <span class='symbol'>:product_name</span><span class='comma'>,</span>
+  <span class='symbol'>:quantity</span><span class='comma'>,</span>
+  <span class='symbol'>:order_date</span><span class='comma'>,</span>
+  <span class='symbol'>:fulfillment_date</span><span class='comma'>,</span>
+<span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="#HEADERS-constant" title="OrderRowImporter::HEADERS (constant)">HEADERS</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='rbrace'>}</span></pre></dd>
+    
+  </dl>
+
+
+
+  
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="DateHelper.html" title="DateHelper (module)">DateHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DateHelper.html#USA_DATE_FORMAT-constant" title="DateHelper::USA_DATE_FORMAT (constant)">DateHelper::USA_DATE_FORMAT</a></span></p>
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#headers_to_s-class_method" title="headers_to_s (class method)">.<strong>headers_to_s</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#order_key_for_row-class_method" title="order_key_for_row (class method)">.<strong>order_key_for_row</strong>(row)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#account-instance_method" title="#account (instance method)">#<strong>account</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#account_number-instance_method" title="#account_number (instance method)">#<strong>account_number</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_error-instance_method" title="#add_error (instance method)">#<strong>add_error</strong>(message)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#add_product_to_order-instance_method" title="#add_product_to_order (instance method)">#<strong>add_product_to_order</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#backdate_order_details_to_complete!-instance_method" title="#backdate_order_details_to_complete! (instance method)">#<strong>backdate_order_details_to_complete!</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#chart_string_field-instance_method" title="#chart_string_field (instance method)">#<strong>chart_string_field</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#errors-instance_method" title="#errors (instance method)">#<strong>errors</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#errors%3F-instance_method" title="#errors? (instance method)">#<strong>errors?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#fulfillment_date-instance_method" title="#fulfillment_date (instance method)">#<strong>fulfillment_date</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#fulfillment_date_field-instance_method" title="#fulfillment_date_field (instance method)">#<strong>fulfillment_date_field</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#has_valid_fields%3F-instance_method" title="#has_valid_fields? (instance method)">#<strong>has_valid_fields?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#has_valid_headers%3F-instance_method" title="#has_valid_headers? (instance method)">#<strong>has_valid_headers?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#import-instance_method" title="#import (instance method)">#<strong>import</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(row, order_import)  &#x21d2; OrderRowImporter </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of OrderRowImporter.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#note-instance_method" title="#note (instance method)">#<strong>note</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#order-instance_method" title="#order (instance method)">#<strong>order</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#order_date-instance_method" title="#order_date (instance method)">#<strong>order_date</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#order_date_field-instance_method" title="#order_date_field (instance method)">#<strong>order_date_field</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#order_key-instance_method" title="#order_key (instance method)">#<strong>order_key</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#product-instance_method" title="#product (instance method)">#<strong>product</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#product_field-instance_method" title="#product_field (instance method)">#<strong>product_field</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#purchase_order!-instance_method" title="#purchase_order! (instance method)">#<strong>purchase_order!</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#quantity-instance_method" title="#quantity (instance method)">#<strong>quantity</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#row_with_errors-instance_method" title="#row_with_errors (instance method)">#<strong>row_with_errors</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#user-instance_method" title="#user (instance method)">#<strong>user</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#user_field-instance_method" title="#user_field (instance method)">#<strong>user_field</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#validate_account-instance_method" title="#validate_account (instance method)">#<strong>validate_account</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#validate_fields-instance_method" title="#validate_fields (instance method)">#<strong>validate_fields</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#validate_fulfillment_date-instance_method" title="#validate_fulfillment_date (instance method)">#<strong>validate_fulfillment_date</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#validate_headers-instance_method" title="#validate_headers (instance method)">#<strong>validate_headers</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#validate_order_date-instance_method" title="#validate_order_date (instance method)">#<strong>validate_order_date</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#validate_product-instance_method" title="#validate_product (instance method)">#<strong>validate_product</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#validate_product_is_importable-instance_method" title="#validate_product_is_importable (instance method)">#<strong>validate_product_is_importable</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#validate_user-instance_method" title="#validate_user (instance method)">#<strong>validate_user</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="DateHelper.html" title="DateHelper (module)">DateHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DateHelper.html#format_usa_date-instance_method" title="DateHelper#format_usa_date (method)">#format_usa_date</a></span>, <span class='object_link'><a href="DateHelper.html#format_usa_datetime-instance_method" title="DateHelper#format_usa_datetime (method)">#format_usa_datetime</a></span>, <span class='object_link'><a href="DateHelper.html#hour_options-instance_method" title="DateHelper#hour_options (method)">#hour_options</a></span>, <span class='object_link'><a href="DateHelper.html#human_date-instance_method" title="DateHelper#human_date (method)">#human_date</a></span>, <span class='object_link'><a href="DateHelper.html#human_time-instance_method" title="DateHelper#human_time (method)">#human_time</a></span>, <span class='object_link'><a href="DateHelper.html#join_time_select_values-instance_method" title="DateHelper#join_time_select_values (method)">#join_time_select_values</a></span>, <span class='object_link'><a href="DateHelper.html#minute_options-instance_method" title="DateHelper#minute_options (method)">#minute_options</a></span>, <span class='object_link'><a href="DateHelper.html#parse_mmddyyyy_in_current_zone!-instance_method" title="DateHelper#parse_mmddyyyy_in_current_zone! (method)">#parse_mmddyyyy_in_current_zone!</a></span>, <span class='object_link'><a href="DateHelper.html#parse_usa_date-instance_method" title="DateHelper#parse_usa_date (method)">#parse_usa_date</a></span>, <span class='object_link'><a href="DateHelper.html#parse_usa_import_date-instance_method" title="DateHelper#parse_usa_import_date (method)">#parse_usa_import_date</a></span>, <span class='object_link'><a href="DateHelper.html#time_ceil-instance_method" title="DateHelper#time_ceil (method)">#time_ceil</a></span>, <span class='object_link'><a href="DateHelper.html#time_floor-instance_method" title="DateHelper#time_floor (method)">#time_floor</a></span>, <span class='object_link'><a href="DateHelper.html#time_select-instance_method" title="DateHelper#time_select (method)">#time_select</a></span>, <span class='object_link'><a href="DateHelper.html#time_select24-instance_method" title="DateHelper#time_select24 (method)">#time_select24</a></span>, <span class='object_link'><a href="DateHelper.html#time_select_tag-instance_method" title="DateHelper#time_select_tag (method)">#time_select_tag</a></span>, <span class='object_link'><a href="DateHelper.html#usa_formatted_date%3F-instance_method" title="DateHelper#usa_formatted_date? (method)">#usa_formatted_date?</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(row, order_import)  &#x21d2; <tt><span class='object_link'><a href="" title="OrderRowImporter (class)">OrderRowImporter</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of OrderRowImporter</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39
+40
+41</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 37</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_row'>row</span><span class='comma'>,</span> <span class='id identifier rubyid_order_import'>order_import</span><span class='rparen'>)</span>
+  <span class='ivar'>@row</span> <span class='op'>=</span> <span class='id identifier rubyid_row'>row</span>
+  <span class='ivar'>@order_import</span> <span class='op'>=</span> <span class='id identifier rubyid_order_import'>order_import</span>
+  <span class='ivar'>@errors</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="headers_to_s-class_method">
+  
+    .<strong>headers_to_s</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+33
+34
+35</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 33</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_headers_to_s'>headers_to_s</span>
+  <span class='const'><span class='object_link'><a href="#HEADERS-constant" title="OrderRowImporter::HEADERS (constant)">HEADERS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>,</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="order_key_for_row-class_method">
+  
+    .<strong>order_key_for_row</strong>(row)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 29</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_order_key_for_row'>order_key_for_row</span><span class='lparen'>(</span><span class='id identifier rubyid_row'>row</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_row'>row</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_order_key'>order_key</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="account-instance_method">
+  
+    #<strong>account</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+43
+44
+45
+46
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 43</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_account'>account</span>
+  <span class='ivar'>@account</span> <span class='op'>||=</span>
+    <span class='id identifier rubyid_user'>user</span>
+    <span class='period'>.</span><span class='id identifier rubyid_accounts'>accounts</span>
+    <span class='period'>.</span><span class='id identifier rubyid_for_facility'>for_facility</span><span class='lparen'>(</span><span class='id identifier rubyid_product'>product</span><span class='period'>.</span><span class='id identifier rubyid_facility'>facility</span><span class='rparen'>)</span>
+    <span class='period'>.</span><span class='id identifier rubyid_active'>active</span><span class='period'>.</span><span class='id identifier rubyid_find_by'>find_by</span><span class='lparen'>(</span><span class='label'>account_number:</span> <span class='id identifier rubyid_account_number'>account_number</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="account_number-instance_method">
+  
+    #<strong>account_number</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+94
+95
+96</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 94</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_account_number'>account_number</span>
+  <span class='ivar'>@account_number</span> <span class='op'>||=</span> <span class='ivar'>@row</span><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#HEADERS-constant" title="OrderRowImporter::HEADERS (constant)">HEADERS</a></span></span><span class='lbracket'>[</span><span class='symbol'>:chart_string</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_try'>try</span><span class='lparen'>(</span><span class='symbol'>:strip</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="add_error-instance_method">
+  
+    #<strong>add_error</strong>(message)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+88
+89
+90</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 88</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_error'>add_error</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+  <span class='ivar'>@errors</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="add_product_to_order-instance_method">
+  
+    #<strong>add_product_to_order</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 98</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_product_to_order'>add_product_to_order</span>
+  <span class='const'><span class='object_link'><a href="ActiveRecord.html" title="ActiveRecord (module)">ActiveRecord</a></span></span><span class='op'>::</span><span class='const'>Base</span><span class='period'>.</span><span class='id identifier rubyid_transaction'>transaction</span> <span class='kw'>do</span>
+    <span class='kw'>begin</span>
+      <span class='ivar'>@order_details</span> <span class='op'>=</span> <span class='id identifier rubyid_order'>order</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_product'>product</span><span class='comma'>,</span> <span class='id identifier rubyid_quantity'>quantity</span><span class='comma'>,</span> <span class='label'>note:</span> <span class='id identifier rubyid_note'>note</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_purchase_order!'>purchase_order!</span> <span class='kw'>unless</span> <span class='id identifier rubyid_order'>order</span><span class='period'>.</span><span class='id identifier rubyid_purchased?'>purchased?</span>
+      <span class='id identifier rubyid_backdate_order_details_to_complete!'>backdate_order_details_to_complete!</span>
+    <span class='kw'>rescue</span> <span class='const'><span class='object_link'><a href="ActiveRecord.html" title="ActiveRecord (module)">ActiveRecord</a></span></span><span class='op'>::</span><span class='const'>RecordInvalid</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+      <span class='id identifier rubyid_add_error'>add_error</span><span class='lparen'>(</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ActiveRecord.html" title="ActiveRecord (module)">ActiveRecord</a></span></span><span class='op'>::</span><span class='const'>Rollback</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="backdate_order_details_to_complete!-instance_method">
+  
+    #<strong>backdate_order_details_to_complete!</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+111
+112
+113
+114
+115</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 111</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_backdate_order_details_to_complete!'>backdate_order_details_to_complete!</span>
+  <span class='ivar'>@order_details</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_order_detail'>order_detail</span><span class='op'>|</span>
+    <span class='id identifier rubyid_order_detail'>order_detail</span><span class='period'>.</span><span class='id identifier rubyid_backdate_to_complete!'>backdate_to_complete!</span><span class='lparen'>(</span><span class='id identifier rubyid_fulfillment_date'>fulfillment_date</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="chart_string_field-instance_method">
+  
+    #<strong>chart_string_field</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+117
+118
+119</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 117</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_chart_string_field'>chart_string_field</span>
+  <span class='ivar'>@chart_string_field</span> <span class='op'>||=</span> <span class='ivar'>@row</span><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#HEADERS-constant" title="OrderRowImporter::HEADERS (constant)">HEADERS</a></span></span><span class='lbracket'>[</span><span class='symbol'>:chart_string</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_try'>try</span><span class='lparen'>(</span><span class='symbol'>:strip</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="errors-instance_method">
+  
+    #<strong>errors</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+55
+56
+57</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 55</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_errors'>errors</span>
+  <span class='ivar'>@errors</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="errors?-instance_method">
+  
+    #<strong>errors?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+51
+52
+53</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 51</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_errors?'>errors?</span>
+  <span class='ivar'>@errors</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="fulfillment_date-instance_method">
+  
+    #<strong>fulfillment_date</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+121
+122
+123</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 121</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_fulfillment_date'>fulfillment_date</span>
+  <span class='ivar'>@fulfillment_date</span> <span class='op'>||=</span> <span class='id identifier rubyid_parse_usa_import_date'>parse_usa_import_date</span><span class='lparen'>(</span><span class='id identifier rubyid_fulfillment_date_field'>fulfillment_date_field</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="fulfillment_date_field-instance_method">
+  
+    #<strong>fulfillment_date_field</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+125
+126
+127</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 125</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_fulfillment_date_field'>fulfillment_date_field</span>
+  <span class='ivar'>@fulfillment_date_field</span> <span class='op'>||=</span> <span class='ivar'>@row</span><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#HEADERS-constant" title="OrderRowImporter::HEADERS (constant)">HEADERS</a></span></span><span class='lbracket'>[</span><span class='symbol'>:fulfillment_date</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_try'>try</span><span class='lparen'>(</span><span class='symbol'>:strip</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="has_valid_fields?-instance_method">
+  
+    #<strong>has_valid_fields?</strong>  &#x21d2; <tt>Boolean</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+134
+135
+136
+137</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 134</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_has_valid_fields?'>has_valid_fields?</span>
+  <span class='id identifier rubyid_validate_fields'>validate_fields</span>
+  <span class='op'>!</span><span class='id identifier rubyid_errors?'>errors?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="has_valid_headers?-instance_method">
+  
+    #<strong>has_valid_headers?</strong>  &#x21d2; <tt>Boolean</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+129
+130
+131
+132</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 129</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_has_valid_headers?'>has_valid_headers?</span>
+  <span class='id identifier rubyid_validate_headers'>validate_headers</span>
+  <span class='op'>!</span><span class='id identifier rubyid_errors?'>errors?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="import-instance_method">
+  
+    #<strong>import</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 59</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_import'>import</span>
+  <span class='id identifier rubyid_add_product_to_order'>add_product_to_order</span> <span class='kw'>if</span> <span class='id identifier rubyid_has_valid_headers?'>has_valid_headers?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_has_valid_fields?'>has_valid_fields?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="note-instance_method">
+  
+    #<strong>note</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+139
+140
+141</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 139</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_note'>note</span>
+  <span class='ivar'>@note</span> <span class='op'>||=</span> <span class='ivar'>@row</span><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#HEADERS-constant" title="OrderRowImporter::HEADERS (constant)">HEADERS</a></span></span><span class='lbracket'>[</span><span class='symbol'>:notes</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_try'>try</span><span class='lparen'>(</span><span class='symbol'>:strip</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="order-instance_method">
+  
+    #<strong>order</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+143
+144
+145</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 143</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_order'>order</span>
+  <span class='ivar'>@order</span> <span class='op'>||=</span> <span class='ivar'>@order_import</span><span class='period'>.</span><span class='id identifier rubyid_fetch_or_create_order!'>fetch_or_create_order!</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="order_date-instance_method">
+  
+    #<strong>order_date</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+63
+64
+65</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 63</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_order_date'>order_date</span>
+  <span class='ivar'>@order_date</span> <span class='op'>||=</span> <span class='id identifier rubyid_parse_usa_import_date'>parse_usa_import_date</span><span class='lparen'>(</span><span class='id identifier rubyid_order_date_field'>order_date_field</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="order_date_field-instance_method">
+  
+    #<strong>order_date_field</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+147
+148
+149</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 147</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_order_date_field'>order_date_field</span>
+  <span class='ivar'>@order_date_field</span> <span class='op'>||=</span> <span class='ivar'>@row</span><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#HEADERS-constant" title="OrderRowImporter::HEADERS (constant)">HEADERS</a></span></span><span class='lbracket'>[</span><span class='symbol'>:order_date</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_try'>try</span><span class='lparen'>(</span><span class='symbol'>:strip</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="order_key-instance_method">
+  
+    #<strong>order_key</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+69
+70
+71</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 69</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_order_key'>order_key</span>
+  <span class='ivar'>@order_key</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_field'>user_field</span><span class='comma'>,</span> <span class='id identifier rubyid_chart_string_field'>chart_string_field</span><span class='comma'>,</span> <span class='id identifier rubyid_order_date_field'>order_date_field</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="product-instance_method">
+  
+    #<strong>product</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+151
+152
+153
+154
+155
+156
+157
+158</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 151</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_product'>product</span>
+  <span class='ivar'>@product</span> <span class='op'>||=</span>
+    <span class='ivar'>@order_import</span>
+    <span class='period'>.</span><span class='id identifier rubyid_facility'>facility</span>
+    <span class='period'>.</span><span class='id identifier rubyid_products'>products</span>
+    <span class='period'>.</span><span class='id identifier rubyid_active_plus_hidden'>active_plus_hidden</span>
+    <span class='period'>.</span><span class='id identifier rubyid_find_by'>find_by</span><span class='lparen'>(</span><span class='label'>name:</span> <span class='id identifier rubyid_product_field'>product_field</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="product_field-instance_method">
+  
+    #<strong>product_field</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+160
+161
+162</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 160</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_product_field'>product_field</span>
+  <span class='ivar'>@product_field</span> <span class='op'>||=</span> <span class='ivar'>@row</span><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#HEADERS-constant" title="OrderRowImporter::HEADERS (constant)">HEADERS</a></span></span><span class='lbracket'>[</span><span class='symbol'>:product_name</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_try'>try</span><span class='lparen'>(</span><span class='symbol'>:strip</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="purchase_order!-instance_method">
+  
+    #<strong>purchase_order!</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+164
+165
+166
+167
+168
+169
+170</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 164</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_purchase_order!'>purchase_order!</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_order'>order</span><span class='period'>.</span><span class='id identifier rubyid_validate_order!'>validate_order!</span>
+    <span class='id identifier rubyid_add_error'>add_error</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Couldn&#39;t purchase order</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_order'>order</span><span class='period'>.</span><span class='id identifier rubyid_purchase_without_default_status!'>purchase_without_default_status!</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_add_error'>add_error</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Couldn&#39;t validate order</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="quantity-instance_method">
+  
+    #<strong>quantity</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+172
+173
+174</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 172</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_quantity'>quantity</span>
+  <span class='ivar'>@quantity</span> <span class='op'>||=</span> <span class='ivar'>@row</span><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#HEADERS-constant" title="OrderRowImporter::HEADERS (constant)">HEADERS</a></span></span><span class='lbracket'>[</span><span class='symbol'>:quantity</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="row_with_errors-instance_method">
+  
+    #<strong>row_with_errors</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+73
+74
+75
+76
+77
+78
+79
+80
+81</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 73</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_row_with_errors'>row_with_errors</span>
+  <span class='comment'># Start with a hash of HEADERS keys with nil values to ensure optional columns
+</span>  <span class='comment'># are included in the report even if they are not in the uploaded CSV.
+</span>  <span class='id identifier rubyid_new_row'>new_row</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#HEADERS-constant" title="OrderRowImporter::HEADERS (constant)">HEADERS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_each_with_object'>each_with_object</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_header'>header</span><span class='comma'>,</span> <span class='id identifier rubyid_hash'>hash</span><span class='op'>|</span> <span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_header'>header</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_new_row'>new_row</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span><span class='ivar'>@row</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_new_row'>new_row</span><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#HEADERS-constant" title="OrderRowImporter::HEADERS (constant)">HEADERS</a></span></span><span class='lbracket'>[</span><span class='symbol'>:errors</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+  <span class='const'>CSV</span><span class='op'>::</span><span class='const'>Row</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_new_row'>new_row</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='comma'>,</span> <span class='id identifier rubyid_new_row'>new_row</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="user-instance_method">
+  
+    #<strong>user</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+83
+84
+85
+86</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 83</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_user'>user</span>
+  <span class='ivar'>@user</span> <span class='op'>||=</span>
+    <span class='const'><span class='object_link'><a href="User.html" title="User (class)">User</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_by'>find_by</span><span class='lparen'>(</span><span class='label'>username:</span> <span class='id identifier rubyid_user_field'>user_field</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="User.html" title="User (class)">User</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_by'>find_by</span><span class='lparen'>(</span><span class='label'>email:</span> <span class='id identifier rubyid_user_field'>user_field</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="user_field-instance_method">
+  
+    #<strong>user_field</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+176
+177
+178</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 176</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_user_field'>user_field</span>
+  <span class='ivar'>@user_field</span> <span class='op'>||=</span> <span class='ivar'>@row</span><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#HEADERS-constant" title="OrderRowImporter::HEADERS (constant)">HEADERS</a></span></span><span class='lbracket'>[</span><span class='symbol'>:user</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_try'>try</span><span class='lparen'>(</span><span class='symbol'>:strip</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate_account-instance_method">
+  
+    #<strong>validate_account</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+180
+181
+182
+183
+184
+185
+186
+187</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 180</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_validate_account'>validate_account</span>
+  <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_blank?'>blank?</span> <span class='op'>||</span> <span class='id identifier rubyid_product'>product</span><span class='period'>.</span><span class='id identifier rubyid_blank?'>blank?</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_account'>account</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+    <span class='id identifier rubyid_add_error'>add_error</span><span class='lparen'>(</span><span class='id identifier rubyid_account'>account</span><span class='period'>.</span><span class='id identifier rubyid_validate_against_product'>validate_against_product</span><span class='lparen'>(</span><span class='id identifier rubyid_product'>product</span><span class='comma'>,</span> <span class='id identifier rubyid_user'>user</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_add_error'>add_error</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Can&#39;t find account</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate_fields-instance_method">
+  
+    #<strong>validate_fields</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+194
+195
+196
+197
+198
+199
+200</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 194</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_validate_fields'>validate_fields</span>
+  <span class='id identifier rubyid_validate_fulfillment_date'>validate_fulfillment_date</span>
+  <span class='id identifier rubyid_validate_order_date'>validate_order_date</span>
+  <span class='id identifier rubyid_validate_user'>validate_user</span>
+  <span class='id identifier rubyid_validate_product'>validate_product</span>
+  <span class='id identifier rubyid_validate_account'>validate_account</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate_fulfillment_date-instance_method">
+  
+    #<strong>validate_fulfillment_date</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+202
+203
+204
+205
+206</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 202</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_validate_fulfillment_date'>validate_fulfillment_date</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_fulfillment_date'>fulfillment_date</span><span class='period'>.</span><span class='id identifier rubyid_blank?'>blank?</span>
+    <span class='id identifier rubyid_add_error'>add_error</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Invalid Fulfillment Date: Please use MM/DD/YYYY format</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate_headers-instance_method">
+  
+    #<strong>validate_headers</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+189
+190
+191
+192</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 189</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_validate_headers'>validate_headers</span>
+  <span class='id identifier rubyid_missing_headers'>missing_headers</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#REQUIRED_HEADERS-constant" title="OrderRowImporter::REQUIRED_HEADERS (constant)">REQUIRED_HEADERS</a></span></span> <span class='op'>-</span> <span class='ivar'>@row</span><span class='period'>.</span><span class='id identifier rubyid_headers'>headers</span>
+  <span class='id identifier rubyid_add_error'>add_error</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Missing headers: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_missing_headers'>missing_headers</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> | </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_missing_headers'>missing_headers</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate_order_date-instance_method">
+  
+    #<strong>validate_order_date</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+208
+209
+210
+211
+212</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 208</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_validate_order_date'>validate_order_date</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_order_date'>order_date</span><span class='period'>.</span><span class='id identifier rubyid_blank?'>blank?</span>
+    <span class='id identifier rubyid_add_error'>add_error</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Invalid Order Date: Please use MM/DD/YYYY format</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate_product-instance_method">
+  
+    #<strong>validate_product</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+214
+215
+216
+217
+218
+219
+220</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 214</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_validate_product'>validate_product</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_product'>product</span><span class='period'>.</span><span class='id identifier rubyid_blank?'>blank?</span>
+    <span class='id identifier rubyid_add_error'>add_error</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Couldn&#39;t find product by name &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_product_field'>product_field</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_validate_product_is_importable'>validate_product_is_importable</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate_product_is_importable-instance_method">
+  
+    #<strong>validate_product_is_importable</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 222</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_validate_product_is_importable'>validate_product_is_importable</span>
+  <span class='kw'>unless</span> <span class='id identifier rubyid_product'>product</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_in?'>in?</span><span class='lparen'>(</span><span class='id identifier rubyid_importable_product_types'>importable_product_types</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_add_error'>add_error</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>import of </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_product'>product</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_model_name'>model_name</span><span class='period'>.</span><span class='id identifier rubyid_human'>human</span><span class='embexpr_end'>}</span><span class='tstring_content'> orders not allowed at this time</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_product'>product</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Service.html" title="Service (class)">Service</a></span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_add_error'>add_error</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Service requires survey</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_product'>product</span><span class='period'>.</span><span class='id identifier rubyid_active_survey?'>active_survey?</span>
+    <span class='id identifier rubyid_add_error'>add_error</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Service requires template</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_product'>product</span><span class='period'>.</span><span class='id identifier rubyid_active_template?'>active_template?</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate_user-instance_method">
+  
+    #<strong>validate_user</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+233
+234
+235</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/order_row_importer.rb', line 233</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_validate_user'>validate_user</span>
+  <span class='id identifier rubyid_add_error'>add_error</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Invalid username or email</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_blank?'>blank?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr 13 09:52:03 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.12 (ruby-2.4.1).
+</div>
+
+    </div>
+  </body>
+</html>

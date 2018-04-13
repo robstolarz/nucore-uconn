@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.9.12
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "README";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'><h1>NUcore Open</h1>
+
+<p>Open source version of Northwestern University Core Facility Management Software</p>
+
+<h2>Quickstart</h2>
+
+<p>Welcome to NUcore! This guide will help you get a development environment up and running. It makes a few assumptions:</p>
+
+<ol>
+<li>You write code on a Mac.</li>
+<li>You have a running Oracle or MySQL instance with two brand new databases. (Oracle setup instructions <a href="doc/HOWTO_oracle.txt">here</a>.)</li>
+<li>You have the following installed:
+
+<ul>
+<li><a href="http://www.ruby-lang.org/en">Ruby 2.2</a></li>
+<li><a href="http://gembundler.com">Bundler</a></li>
+<li><a href="http://git-scm.com">Git</a></li>
+<li><a href="http://phantomjs.org/">PhantomJS</a></li>
+</ul></li>
+</ol>
+
+<h3>Spin it up</h3>
+
+<ol>
+<li><p>Download the project code from Github</p>
+
+<pre class="code ruby"><code class="ruby">git clone git@github.com:tablexi/nucore-open.git nucore
+</code></pre></li>
+<li><p>Install dependencies</p>
+
+<pre class="code ruby"><code class="ruby">cd nucore
+bundle install --without oracle
+</code></pre></li>
+</ol>
+
+<pre class="code ruby"><code class="ruby">- Note: `ruby-oci8` gem installation will fail unless Oracle is set up first.
+</code></pre>
+
+<ol>
+<li><p>Configure your databases</p>
+
+<pre class="code ruby"><code class="ruby">cp config/database.yml.mysql.template config/database.yml
+</code></pre>
+
+<p>Edit the adapter, database, username, and password settings for both the development and test DBs to match your database instance</p></li>
+<li><p>Create your databases</p>
+
+<pre class="code ruby"><code class="ruby">rake db:create
+rake db:create RAILS_ENV=test
+rake db:schema:load
+rake db:schema:load RAILS_ENV=test
+</code></pre></li>
+<li><p>Seed your development database</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_rake'>rake</span> <span class='label'>db:</span><span class='id identifier rubyid_seed'>seed</span>
+<span class='id identifier rubyid_rake'>rake</span> <span class='label'>demo:</span><span class='id identifier rubyid_seed'>seed</span>
+</code></pre></li>
+<li><p>Configure your secrets</p></li>
+</ol>
+
+<pre class="code ruby"><code class="ruby">  cp config/secrets.yml.template config/secrets.yml
+  rake secret
+</code></pre>
+
+<ul>
+<li>Paste the output from <code>rake secret</code> into <code>config/secrets.yml</code> for both <code>development/secret_key_base</code> and <code>test/secret_key_base</code></li>
+</ul>
+
+<ol>
+<li><p>Configure your file storage</p>
+
+<p>By default, files are stored on the local filesystem. If you wish to use
+Amazon&#39;s S3 instead, create a local settings override file such as
+<code>config/settings/development.local.yml</code> or <code>config/settings/production.local.yml</code>
+and include the following, substituting your AWS settings:</p>
+
+<pre class="code ruby"><code class="ruby">paperclip:
+  storage: fog
+  fog_credentials:
+    provider: AWS
+    aws_access_key_id: YOUR_S3_KEY_GOES_HERE
+    aws_secret_access_key: YOUR_S3_SECRET_KEY_GOES_HERE
+  fog_directory: YOUR_S3_BUCKET_NAME_GOES_HERE
+  fog_public: false
+  path: &quot;:class/:attachment/:id_partition/:style/:safe_filename&quot;
+</code></pre></li>
+<li><p>Start your server</p>
+
+<pre class="code ruby"><code class="ruby">bin/rails s
+</code></pre></li>
+<li><p>Log in</p>
+
+<p>Visit <a href="http://localhost:3000">http://localhost:3000</a></p>
+
+<p><code>demo:seed</code> creates several users with various permissions. All users have the default password of <code>password</code></p>
+
+<table><thead>
+<tr>
+<th>Email/username</th>
+<th>Role</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="mailto:admin@example.com">admin@example.com</a></td>
+<td>Admin</td>
+</tr>
+<tr>
+<td><a href="mailto:ppi123@example.com">ppi123@example.com</a></td>
+<td>PI</td>
+</tr>
+<tr>
+<td><a href="mailto:sst123@example.com">sst123@example.com</a></td>
+<td>Normal User</td>
+</tr>
+<tr>
+<td><a href="mailto:ast123@example.com">ast123@example.com</a></td>
+<td>Facility Staff</td>
+</tr>
+<tr>
+<td><a href="mailto:ddi123@example.com">ddi123@example.com</a></td>
+<td>Facility Director</td>
+</tr>
+</tbody></table></li>
+<li><p>Play around! You&#39;re running NUcore!</p></li>
+<li><p>Run <code>delayed_job</code> to support in-browser email previews.</p>
+
+<p>Run delayed jobs indefinitely in the background:</p>
+
+<pre class="code ruby"><code class="ruby">./script/delayed_job start
+</code></pre>
+
+<p>Or run delayed jobs once for one-off jobs:</p>
+
+<pre class="code ruby"><code class="ruby">./script/delayed_job run
+</code></pre></li>
+</ol>
+
+<h3>Test it</h3>
+
+<p>NUcore uses <a href="http://rspec.info">Rspec</a> to run tests. Try any of the following from NUcore&#39;s root directory.</p>
+
+<ul>
+<li><p>To run all tests (this will take awhile!)
+rake spec</p></li>
+<li><p>To run just the model tests
+rake spec:models</p></li>
+<li><p>To run just the controller tests
+rake spec:controllers</p></li>
+</ul>
+
+<h2>Optional Modules</h2>
+
+<p>The following modules are provided as optional features via
+<a href="http://guides.rubyonrails.org/engines.html">Rails engines</a>. These are enabled
+by adding the appropriate engine to your Gemfile (all are on by default). They
+exist in the <code>vendor/engines</code> directory.</p>
+
+<ul>
+<li>Accept Credit Cards &amp; Purchase Orders (c2po)</li>
+<li>Connect to Dataprobe Power Relays (dataprobe)</li>
+<li>Link orders together as a Project (projects)</li>
+<li><a href="vendor/engines/sanger_sequencing/README.md">Sanger Sequencing order form and well plate management</a></li>
+<li><a href="vendor/engines/split_accounts/README.md">Split charges between different accounts</a></li>
+<li><a href="vendor/engines/ldap_authentication/README.md">Authenticate against an LDAP server</a></li>
+<li><a href="vendor/engines/saml_authentication/README.md">Authenticate with SSO via SAML</a></li>
+</ul>
+
+<p>Engine-specific migrations should live in the engine&#39;s <code>db/migrate</code> directory and
+use an engine initializer to add that path to the list of paths Rails checks. If
+you need to disable an engine, you can undo all of the engine&#39;s migrations with
+the <code>rake engines:db:migrate_down[ENGINE_NAME]</code> task.</p>
+
+<h2>Learn more</h2>
+
+<p>There are valuable resources in the NUcore&#39;s doc directory.</p>
+
+<ul>
+<li><p>Want to conform to the project&#39;s established coding standards? <a href="doc/coding_standards.md"><strong>See coding_standards.md</strong></a></p></li>
+<li><p>Want to know more about the instrument pricing model? <a href="doc/instrument_pricing.md"><strong>See instrument_pricing.md</strong></a></p></li>
+<li><p>Need to move changes between nucore-open and your fork? <a href="doc/HOWTO_forks.md"><strong>See HOWTO_forks.txt</strong></a></p></li>
+<li><p>Need help getting Oracle running on your Mac? <a href="doc/HOWTO_oracle.md"><strong>See HOWTO_oracle.md</strong></a></p></li>
+<li><p>Want to authenticate users against your institution&#39;s LDAP server? <a href="vendor/engines/ldap_authentication/README.md"><strong>See the <code>ldap_authentication</code> engine</strong></a></p></li>
+<li><p>Need to use a 3rd party service with your NUcore? <a href="doc/HOWTO_external_services.md"><strong>See HOWTO_external_services.txt</strong></a></p></li>
+<li><p>Need to asynchronously monitor some aspect of NUcore? <a href="doc/HOWTO_daemons.txt"><strong>See HOWTO_daemons.txt</strong></a></p></li>
+</ul>
+</div></div>
+
+      <div id="footer">
+  Generated on Fri Apr 13 09:51:51 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.12 (ruby-2.4.1).
+</div>
+
+    </div>
+  </body>
+</html>

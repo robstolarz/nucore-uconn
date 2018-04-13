@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: OrderManagement::OrderDetailsController
+  
+    &mdash; Documentation by YARD 0.9.12
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "OrderManagement::OrderDetailsController";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (O)</a> &raquo;
+    <span class='title'>OrderManagement</span>
+     &raquo; 
+    <span class="title">OrderDetailsController</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: OrderManagement::OrderDetailsController
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">ApplicationController</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ApplicationController</li>
+          
+            <li class="next">OrderManagement::OrderDetailsController</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="../OrderDetailFileDownload.html" title="OrderDetailFileDownload (module)">OrderDetailFileDownload</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/controllers/order_management/order_details_controller.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#ability_resource-instance_method" title="#ability_resource (instance method)">#<strong>ability_resource</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#authorize_order_detail-instance_method" title="#authorize_order_detail (instance method)">#<strong>authorize_order_detail</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#edit-instance_method" title="#edit (instance method)">#<strong>edit</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>GET /facilities/:facility_id/orders/:order_id/order_details/:id/manage.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#edit_disabled%3F-instance_method" title="#edit_disabled? (instance method)">#<strong>edit_disabled?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#files-instance_method" title="#files (instance method)">#<strong>files</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>GET /facilities/:facility_id/orders/:order_id/order_details/:id/files.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#load_accounts-instance_method" title="#load_accounts (instance method)">#<strong>load_accounts</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#load_order_statuses-instance_method" title="#load_order_statuses (instance method)">#<strong>load_order_statuses</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#modal%3F-instance_method" title="#modal? (instance method)">#<strong>modal?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pricing-instance_method" title="#pricing (instance method)">#<strong>pricing</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>GET /facilities/:facility_id/orders/:order_id/order_details/:id/pricing.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove_from_journal-instance_method" title="#remove_from_journal (instance method)">#<strong>remove_from_journal</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>POST
+/facilities/:facility_id/orders/:order_id/order_details/:id/remove_from_journal.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update-instance_method" title="#update (instance method)">#<strong>update</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>PUT /facilities/:facility_id/orders/:order_id/order_details/:id/manage.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../OrderDetailFileDownload.html" title="OrderDetailFileDownload (module)">OrderDetailFileDownload</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../OrderDetailFileDownload.html#sample_results-instance_method" title="OrderDetailFileDownload#sample_results (method)">#sample_results</a></span>, <span class='object_link'><a href="../OrderDetailFileDownload.html#template_results-instance_method" title="OrderDetailFileDownload#template_results (method)">#template_results</a></span></p>
+
+  
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="ability_resource-instance_method">
+  
+    #<strong>ability_resource</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+83
+84
+85</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/order_management/order_details_controller.rb', line 83</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ability_resource'>ability_resource</span>
+  <span class='ivar'>@order_detail</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="authorize_order_detail-instance_method">
+  
+    #<strong>authorize_order_detail</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+87
+88
+89</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/order_management/order_details_controller.rb', line 87</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_authorize_order_detail'>authorize_order_detail</span>
+  <span class='id identifier rubyid_authorize!'>authorize!</span> <span class='symbol'>:update</span><span class='comma'>,</span> <span class='ivar'>@order_detail</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="edit-instance_method">
+  
+    #<strong>edit</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>GET /facilities/:facility_id/orders/:order_id/order_details/:id/manage</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+20
+21
+22
+23</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/order_management/order_details_controller.rb', line 20</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_edit'>edit</span>
+  <span class='ivar'>@active_tab</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>admin_orders</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_render'>render</span> <span class='label'>layout:</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id identifier rubyid_modal?'>modal?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="edit_disabled?-instance_method">
+  
+    #<strong>edit_disabled?</strong>  &#x21d2; <tt>Boolean</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+109
+110
+111</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/order_management/order_details_controller.rb', line 109</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_edit_disabled?'>edit_disabled?</span>
+  <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_in_open_journal?'>in_open_journal?</span> <span class='op'>||</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_reconciled?'>reconciled?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="files-instance_method">
+  
+    #<strong>files</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>GET /facilities/:facility_id/orders/:order_id/order_details/:id/files</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+57
+58
+59
+60</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/order_management/order_details_controller.rb', line 57</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_files'>files</span>
+  <span class='ivar'>@files</span> <span class='op'>=</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_stored_files'>stored_files</span><span class='period'>.</span><span class='id identifier rubyid_sample_result'>sample_result</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='lparen'>(</span><span class='symbol'>:created_at</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_render'>render</span> <span class='label'>layout:</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id identifier rubyid_modal?'>modal?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load_accounts-instance_method">
+  
+    #<strong>load_accounts</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+91
+92
+93
+94</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/order_management/order_details_controller.rb', line 91</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_load_accounts'>load_accounts</span>
+  <span class='ivar'>@available_accounts</span> <span class='op'>=</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_available_accounts'>available_accounts</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span>
+  <span class='ivar'>@available_accounts</span> <span class='op'>&lt;&lt;</span> <span class='ivar'>@order</span><span class='period'>.</span><span class='id identifier rubyid_account'>account</span> <span class='kw'>unless</span> <span class='ivar'>@available_accounts</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='ivar'>@order</span><span class='period'>.</span><span class='id identifier rubyid_account'>account</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load_order_statuses-instance_method">
+  
+    #<strong>load_order_statuses</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/order_management/order_details_controller.rb', line 96</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_load_order_statuses'>load_order_statuses</span>
+  <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_reconciled?'>reconciled?</span>
+
+  <span class='kw'>if</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_complete?'>complete?</span>
+    <span class='ivar'>@order_statuses</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="../OrderStatus.html" title="OrderStatus (class)">OrderStatus</a></span></span><span class='period'>.</span><span class='id identifier rubyid_complete'><span class='object_link'><a href="../OrderStatus.html#complete-class_method" title="OrderStatus.complete (method)">complete</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="../OrderStatus.html" title="OrderStatus (class)">OrderStatus</a></span></span><span class='period'>.</span><span class='id identifier rubyid_canceled'><span class='object_link'><a href="../OrderStatus.html#canceled-class_method" title="OrderStatus.canceled (method)">canceled</a></span></span><span class='rbracket'>]</span>
+    <span class='ivar'>@order_statuses</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="../OrderStatus.html" title="OrderStatus (class)">OrderStatus</a></span></span><span class='period'>.</span><span class='id identifier rubyid_reconciled'><span class='object_link'><a href="../OrderStatus.html#reconciled-class_method" title="OrderStatus.reconciled (method)">reconciled</a></span></span> <span class='kw'>if</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_can_reconcile?'>can_reconcile?</span>
+  <span class='kw'>elsif</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_order_status'>order_status</span><span class='period'>.</span><span class='id identifier rubyid_root'>root</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="../OrderStatus.html" title="OrderStatus (class)">OrderStatus</a></span></span><span class='period'>.</span><span class='id identifier rubyid_canceled'><span class='object_link'><a href="../OrderStatus.html#canceled-class_method" title="OrderStatus.canceled (method)">canceled</a></span></span>
+    <span class='ivar'>@order_statuses</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../OrderStatus.html" title="OrderStatus (class)">OrderStatus</a></span></span><span class='period'>.</span><span class='id identifier rubyid_canceled'><span class='object_link'><a href="../OrderStatus.html#canceled-class_method" title="OrderStatus.canceled (method)">canceled</a></span></span><span class='period'>.</span><span class='id identifier rubyid_self_and_descendants'>self_and_descendants</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@order_statuses</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../OrderStatus.html" title="OrderStatus (class)">OrderStatus</a></span></span><span class='period'>.</span><span class='id identifier rubyid_non_protected_statuses'><span class='object_link'><a href="../OrderStatus.html#non_protected_statuses-class_method" title="OrderStatus.non_protected_statuses (method)">non_protected_statuses</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_current_facility'>current_facility</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="modal?-instance_method">
+  
+    #<strong>modal?</strong>  &#x21d2; <tt>Boolean</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+78
+79
+80</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/order_management/order_details_controller.rb', line 78</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_modal?'>modal?</span>
+  <span class='id identifier rubyid_request'>request</span><span class='period'>.</span><span class='id identifier rubyid_xhr?'>xhr?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pricing-instance_method">
+  
+    #<strong>pricing</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>GET /facilities/:facility_id/orders/:order_id/order_details/:id/pricing</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+49
+50
+51
+52
+53
+54</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/order_management/order_details_controller.rb', line 49</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_pricing'>pricing</span>
+  <span class='id identifier rubyid_checker'>checker</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../OrderDetails.html" title="OrderDetails (module)">OrderDetails</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../OrderDetails/PriceChecker.html" title="OrderDetails::PriceChecker (class)">PriceChecker</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../OrderDetails/PriceChecker.html#initialize-instance_method" title="OrderDetails::PriceChecker#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='ivar'>@order_detail</span><span class='rparen'>)</span>
+  <span class='ivar'>@prices</span> <span class='op'>=</span> <span class='id identifier rubyid_checker'>checker</span><span class='period'>.</span><span class='id identifier rubyid_prices_from_params'>prices_from_params</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:order_detail</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_render'>render</span> <span class='label'>json:</span> <span class='ivar'>@prices</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="remove_from_journal-instance_method">
+  
+    #<strong>remove_from_journal</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>POST
+/facilities/:facility_id/orders/:order_id/order_details/:id/remove_from_journal</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/order_management/order_details_controller.rb', line 63</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_remove_from_journal'>remove_from_journal</span>
+  <span class='const'><span class='object_link'><a href="../OrderDetailJournalRemover.html" title="OrderDetailJournalRemover (class)">OrderDetailJournalRemover</a></span></span><span class='period'>.</span><span class='id identifier rubyid_remove_from_journal'><span class='object_link'><a href="../OrderDetailJournalRemover.html#remove_from_journal-class_method" title="OrderDetailJournalRemover.remove_from_journal (method)">remove_from_journal</a></span></span><span class='lparen'>(</span><span class='ivar'>@order_detail</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:notice</span><span class='rbracket'>]</span> <span class='op'>=</span>
+    <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_t'>t</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>controllers.order_management.order_details.remove_from_journal.notice</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_modal?'>modal?</span>
+    <span class='id identifier rubyid_render'>render</span> <span class='label'>nothing:</span> <span class='kw'>true</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='lbracket'>[</span><span class='id identifier rubyid_current_facility'>current_facility</span><span class='comma'>,</span> <span class='ivar'>@order</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update-instance_method">
+  
+    #<strong>update</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>PUT /facilities/:facility_id/orders/:order_id/order_details/:id/manage</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/order_management/order_details_controller.rb', line 26</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span>
+  <span class='ivar'>@active_tab</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>admin_orders</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='id identifier rubyid_updater'>updater</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../OrderDetails.html" title="OrderDetails (module)">OrderDetails</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../OrderDetails/ParamUpdater.html" title="OrderDetails::ParamUpdater (class)">ParamUpdater</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../OrderDetails/ParamUpdater.html#initialize-instance_method" title="OrderDetails::ParamUpdater#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='ivar'>@order_detail</span><span class='comma'>,</span> <span class='label'>user:</span> <span class='id identifier rubyid_session_user'>session_user</span><span class='comma'>,</span> <span class='label'>cancel_fee:</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:with_cancel_fee</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_updater'>updater</span><span class='period'>.</span><span class='id identifier rubyid_update_attributes'>update_attributes</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:order_detail</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:notice</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>The order was successfully updated.</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>if</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_updated_children'>updated_children</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span>
+      <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:notice</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> Auto-scaled accessories have been updated as well.</span><span class='tstring_end'>&quot;</span></span>
+      <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:updated_order_details</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_updated_children'>updated_children</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:id</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_modal?'>modal?</span>
+      <span class='id identifier rubyid_render'>render</span> <span class='label'>nothing:</span> <span class='kw'>true</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='lbracket'>[</span><span class='id identifier rubyid_current_facility'>current_facility</span><span class='comma'>,</span> <span class='ivar'>@order</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_flash'>flash</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='lbracket'>[</span><span class='symbol'>:error</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Error while updating order</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_render'>render</span> <span class='symbol'>:edit</span><span class='comma'>,</span> <span class='label'>layout:</span> <span class='op'>!</span><span class='id identifier rubyid_modal?'>modal?</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='int'>406</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr 13 09:52:17 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.12 (ruby-2.4.1).
+</div>
+
+    </div>
+  </body>
+</html>

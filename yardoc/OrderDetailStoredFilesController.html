@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: OrderDetailStoredFilesController
+  
+    &mdash; Documentation by YARD 0.9.12
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "OrderDetailStoredFilesController";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (O)</a> &raquo;
+    
+    
+    <span class="title">OrderDetailStoredFilesController</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: OrderDetailStoredFilesController
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ActionController::Base</li>
+          
+            <li class="next"><span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></li>
+          
+            <li class="next">OrderDetailStoredFilesController</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/controllers/order_detail_stored_files_controller.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+  <h2>Constant Summary</h2>
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="DateHelper.html" title="DateHelper (module)">DateHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DateHelper.html#USA_DATE_FORMAT-constant" title="DateHelper::USA_DATE_FORMAT (constant)">DateHelper::USA_DATE_FORMAT</a></span></p>
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="ApplicationController.html#active_tab-instance_method" title="ApplicationController#active_tab (method)">#active_tab</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#ability_resource-instance_method" title="#ability_resource (instance method)">#<strong>ability_resource</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#init_order_detail-instance_method" title="#init_order_detail (instance method)">#<strong>init_order_detail</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#order_file-instance_method" title="#order_file (instance method)">#<strong>order_file</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>GET /orders/:order_id/order_details/:order_detail_id/order_file.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove_order_file-instance_method" title="#remove_order_file (instance method)">#<strong>remove_order_file</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>GET /orders/:order_id/order_details/:order_detail_id/remove_order_file.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sample_results-instance_method" title="#sample_results (instance method)">#<strong>sample_results</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sample_results_zip-instance_method" title="#sample_results_zip (instance method)">#<strong>sample_results_zip</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#template_results-instance_method" title="#template_results (instance method)">#<strong>template_results</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#upload_order_file-instance_method" title="#upload_order_file (instance method)">#<strong>upload_order_file</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>POST /orders/:order_id/order_details/:order_detail_id/upload_order_file.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="ApplicationController.html#acting_as%3F-instance_method" title="ApplicationController#acting_as? (method)">#acting_as?</a></span>, <span class='object_link'><a href="ApplicationController.html#acting_user-instance_method" title="ApplicationController#acting_user (method)">#acting_user</a></span>, <span class='object_link'><a href="ApplicationController.html#after_sign_out_path_for-instance_method" title="ApplicationController#after_sign_out_path_for (method)">#after_sign_out_path_for</a></span>, <span class='object_link'><a href="ApplicationController.html#backend%3F-instance_method" title="ApplicationController#backend? (method)">#backend?</a></span>, <span class='object_link'><a href="ApplicationController.html#check_acting_as-instance_method" title="ApplicationController#check_acting_as (method)">#check_acting_as</a></span>, <span class='object_link'><a href="ApplicationController.html#check_billing_access-instance_method" title="ApplicationController#check_billing_access (method)">#check_billing_access</a></span>, <span class='object_link'><a href="ApplicationController.html#cross_facility%3F-instance_method" title="ApplicationController#cross_facility? (method)">#cross_facility?</a></span>, <span class='object_link'><a href="ApplicationController.html#current_ability-instance_method" title="ApplicationController#current_ability (method)">#current_ability</a></span>, <span class='object_link'><a href="ApplicationController.html#current_cart-instance_method" title="ApplicationController#current_cart (method)">#current_cart</a></span>, <span class='object_link'><a href="ApplicationController.html#current_facility-instance_method" title="ApplicationController#current_facility (method)">#current_facility</a></span>, <span class='object_link'><a href="ApplicationController.html#empty_params-instance_method" title="ApplicationController#empty_params (method)">#empty_params</a></span>, <span class='object_link'><a href="ApplicationController.html#init_current_account-instance_method" title="ApplicationController#init_current_account (method)">#init_current_account</a></span>, <span class='object_link'><a href="ApplicationController.html#init_current_facility-instance_method" title="ApplicationController#init_current_facility (method)">#init_current_facility</a></span>, <span class='object_link'><a href="ApplicationController.html#manageable_facilities-instance_method" title="ApplicationController#manageable_facilities (method)">#manageable_facilities</a></span>, <span class='object_link'><a href="ApplicationController.html#open_or_facility_path-instance_method" title="ApplicationController#open_or_facility_path (method)">#open_or_facility_path</a></span>, <span class='object_link'><a href="ApplicationController.html#operable_facilities-instance_method" title="ApplicationController#operable_facilities (method)">#operable_facilities</a></span>, <span class='object_link'><a href="ApplicationController.html#render_403-instance_method" title="ApplicationController#render_403 (method)">#render_403</a></span>, <span class='object_link'><a href="ApplicationController.html#render_404-instance_method" title="ApplicationController#render_404 (method)">#render_404</a></span>, <span class='object_link'><a href="ApplicationController.html#render_acting_error-instance_method" title="ApplicationController#render_acting_error (method)">#render_acting_error</a></span>, <span class='object_link'><a href="ApplicationController.html#session_user-instance_method" title="ApplicationController#session_user (method)">#session_user</a></span>, <span class='object_link'><a href="ApplicationController.html#store_fullpath_in_session-instance_method" title="ApplicationController#store_fullpath_in_session (method)">#store_fullpath_in_session</a></span>, <span class='object_link'><a href="ApplicationController.html#with_dropped_params-instance_method" title="ApplicationController#with_dropped_params (method)">#with_dropped_params</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="NavTab.html" title="NavTab (module)">NavTab</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="NavTab.html#admin_tab%3F-instance_method" title="NavTab#admin_tab? (method)">#admin_tab?</a></span>, <span class='object_link'><a href="NavTab.html#global_link_collection-instance_method" title="NavTab#global_link_collection (method)">#global_link_collection</a></span>, <span class='object_link'><a href="NavTab.html#global_navigation_links-instance_method" title="NavTab#global_navigation_links (method)">#global_navigation_links</a></span>, <span class='object_link'><a href="NavTab.html#link_collection-instance_method" title="NavTab#link_collection (method)">#link_collection</a></span>, <span class='object_link'><a href="NavTab.html#navigation_links-instance_method" title="NavTab#navigation_links (method)">#navigation_links</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="DateHelper.html" title="DateHelper (module)">DateHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DateHelper.html#format_usa_date-instance_method" title="DateHelper#format_usa_date (method)">#format_usa_date</a></span>, <span class='object_link'><a href="DateHelper.html#format_usa_datetime-instance_method" title="DateHelper#format_usa_datetime (method)">#format_usa_datetime</a></span>, <span class='object_link'><a href="DateHelper.html#hour_options-instance_method" title="DateHelper#hour_options (method)">#hour_options</a></span>, <span class='object_link'><a href="DateHelper.html#human_date-instance_method" title="DateHelper#human_date (method)">#human_date</a></span>, <span class='object_link'><a href="DateHelper.html#human_time-instance_method" title="DateHelper#human_time (method)">#human_time</a></span>, <span class='object_link'><a href="DateHelper.html#join_time_select_values-instance_method" title="DateHelper#join_time_select_values (method)">#join_time_select_values</a></span>, <span class='object_link'><a href="DateHelper.html#minute_options-instance_method" title="DateHelper#minute_options (method)">#minute_options</a></span>, <span class='object_link'><a href="DateHelper.html#parse_mmddyyyy_in_current_zone!-instance_method" title="DateHelper#parse_mmddyyyy_in_current_zone! (method)">#parse_mmddyyyy_in_current_zone!</a></span>, <span class='object_link'><a href="DateHelper.html#parse_usa_date-instance_method" title="DateHelper#parse_usa_date (method)">#parse_usa_date</a></span>, <span class='object_link'><a href="DateHelper.html#parse_usa_import_date-instance_method" title="DateHelper#parse_usa_import_date (method)">#parse_usa_import_date</a></span>, <span class='object_link'><a href="DateHelper.html#time_ceil-instance_method" title="DateHelper#time_ceil (method)">#time_ceil</a></span>, <span class='object_link'><a href="DateHelper.html#time_floor-instance_method" title="DateHelper#time_floor (method)">#time_floor</a></span>, <span class='object_link'><a href="DateHelper.html#time_select-instance_method" title="DateHelper#time_select (method)">#time_select</a></span>, <span class='object_link'><a href="DateHelper.html#time_select24-instance_method" title="DateHelper#time_select24 (method)">#time_select24</a></span>, <span class='object_link'><a href="DateHelper.html#time_select_tag-instance_method" title="DateHelper#time_select_tag (method)">#time_select_tag</a></span>, <span class='object_link'><a href="DateHelper.html#usa_formatted_date%3F-instance_method" title="DateHelper#usa_formatted_date? (method)">#usa_formatted_date?</a></span></p>
+
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="ability_resource-instance_method">
+  
+    #<strong>ability_resource</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+78
+79
+80</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/order_detail_stored_files_controller.rb', line 78</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ability_resource'>ability_resource</span>
+  <span class='ivar'>@order_detail</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="init_order_detail-instance_method">
+  
+    #<strong>init_order_detail</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+73
+74
+75
+76</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/order_detail_stored_files_controller.rb', line 73</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_init_order_detail'>init_order_detail</span>
+  <span class='ivar'>@order</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Order.html" title="Order (class)">Order</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:order_id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@order_detail</span> <span class='op'>=</span> <span class='ivar'>@order</span><span class='period'>.</span><span class='id identifier rubyid_order_details'>order_details</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:order_detail_id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="order_file-instance_method">
+  
+    #<strong>order_file</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>GET /orders/:order_id/order_details/:order_detail_id/order_file</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::RecordNotFound</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30
+31</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/order_detail_stored_files_controller.rb', line 28</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_order_file'>order_file</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ActiveRecord.html" title="ActiveRecord (module)">ActiveRecord</a></span></span><span class='op'>::</span><span class='const'>RecordNotFound</span> <span class='kw'>if</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_product'>product</span><span class='period'>.</span><span class='id identifier rubyid_stored_files'>stored_files</span><span class='period'>.</span><span class='id identifier rubyid_template'>template</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+  <span class='ivar'>@file</span> <span class='op'>=</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_stored_files'>stored_files</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='label'>file_type:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>template_result</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="remove_order_file-instance_method">
+  
+    #<strong>remove_order_file</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>GET /orders/:order_id/order_details/:order_detail_id/remove_order_file</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/order_detail_stored_files_controller.rb', line 57</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_remove_order_file'>remove_order_file</span>
+  <span class='kw'>if</span> <span class='ivar'>@order</span><span class='period'>.</span><span class='id identifier rubyid_purchased?'>purchased?</span>
+    <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:error</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_text'>text</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>remove_order_file.already_purchased_error</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='kw'>if</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_stored_files'>stored_files</span><span class='period'>.</span><span class='id identifier rubyid_template_result'>template_result</span><span class='period'>.</span><span class='id identifier rubyid_all?'>all?</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:destroy</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:notice</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_text'>text</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>remove_order_file.success</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:error</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_text'>text</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>remove_order_file.delete_error</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@order</span><span class='period'>.</span><span class='id identifier rubyid_invalidate!'>invalidate!</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_redirect_to'>redirect_to</span><span class='lparen'>(</span><span class='id identifier rubyid_order_path'>order_path</span><span class='lparen'>(</span><span class='ivar'>@order</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sample_results-instance_method">
+  
+    #<strong>sample_results</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+11
+12
+13</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/order_detail_stored_files_controller.rb', line 11</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sample_results'>sample_results</span>
+  <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_stored_files'>stored_files</span><span class='period'>.</span><span class='id identifier rubyid_sample_result'>sample_result</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_download_url'>download_url</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sample_results_zip-instance_method">
+  
+    #<strong>sample_results_zip</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17
+18
+19
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/order_detail_stored_files_controller.rb', line 15</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sample_results_zip'>sample_results_zip</span>
+  <span class='id identifier rubyid_zip_data'>zip_data</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="StoredFileZipper.html" title="StoredFileZipper (class)">StoredFileZipper</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="StoredFileZipper.html#initialize-instance_method" title="StoredFileZipper#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_stored_files'>stored_files</span><span class='period'>.</span><span class='id identifier rubyid_sample_result'>sample_result</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_read'><span class='object_link'><a href="StoredFileZipper.html#read-instance_method" title="StoredFileZipper#read (method)">read</a></span></span>
+
+  <span class='id identifier rubyid_respond_to'>respond_to</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_format'>format</span><span class='op'>|</span>
+    <span class='id identifier rubyid_format'>format</span><span class='period'>.</span><span class='id identifier rubyid_zip'>zip</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_send_data'>send_data</span> <span class='id identifier rubyid_zip_data'>zip_data</span><span class='comma'>,</span> <span class='label'>filename:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sample_results_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@order_detail</span><span class='embexpr_end'>}</span><span class='tstring_content'>.zip</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="template_results-instance_method">
+  
+    #<strong>template_results</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/order_detail_stored_files_controller.rb', line 23</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_template_results'>template_results</span>
+  <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_stored_files'>stored_files</span><span class='period'>.</span><span class='id identifier rubyid_template_result'>template_result</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_download_url'>download_url</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="upload_order_file-instance_method">
+  
+    #<strong>upload_order_file</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>POST /orders/:order_id/order_details/:order_detail_id/upload_order_file</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/order_detail_stored_files_controller.rb', line 34</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_upload_order_file'>upload_order_file</span>
+  <span class='ivar'>@file</span> <span class='op'>=</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_stored_files'>stored_files</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_require'>require</span><span class='lparen'>(</span><span class='symbol'>:stored_file</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_permit'>permit</span><span class='lparen'>(</span><span class='symbol'>:file</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='ivar'>@file</span><span class='period'>.</span><span class='id identifier rubyid_file_type'>file_type</span>  <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>template_result</span><span class='tstring_end'>&quot;</span></span>
+  <span class='ivar'>@file</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>       <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Order File</span><span class='tstring_end'>&quot;</span></span>
+  <span class='ivar'>@file</span><span class='period'>.</span><span class='id identifier rubyid_product'>product</span> <span class='op'>=</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_product'>product</span>
+  <span class='ivar'>@file</span><span class='period'>.</span><span class='id identifier rubyid_created_by'>created_by</span> <span class='op'>=</span> <span class='id identifier rubyid_session_user'>session_user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='comment'>## this is correct, session_user instead of acting_user
+</span>
+  <span class='kw'>if</span> <span class='ivar'>@file</span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span>
+    <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:notice</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_text'>text</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>upload_order_file.success</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+    <span class='kw'>if</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='period'>.</span><span class='id identifier rubyid_to_be_merged?'>to_be_merged?</span>
+      <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span> <span class='comment'># trigger the OrderDetailObserver callbacks
+</span>      <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='id identifier rubyid_facility_order_path'>facility_order_path</span><span class='lparen'>(</span><span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_facility'>facility</span><span class='comma'>,</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='period'>.</span><span class='id identifier rubyid_merge_order'>merge_order</span> <span class='op'>||</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_redirect_to'>redirect_to</span><span class='lparen'>(</span><span class='id identifier rubyid_order_path'>order_path</span><span class='lparen'>(</span><span class='ivar'>@order</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_flash'>flash</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='lbracket'>[</span><span class='symbol'>:error</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_text'>text</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>upload_order_file.error</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_render'>render</span> <span class='symbol'>:order_file</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr 13 09:52:16 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.12 (ruby-2.4.1).
+</div>
+
+    </div>
+  </body>
+</html>

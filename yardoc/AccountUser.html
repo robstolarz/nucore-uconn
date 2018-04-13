@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: AccountUser
+  
+    &mdash; Documentation by YARD 0.9.12
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "AccountUser";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (A)</a> &raquo;
+    
+    
+    <span class="title">AccountUser</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: AccountUser
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">ActiveRecord::Base</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ActiveRecord::Base</li>
+          
+            <li class="next">AccountUser</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/models/account_user.rb</dd>
+  </dl>
+  
+</div>
+
+
+  <h2>Constant Summary</h2>
+  <dl class="constants">
+    
+      <dt id="ACCOUNT_PURCHASER-constant" class="">ACCOUNT_PURCHASER =
+        
+      </dt>
+      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Purchaser</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+    
+      <dt id="ACCOUNT_OWNER-constant" class="">ACCOUNT_OWNER =
+        
+      </dt>
+      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Owner</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+    
+      <dt id="ACCOUNT_ADMINISTRATOR-constant" class="">ACCOUNT_ADMINISTRATOR =
+        
+      </dt>
+      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Business Administrator</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+    
+  </dl>
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#active-class_method" title="active (class method)">.<strong>active</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#admin_user_roles-class_method" title="admin_user_roles (class method)">.<strong>admin_user_roles</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#administrators-class_method" title="administrators (class method)">.<strong>administrators</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#business_administrators-class_method" title="business_administrators (class method)">.<strong>business_administrators</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#grant-class_method" title="grant (class method)">.<strong>grant</strong>(user, role, account, granting_user)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Assigns <code>role</code> to <code>user</code> for <code>account</code>
+[<em>user</em>]   the user you want to grant permissions to [<em>role</em>]
+one of this class&#39; constants [<em>account</em>]   the account that you
+want to grant permissions on.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#owners-class_method" title="owners (class method)">.<strong>owners</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#purchasers-class_method" title="purchasers (class method)">.<strong>purchasers</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#read_only_user_roles-class_method" title="read_only_user_roles (class method)">.<strong>read_only_user_roles</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#selectable_user_roles-class_method" title="selectable_user_roles (class method)">.<strong>selectable_user_roles</strong>(granting_user = nil, facility = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Provides an <code>Array</code> of roles that can be assigned to a user.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#user_roles-class_method" title="user_roles (class method)">.<strong>user_roles</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#can_administer%3F-instance_method" title="#can_administer? (instance method)">#<strong>can_administer?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="active-class_method">
+  
+    .<strong>active</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/account_user.rb', line 39</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_active'>active</span>
+  <span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='label'>deleted_at:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="admin_user_roles-class_method">
+  
+    .<strong>admin_user_roles</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/account_user.rb', line 15</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_admin_user_roles'>admin_user_roles</span>
+  <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#ACCOUNT_OWNER-constant" title="AccountUser::ACCOUNT_OWNER (constant)">ACCOUNT_OWNER</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#ACCOUNT_ADMINISTRATOR-constant" title="AccountUser::ACCOUNT_ADMINISTRATOR (constant)">ACCOUNT_ADMINISTRATOR</a></span></span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="administrators-class_method">
+  
+    .<strong>administrators</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+19
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/account_user.rb', line 19</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_administrators'>administrators</span>
+  <span class='const'><span class='object_link'><a href="User.html" title="User (class)">User</a></span></span><span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='label'>id:</span> <span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='label'>user_role:</span> <span class='id identifier rubyid_admin_user_roles'>admin_user_roles</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span><span class='lparen'>(</span><span class='symbol'>:user_id</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="business_administrators-class_method">
+  
+    .<strong>business_administrators</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/account_user.rb', line 31</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_business_administrators'>business_administrators</span>
+  <span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='label'>user_role:</span> <span class='const'><span class='object_link'><a href="#ACCOUNT_ADMINISTRATOR-constant" title="AccountUser::ACCOUNT_ADMINISTRATOR (constant)">ACCOUNT_ADMINISTRATOR</a></span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="grant-class_method">
+  
+    .<strong>grant</strong>(user, role, account, granting_user)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Assigns <code>role</code> to <code>user</code> for <code>account</code></p>
+<dl class="rdoc-list label-list"><dt><em>user</em>
+<dd>
+<p>the user you want to grant permissions to</p>
+</dd><dt><em>role</em>
+<dd>
+<p>one of this class&#39; constants</p>
+</dd><dt><em>account</em>
+<dd>
+<p>the account that you want to grant permissions on.</p>
+</dd><dt><em>granting_user</em>
+<dd>
+<p>the user who is granting the privilege</p>
+</dd></dl>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+74
+75
+76</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/account_user.rb', line 74</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_grant'>grant</span><span class='lparen'>(</span><span class='id identifier rubyid_user'>user</span><span class='comma'>,</span> <span class='id identifier rubyid_role'>role</span><span class='comma'>,</span> <span class='id identifier rubyid_account'>account</span><span class='comma'>,</span> <span class='id identifier rubyid_granting_user'>granting_user</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_create!'>create!</span><span class='lparen'>(</span><span class='label'>user:</span> <span class='id identifier rubyid_user'>user</span><span class='comma'>,</span> <span class='label'>user_role:</span> <span class='id identifier rubyid_role'>role</span><span class='comma'>,</span> <span class='label'>account:</span> <span class='id identifier rubyid_account'>account</span><span class='comma'>,</span> <span class='label'>created_by:</span> <span class='id identifier rubyid_granting_user'>granting_user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="owners-class_method">
+  
+    .<strong>owners</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+27
+28
+29</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/account_user.rb', line 27</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_owners'>owners</span>
+  <span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='label'>user_role:</span> <span class='const'><span class='object_link'><a href="#ACCOUNT_OWNER-constant" title="AccountUser::ACCOUNT_OWNER (constant)">ACCOUNT_OWNER</a></span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="purchasers-class_method">
+  
+    .<strong>purchasers</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/account_user.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_purchasers'>purchasers</span>
+  <span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='label'>user_role:</span> <span class='const'><span class='object_link'><a href="#ACCOUNT_PURCHASER-constant" title="AccountUser::ACCOUNT_PURCHASER (constant)">ACCOUNT_PURCHASER</a></span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="read_only_user_roles-class_method">
+  
+    .<strong>read_only_user_roles</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+11
+12
+13</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/account_user.rb', line 11</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_read_only_user_roles'>read_only_user_roles</span>
+  <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#ACCOUNT_PURCHASER-constant" title="AccountUser::ACCOUNT_PURCHASER (constant)">ACCOUNT_PURCHASER</a></span></span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="selectable_user_roles-class_method">
+  
+    .<strong>selectable_user_roles</strong>(granting_user = nil, facility = nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Provides an <code>Array</code> of roles that can be assigned to a user.
+Optionally filters the set by the given arguments</p>
+<dl class="rdoc-list label-list"><dt><em>granting_user</em>
+<dd>
+<p>The user selecting a role to be applied to another user; the grantor</p>
+<dl class="rdoc-list label-list"><dt><em>facility</em>
+<dd>
+<p>The facility under which the selected role is granted by <code>user</code></p>
+</dd></dl>
+</dd></dl>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/account_user.rb', line 53</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_selectable_user_roles'>selectable_user_roles</span><span class='lparen'>(</span><span class='id identifier rubyid_granting_user'>granting_user</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_facility'>facility</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>case</span>
+  <span class='kw'>when</span> <span class='id identifier rubyid_granting_user'>granting_user</span><span class='period'>.</span><span class='id identifier rubyid_blank?'>blank?</span> <span class='op'>||</span> <span class='id identifier rubyid_facility'>facility</span><span class='period'>.</span><span class='id identifier rubyid_blank?'>blank?</span>
+    <span class='id identifier rubyid_user_roles'>user_roles</span> <span class='op'>-</span> <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#ACCOUNT_OWNER-constant" title="AccountUser::ACCOUNT_OWNER (constant)">ACCOUNT_OWNER</a></span></span><span class='rbracket'>]</span>
+  <span class='kw'>when</span> <span class='id identifier rubyid_granting_user'>granting_user</span><span class='period'>.</span><span class='id identifier rubyid_account_manager?'>account_manager?</span> <span class='op'>||</span> <span class='id identifier rubyid_granting_user'>granting_user</span><span class='period'>.</span><span class='id identifier rubyid_manager_of?'>manager_of?</span><span class='lparen'>(</span><span class='id identifier rubyid_facility'>facility</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_user_roles'>user_roles</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_user_roles'>user_roles</span> <span class='op'>-</span> <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#ACCOUNT_OWNER-constant" title="AccountUser::ACCOUNT_OWNER (constant)">ACCOUNT_OWNER</a></span></span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="user_roles-class_method">
+  
+    .<strong>user_roles</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/account_user.rb', line 23</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_user_roles'>user_roles</span>
+  <span class='id identifier rubyid_admin_user_roles'>admin_user_roles</span> <span class='op'>+</span> <span class='id identifier rubyid_read_only_user_roles'>read_only_user_roles</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="can_administer?-instance_method">
+  
+    #<strong>can_administer?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+78
+79
+80</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/account_user.rb', line 78</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_can_administer?'>can_administer?</span>
+  <span class='id identifier rubyid_deleted_at'>deleted_at</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>&amp;&amp;</span> <span class='const'><span class='object_link'><a href="" title="AccountUser (class)">AccountUser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_admin_user_roles'><span class='object_link'><a href="#admin_user_roles-class_method" title="AccountUser.admin_user_roles (method)">admin_user_roles</a></span></span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span> <span class='id identifier rubyid_r'>r</span> <span class='op'>==</span> <span class='id identifier rubyid_user_role'>user_role</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr 13 09:51:58 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.12 (ruby-2.4.1).
+</div>
+
+    </div>
+  </body>
+</html>

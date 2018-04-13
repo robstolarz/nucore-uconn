@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Accessories::Accessorizer
+  
+    &mdash; Documentation by YARD 0.9.12
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Accessories::Accessorizer";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (A)</a> &raquo;
+    <span class='title'>Accessories</span>
+     &raquo; 
+    <span class="title">Accessorizer</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Accessories::Accessorizer
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Accessories::Accessorizer</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/support/accessories/accessorizer.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#accessory_order_details-instance_method" title="#accessory_order_details (instance method)">#<strong>accessory_order_details</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_accessory-instance_method" title="#add_accessory (instance method)">#<strong>add_accessory</strong>(accessory, options = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#assign_attributes_and_save-instance_method" title="#assign_attributes_and_save (instance method)">#<strong>assign_attributes_and_save</strong>(od, params)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#build_accessory_order_detail-instance_method" title="#build_accessory_order_detail (instance method)">#<strong>build_accessory_order_detail</strong>(accessory, options = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#current_accessories-instance_method" title="#current_accessories (instance method)">#<strong>current_accessories</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#decorate-instance_method" title="#decorate (instance method)">#<strong>decorate</strong>(order_detail)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#detail_attributes-instance_method" title="#detail_attributes (instance method)">#<strong>detail_attributes</strong>(accessory, options)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#find_or_build_accessory_order_detail-instance_method" title="#find_or_build_accessory_order_detail (instance method)">#<strong>find_or_build_accessory_order_detail</strong>(accessory)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(order_detail)  &#x21d2; Accessorizer </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Accessorizer.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#permitted_attributes-instance_method" title="#permitted_attributes (instance method)">#<strong>permitted_attributes</strong>(params)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#product_accessory-instance_method" title="#product_accessory (instance method)">#<strong>product_accessory</strong>(accessory)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unpurchased_accessories-instance_method" title="#unpurchased_accessories (instance method)">#<strong>unpurchased_accessories</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unpurchased_accessory_order_details-instance_method" title="#unpurchased_accessory_order_details (instance method)">#<strong>unpurchased_accessory_order_details</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the accessories for the product, but excludes all the accessories
+that have already been ordered.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_attributes-instance_method" title="#update_attributes (instance method)">#<strong>update_attributes</strong>(params)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#update_attributes_of-instance_method" title="#update_attributes_of (instance method)">#<strong>update_attributes_of</strong>(order_details, params)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_order_detail-instance_method" title="#update_order_detail (instance method)">#<strong>update_order_detail</strong>(od, params)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_unpurchased_attributes-instance_method" title="#update_unpurchased_attributes (instance method)">#<strong>update_unpurchased_attributes</strong>(params)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#valid_accessory%3F-instance_method" title="#valid_accessory? (instance method)">#<strong>valid_accessory?</strong>(accessory)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(order_detail)  &#x21d2; <tt><span class='object_link'><a href="" title="Accessories::Accessorizer (class)">Accessorizer</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of Accessorizer</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3
+4
+5</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/accessories/accessorizer.rb', line 3</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_order_detail'>order_detail</span><span class='rparen'>)</span>
+  <span class='ivar'>@order_detail</span> <span class='op'>=</span> <span class='id identifier rubyid_order_detail'>order_detail</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="accessory_order_details-instance_method">
+  
+    #<strong>accessory_order_details</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+24
+25
+26</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/accessories/accessorizer.rb', line 24</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_accessory_order_details'>accessory_order_details</span>
+  <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_product'>product</span><span class='period'>.</span><span class='id identifier rubyid_accessories'>accessories</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='op'>|</span> <span class='id identifier rubyid_find_or_build_accessory_order_detail'>find_or_build_accessory_order_detail</span><span class='lparen'>(</span><span class='id identifier rubyid_a'>a</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="add_accessory-instance_method">
+  
+    #<strong>add_accessory</strong>(accessory, options = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/accessories/accessorizer.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_accessory'>add_accessory</span><span class='lparen'>(</span><span class='id identifier rubyid_accessory'>accessory</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_new_order_detail'>new_order_detail</span> <span class='op'>=</span> <span class='id identifier rubyid_build_accessory_order_detail'>build_accessory_order_detail</span><span class='lparen'>(</span><span class='id identifier rubyid_accessory'>accessory</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='comment'># match the order status to that of the parent
+</span>  <span class='id identifier rubyid_new_order_detail'>new_order_detail</span><span class='period'>.</span><span class='id identifier rubyid_update_order_status!'>update_order_status!</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_order_status'>order_status</span>
+  <span class='id identifier rubyid_new_order_detail'>new_order_detail</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="assign_attributes_and_save-instance_method">
+  
+    #<strong>assign_attributes_and_save</strong>(od, params)  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/accessories/accessorizer.rb', line 76</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_assign_attributes_and_save'>assign_attributes_and_save</span><span class='lparen'>(</span><span class='id identifier rubyid_od'>od</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_od'>od</span><span class='period'>.</span><span class='id identifier rubyid_assign_attributes'>assign_attributes</span><span class='lparen'>(</span><span class='id identifier rubyid_permitted_attributes'>permitted_attributes</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_od'>od</span><span class='period'>.</span><span class='id identifier rubyid_update_quantity'>update_quantity</span> <span class='comment'># so auto-scaled overrides the parameter
+</span>  <span class='id identifier rubyid_od'>od</span><span class='period'>.</span><span class='id identifier rubyid_assign_estimated_price'>assign_estimated_price</span>
+  <span class='id identifier rubyid_od'>od</span><span class='period'>.</span><span class='id identifier rubyid_enabled'>enabled</span> <span class='op'>=</span> <span class='kw'>true</span>
+
+  <span class='kw'>if</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_complete?'>complete?</span>
+    <span class='id identifier rubyid_od'>od</span><span class='period'>.</span><span class='id identifier rubyid_save!'>save!</span> <span class='comment'># do validations before trying to backdate
+</span>    <span class='id identifier rubyid_od'>od</span><span class='period'>.</span><span class='id identifier rubyid_backdate_to_complete!'>backdate_to_complete!</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_fulfilled_at'>fulfilled_at</span>
+  <span class='kw'>else</span>
+    <span class='comment'># Cannot do this with backdate_to_complete! because then it doesn&#39;t think
+</span>    <span class='comment'># the status is changing.
+</span>    <span class='id identifier rubyid_od'>od</span><span class='period'>.</span><span class='id identifier rubyid_order_status_id'>order_status_id</span> <span class='op'>=</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_order_status_id'>order_status_id</span>
+    <span class='id identifier rubyid_od'>od</span><span class='period'>.</span><span class='id identifier rubyid_save!'>save!</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="build_accessory_order_detail-instance_method">
+  
+    #<strong>build_accessory_order_detail</strong>(accessory, options = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30
+31
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/accessories/accessorizer.rb', line 28</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_build_accessory_order_detail'>build_accessory_order_detail</span><span class='lparen'>(</span><span class='id identifier rubyid_accessory'>accessory</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='id identifier rubyid_valid_accessory?'>valid_accessory?</span><span class='lparen'>(</span><span class='id identifier rubyid_accessory'>accessory</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_od'>od</span> <span class='op'>=</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_child_order_details'>child_order_details</span><span class='period'>.</span><span class='id identifier rubyid_build'>build</span><span class='lparen'>(</span><span class='id identifier rubyid_detail_attributes'>detail_attributes</span><span class='lparen'>(</span><span class='id identifier rubyid_accessory'>accessory</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_decorated_od'>decorated_od</span> <span class='op'>=</span> <span class='id identifier rubyid_decorate'>decorate</span><span class='lparen'>(</span><span class='id identifier rubyid_od'>od</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_decorated_od'>decorated_od</span><span class='period'>.</span><span class='id identifier rubyid_update_quantity'>update_quantity</span>
+  <span class='id identifier rubyid_decorated_od'>decorated_od</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="current_accessories-instance_method">
+  
+    #<strong>current_accessories</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+119
+120
+121</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/accessories/accessorizer.rb', line 119</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_current_accessories'>current_accessories</span>
+  <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_child_order_details'>child_order_details</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:product</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="decorate-instance_method">
+  
+    #<strong>decorate</strong>(order_detail)  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+105
+106
+107</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/accessories/accessorizer.rb', line 105</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_decorate'>decorate</span><span class='lparen'>(</span><span class='id identifier rubyid_order_detail'>order_detail</span><span class='rparen'>)</span>
+  <span class='const'>Accessories</span><span class='op'>::</span><span class='const'>Scaling</span><span class='period'>.</span><span class='id identifier rubyid_decorate'>decorate</span><span class='lparen'>(</span><span class='id identifier rubyid_order_detail'>order_detail</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="detail_attributes-instance_method">
+  
+    #<strong>detail_attributes</strong>(accessory, options)  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+109
+110
+111
+112
+113
+114
+115
+116
+117</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/accessories/accessorizer.rb', line 109</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_detail_attributes'>detail_attributes</span><span class='lparen'>(</span><span class='id identifier rubyid_accessory'>accessory</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_attrs'>attrs</span> <span class='op'>=</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span><span class='period'>.</span><span class='id identifier rubyid_slice'>slice</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>account_id</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>created_by</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_attrs'>attrs</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='label'>order:</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='comma'>,</span>
+              <span class='label'>product:</span> <span class='id identifier rubyid_accessory'>accessory</span><span class='comma'>,</span>
+              <span class='label'>note:</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:note</span><span class='rbracket'>]</span><span class='comma'>,</span>
+              <span class='label'>quantity:</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:quantity</span><span class='rbracket'>]</span><span class='comma'>,</span>
+              <span class='label'>product_accessory:</span> <span class='id identifier rubyid_product_accessory'>product_accessory</span><span class='lparen'>(</span><span class='id identifier rubyid_accessory'>accessory</span><span class='rparen'>)</span><span class='comma'>,</span>
+              <span class='label'>state:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_or_build_accessory_order_detail-instance_method">
+  
+    #<strong>find_or_build_accessory_order_detail</strong>(accessory)  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/accessories/accessorizer.rb', line 123</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_find_or_build_accessory_order_detail'>find_or_build_accessory_order_detail</span><span class='lparen'>(</span><span class='id identifier rubyid_accessory'>accessory</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_existing_od'>existing_od</span> <span class='op'>=</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_child_order_details'>child_order_details</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_od'>od</span><span class='op'>|</span> <span class='id identifier rubyid_od'>od</span><span class='period'>.</span><span class='id identifier rubyid_product'>product</span> <span class='op'>==</span> <span class='id identifier rubyid_accessory'>accessory</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_decorated'>decorated</span> <span class='op'>=</span> <span class='id identifier rubyid_decorate'>decorate</span><span class='lparen'>(</span><span class='id identifier rubyid_existing_od'>existing_od</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_decorated'>decorated</span><span class='period'>.</span><span class='id identifier rubyid_enabled'>enabled</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='id identifier rubyid_decorated'>decorated</span><span class='period'>.</span><span class='id identifier rubyid_update_quantity'>update_quantity</span>
+    <span class='id identifier rubyid_decorated'>decorated</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_build_accessory_order_detail'>build_accessory_order_detail</span><span class='lparen'>(</span><span class='id identifier rubyid_accessory'>accessory</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="permitted_attributes-instance_method">
+  
+    #<strong>permitted_attributes</strong>(params)  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+93
+94
+95</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/accessories/accessorizer.rb', line 93</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_permitted_attributes'>permitted_attributes</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_except'>except</span><span class='lparen'>(</span><span class='symbol'>:enabled</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_permit'>permit</span><span class='lparen'>(</span><span class='symbol'>:quantity</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="product_accessory-instance_method">
+  
+    #<strong>product_accessory</strong>(accessory)  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+97
+98
+99</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/accessories/accessorizer.rb', line 97</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_product_accessory'>product_accessory</span><span class='lparen'>(</span><span class='id identifier rubyid_accessory'>accessory</span><span class='rparen'>)</span>
+  <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_product'>product</span><span class='period'>.</span><span class='id identifier rubyid_product_accessory_by_id'>product_accessory_by_id</span><span class='lparen'>(</span><span class='id identifier rubyid_accessory'>accessory</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="unpurchased_accessories-instance_method">
+  
+    #<strong>unpurchased_accessories</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+14
+15
+16</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/accessories/accessorizer.rb', line 14</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_unpurchased_accessories'>unpurchased_accessories</span>
+  <span class='id identifier rubyid_accessories'>accessories</span> <span class='op'>=</span> <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_product'>product</span><span class='period'>.</span><span class='id identifier rubyid_accessories'>accessories</span><span class='period'>.</span><span class='id identifier rubyid_reject'>reject</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='op'>|</span> <span class='id identifier rubyid_current_accessories'>current_accessories</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='id identifier rubyid_a'>a</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="unpurchased_accessory_order_details-instance_method">
+  
+    #<strong>unpurchased_accessory_order_details</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the accessories for the product, but excludes all the accessories
+that have already been ordered</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+20
+21
+22</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/accessories/accessorizer.rb', line 20</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_unpurchased_accessory_order_details'>unpurchased_accessory_order_details</span>
+  <span class='id identifier rubyid_unpurchased_accessories'>unpurchased_accessories</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='op'>|</span> <span class='id identifier rubyid_build_accessory_order_detail'>build_accessory_order_detail</span><span class='lparen'>(</span><span class='id identifier rubyid_a'>a</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_attributes-instance_method">
+  
+    #<strong>update_attributes</strong>(params)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41
+42</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/accessories/accessorizer.rb', line 40</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_attributes'>update_attributes</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_update_attributes_of'>update_attributes_of</span><span class='lparen'>(</span><span class='id identifier rubyid_accessory_order_details'>accessory_order_details</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_attributes_of-instance_method">
+  
+    #<strong>update_attributes_of</strong>(order_details, params)  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/accessories/accessorizer.rb', line 55</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_attributes_of'>update_attributes_of</span><span class='lparen'>(</span><span class='id identifier rubyid_order_details'>order_details</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_transaction'>transaction</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_order_details'>order_details</span> <span class='op'>=</span> <span class='id identifier rubyid_order_details'>order_details</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_od'>od</span><span class='op'>|</span>
+      <span class='comment'># begin/rescue each to make sure that validations happen
+</span>      <span class='comment'># for all order details
+</span>      <span class='kw'>begin</span>
+        <span class='id identifier rubyid_detail_params'>detail_params</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='id identifier rubyid_od'>od</span><span class='period'>.</span><span class='id identifier rubyid_product_id'>product_id</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_update_order_detail'>update_order_detail</span><span class='lparen'>(</span><span class='id identifier rubyid_od'>od</span><span class='comma'>,</span> <span class='id identifier rubyid_detail_params'>detail_params</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_detail_params'>detail_params</span>
+      <span class='kw'>rescue</span> <span class='const'><span class='object_link'><a href="../ActiveRecord.html" title="ActiveRecord (module)">ActiveRecord</a></span></span><span class='op'>::</span><span class='const'>RecordInvalid</span>
+        <span class='comment'># UpdateResponse will check #errors on each od
+</span>      <span class='kw'>end</span>
+      <span class='id identifier rubyid_od'>od</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='const'>Accessories</span><span class='op'>::</span><span class='const'>UpdateResponse</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_order_details'>order_details</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../ActiveRecord.html" title="ActiveRecord (module)">ActiveRecord</a></span></span><span class='op'>::</span><span class='const'>Rollback</span> <span class='kw'>unless</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_valid?'>valid?</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_response'>response</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_order_detail-instance_method">
+  
+    #<strong>update_order_detail</strong>(od, params)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+44
+45
+46
+47
+48
+49
+50
+51</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/accessories/accessorizer.rb', line 44</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_order_detail'>update_order_detail</span><span class='lparen'>(</span><span class='id identifier rubyid_od'>od</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>true</span><span class='words_sep'> </span><span class='tstring_content'>1</span><span class='words_sep'>)</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:enabled</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_assign_attributes_and_save'>assign_attributes_and_save</span><span class='lparen'>(</span><span class='id identifier rubyid_od'>od</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_od'>od</span><span class='period'>.</span><span class='id identifier rubyid_destroy'>destroy</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_od'>od</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_unpurchased_attributes-instance_method">
+  
+    #<strong>update_unpurchased_attributes</strong>(params)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+36
+37
+38</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/accessories/accessorizer.rb', line 36</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_unpurchased_attributes'>update_unpurchased_attributes</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_update_attributes_of'>update_attributes_of</span><span class='lparen'>(</span><span class='id identifier rubyid_unpurchased_accessory_order_details'>unpurchased_accessory_order_details</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="valid_accessory?-instance_method">
+  
+    #<strong>valid_accessory?</strong>(accessory)  &#x21d2; <tt>Boolean</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+101
+102
+103</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/support/accessories/accessorizer.rb', line 101</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_valid_accessory?'>valid_accessory?</span><span class='lparen'>(</span><span class='id identifier rubyid_accessory'>accessory</span><span class='rparen'>)</span>
+  <span class='ivar'>@order_detail</span><span class='period'>.</span><span class='id identifier rubyid_product'>product</span><span class='period'>.</span><span class='id identifier rubyid_accessories'>accessories</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='id identifier rubyid_accessory'>accessory</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr 13 09:52:06 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.12 (ruby-2.4.1).
+</div>
+
+    </div>
+  </body>
+</html>

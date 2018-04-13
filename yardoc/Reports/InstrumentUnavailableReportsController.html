@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Reports::InstrumentUnavailableReportsController
+  
+    &mdash; Documentation by YARD 0.9.12
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Reports::InstrumentUnavailableReportsController";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (I)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Reports.html" title="Reports (module)">Reports</a></span></span>
+     &raquo; 
+    <span class="title">InstrumentUnavailableReportsController</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Reports::InstrumentUnavailableReportsController
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="ReportsController.html" title="Reports::ReportsController (class)">ReportsController</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ActionController::Base</li>
+          
+            <li class="next"><span class='object_link'><a href="../ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="ReportsController.html" title="Reports::ReportsController (class)">ReportsController</a></span></li>
+          
+            <li class="next">Reports::InstrumentUnavailableReportsController</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/controllers/reports/instrument_unavailable_reports_controller.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+  <h2>Constant Summary</h2>
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="../DateHelper.html" title="DateHelper (module)">DateHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../DateHelper.html#USA_DATE_FORMAT-constant" title="DateHelper::USA_DATE_FORMAT (constant)">DateHelper::USA_DATE_FORMAT</a></span></p>
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../ApplicationController.html#active_tab-instance_method" title="ApplicationController#active_tab (method)">#active_tab</a></span></p>
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reports-class_method" title="reports (class method)">.<strong>reports</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#export_csv_report_path-instance_method" title="#export_csv_report_path (instance method)">#<strong>export_csv_report_path</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#export_raw_visible-instance_method" title="#export_raw_visible (instance method)">#<strong>export_raw_visible</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#init_report-instance_method" title="#init_report (instance method)">#<strong>init_report</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#init_report_headers-instance_method" title="#init_report_headers (instance method)">#<strong>init_report_headers</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#reporter-instance_method" title="#reporter (instance method)">#<strong>reporter</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#xhr_html_template-instance_method" title="#xhr_html_template (instance method)">#<strong>xhr_html_template</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="ReportsController.html" title="Reports::ReportsController (class)">ReportsController</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="ReportsController.html#export_raw_visible%3F-instance_method" title="Reports::ReportsController#export_raw_visible? (method)">#export_raw_visible?</a></span>, <span class='object_link'><a href="ReportsController.html#format_username-class_method" title="Reports::ReportsController.format_username (method)">format_username</a></span>, <span class='object_link'><a href="ReportsController.html#html_template-instance_method" title="Reports::ReportsController#html_template (method)">#html_template</a></span>, <span class='object_link'><a href="ReportsController.html#index-instance_method" title="Reports::ReportsController#index (method)">#index</a></span>, <span class='object_link'><a href="ReportsController.html#init_report_data-instance_method" title="Reports::ReportsController#init_report_data (method)">#init_report_data</a></span>, <span class='object_link'><a href="ReportsController.html#init_report_params-instance_method" title="Reports::ReportsController#init_report_params (method)">#init_report_params</a></span>, <span class='object_link'><a href="ReportsController.html#initialize-instance_method" title="Reports::ReportsController#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="ReportsController.html#page_report-instance_method" title="Reports::ReportsController#page_report (method)">#page_report</a></span>, <span class='object_link'><a href="ReportsController.html#render_csv-instance_method" title="Reports::ReportsController#render_csv (method)">#render_csv</a></span>, <span class='object_link'><a href="ReportsController.html#render_report-instance_method" title="Reports::ReportsController#render_report (method)">#render_report</a></span>, <span class='object_link'><a href="ReportsController.html#render_report_download-instance_method" title="Reports::ReportsController#render_report_download (method)">#render_report_download</a></span>, <span class='object_link'><a href="ReportsController.html#report_data_request%3F-instance_method" title="Reports::ReportsController#report_data_request? (method)">#report_data_request?</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../CSVHelper.html" title="CSVHelper (module)">CSVHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../CSVHelper.html#set_csv_headers-instance_method" title="CSVHelper#set_csv_headers (method)">#set_csv_headers</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../ReportsHelper.html" title="ReportsHelper (module)">ReportsHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../ReportsHelper.html#combine_attributes-instance_method" title="ReportsHelper#combine_attributes (method)">#combine_attributes</a></span>, <span class='object_link'><a href="../ReportsHelper.html#format_percent-instance_method" title="ReportsHelper#format_percent (method)">#format_percent</a></span>, <span class='object_link'><a href="../ReportsHelper.html#order_and_filter_attributes-instance_method" title="ReportsHelper#order_and_filter_attributes (method)">#order_and_filter_attributes</a></span>, <span class='object_link'><a href="../ReportsHelper.html#report_attribute_values-instance_method" title="ReportsHelper#report_attribute_values (method)">#report_attribute_values</a></span>, <span class='object_link'><a href="../ReportsHelper.html#report_attributes-instance_method" title="ReportsHelper#report_attributes (method)">#report_attributes</a></span>, <span class='object_link'><a href="../ReportsHelper.html#to_hours-instance_method" title="ReportsHelper#to_hours (method)">#to_hours</a></span>, <span class='object_link'><a href="../ReportsHelper.html#to_percent-instance_method" title="ReportsHelper#to_percent (method)">#to_percent</a></span>, <span class='object_link'><a href="../ReportsHelper.html#truncate_seconds-instance_method" title="ReportsHelper#truncate_seconds (method)">#truncate_seconds</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../DateHelper.html" title="DateHelper (module)">DateHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../DateHelper.html#format_usa_date-instance_method" title="DateHelper#format_usa_date (method)">#format_usa_date</a></span>, <span class='object_link'><a href="../DateHelper.html#format_usa_datetime-instance_method" title="DateHelper#format_usa_datetime (method)">#format_usa_datetime</a></span>, <span class='object_link'><a href="../DateHelper.html#hour_options-instance_method" title="DateHelper#hour_options (method)">#hour_options</a></span>, <span class='object_link'><a href="../DateHelper.html#human_date-instance_method" title="DateHelper#human_date (method)">#human_date</a></span>, <span class='object_link'><a href="../DateHelper.html#human_time-instance_method" title="DateHelper#human_time (method)">#human_time</a></span>, <span class='object_link'><a href="../DateHelper.html#join_time_select_values-instance_method" title="DateHelper#join_time_select_values (method)">#join_time_select_values</a></span>, <span class='object_link'><a href="../DateHelper.html#minute_options-instance_method" title="DateHelper#minute_options (method)">#minute_options</a></span>, <span class='object_link'><a href="../DateHelper.html#parse_mmddyyyy_in_current_zone!-instance_method" title="DateHelper#parse_mmddyyyy_in_current_zone! (method)">#parse_mmddyyyy_in_current_zone!</a></span>, <span class='object_link'><a href="../DateHelper.html#parse_usa_date-instance_method" title="DateHelper#parse_usa_date (method)">#parse_usa_date</a></span>, <span class='object_link'><a href="../DateHelper.html#parse_usa_import_date-instance_method" title="DateHelper#parse_usa_import_date (method)">#parse_usa_import_date</a></span>, <span class='object_link'><a href="../DateHelper.html#time_ceil-instance_method" title="DateHelper#time_ceil (method)">#time_ceil</a></span>, <span class='object_link'><a href="../DateHelper.html#time_floor-instance_method" title="DateHelper#time_floor (method)">#time_floor</a></span>, <span class='object_link'><a href="../DateHelper.html#time_select-instance_method" title="DateHelper#time_select (method)">#time_select</a></span>, <span class='object_link'><a href="../DateHelper.html#time_select24-instance_method" title="DateHelper#time_select24 (method)">#time_select24</a></span>, <span class='object_link'><a href="../DateHelper.html#time_select_tag-instance_method" title="DateHelper#time_select_tag (method)">#time_select_tag</a></span>, <span class='object_link'><a href="../DateHelper.html#usa_formatted_date%3F-instance_method" title="DateHelper#usa_formatted_date? (method)">#usa_formatted_date?</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../ApplicationController.html#ability_resource-instance_method" title="ApplicationController#ability_resource (method)">#ability_resource</a></span>, <span class='object_link'><a href="../ApplicationController.html#acting_as%3F-instance_method" title="ApplicationController#acting_as? (method)">#acting_as?</a></span>, <span class='object_link'><a href="../ApplicationController.html#acting_user-instance_method" title="ApplicationController#acting_user (method)">#acting_user</a></span>, <span class='object_link'><a href="../ApplicationController.html#after_sign_out_path_for-instance_method" title="ApplicationController#after_sign_out_path_for (method)">#after_sign_out_path_for</a></span>, <span class='object_link'><a href="../ApplicationController.html#backend%3F-instance_method" title="ApplicationController#backend? (method)">#backend?</a></span>, <span class='object_link'><a href="../ApplicationController.html#check_acting_as-instance_method" title="ApplicationController#check_acting_as (method)">#check_acting_as</a></span>, <span class='object_link'><a href="../ApplicationController.html#check_billing_access-instance_method" title="ApplicationController#check_billing_access (method)">#check_billing_access</a></span>, <span class='object_link'><a href="../ApplicationController.html#cross_facility%3F-instance_method" title="ApplicationController#cross_facility? (method)">#cross_facility?</a></span>, <span class='object_link'><a href="../ApplicationController.html#current_ability-instance_method" title="ApplicationController#current_ability (method)">#current_ability</a></span>, <span class='object_link'><a href="../ApplicationController.html#current_cart-instance_method" title="ApplicationController#current_cart (method)">#current_cart</a></span>, <span class='object_link'><a href="../ApplicationController.html#current_facility-instance_method" title="ApplicationController#current_facility (method)">#current_facility</a></span>, <span class='object_link'><a href="../ApplicationController.html#empty_params-instance_method" title="ApplicationController#empty_params (method)">#empty_params</a></span>, <span class='object_link'><a href="../ApplicationController.html#init_current_account-instance_method" title="ApplicationController#init_current_account (method)">#init_current_account</a></span>, <span class='object_link'><a href="../ApplicationController.html#init_current_facility-instance_method" title="ApplicationController#init_current_facility (method)">#init_current_facility</a></span>, <span class='object_link'><a href="../ApplicationController.html#manageable_facilities-instance_method" title="ApplicationController#manageable_facilities (method)">#manageable_facilities</a></span>, <span class='object_link'><a href="../ApplicationController.html#open_or_facility_path-instance_method" title="ApplicationController#open_or_facility_path (method)">#open_or_facility_path</a></span>, <span class='object_link'><a href="../ApplicationController.html#operable_facilities-instance_method" title="ApplicationController#operable_facilities (method)">#operable_facilities</a></span>, <span class='object_link'><a href="../ApplicationController.html#render_403-instance_method" title="ApplicationController#render_403 (method)">#render_403</a></span>, <span class='object_link'><a href="../ApplicationController.html#render_404-instance_method" title="ApplicationController#render_404 (method)">#render_404</a></span>, <span class='object_link'><a href="../ApplicationController.html#render_acting_error-instance_method" title="ApplicationController#render_acting_error (method)">#render_acting_error</a></span>, <span class='object_link'><a href="../ApplicationController.html#session_user-instance_method" title="ApplicationController#session_user (method)">#session_user</a></span>, <span class='object_link'><a href="../ApplicationController.html#store_fullpath_in_session-instance_method" title="ApplicationController#store_fullpath_in_session (method)">#store_fullpath_in_session</a></span>, <span class='object_link'><a href="../ApplicationController.html#with_dropped_params-instance_method" title="ApplicationController#with_dropped_params (method)">#with_dropped_params</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../NavTab.html" title="NavTab (module)">NavTab</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../NavTab.html#admin_tab%3F-instance_method" title="NavTab#admin_tab? (method)">#admin_tab?</a></span>, <span class='object_link'><a href="../NavTab.html#global_link_collection-instance_method" title="NavTab#global_link_collection (method)">#global_link_collection</a></span>, <span class='object_link'><a href="../NavTab.html#global_navigation_links-instance_method" title="NavTab#global_navigation_links (method)">#global_navigation_links</a></span>, <span class='object_link'><a href="../NavTab.html#link_collection-instance_method" title="NavTab#link_collection (method)">#link_collection</a></span>, <span class='object_link'><a href="../NavTab.html#navigation_links-instance_method" title="NavTab#navigation_links (method)">#navigation_links</a></span></p>
+
+  
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="ReportsController.html#initialize-instance_method" title="Reports::ReportsController#initialize (method)">Reports::ReportsController</a></span></p>
+  
+</div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="reports-class_method">
+  
+    .<strong>reports</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/reports/instrument_unavailable_reports_controller.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_reports'>reports</span>
+  <span class='ivar'>@reports</span> <span class='op'>||=</span> <span class='const'>HashWithIndifferentAccess</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='label'>instrument_unavailable:</span> <span class='symbol'>:type</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="export_csv_report_path-instance_method">
+  
+    #<strong>export_csv_report_path</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+11
+12
+13</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/reports/instrument_unavailable_reports_controller.rb', line 11</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_export_csv_report_path'>export_csv_report_path</span>
+  <span class='id identifier rubyid_facility_instrument_unavailable_export_raw_reports_path'>facility_instrument_unavailable_export_raw_reports_path</span><span class='lparen'>(</span><span class='label'>format:</span> <span class='symbol'>:csv</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="export_raw_visible-instance_method">
+  
+    #<strong>export_raw_visible</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/reports/instrument_unavailable_reports_controller.rb', line 15</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_export_raw_visible'>export_raw_visible</span>
+  <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="init_report-instance_method">
+  
+    #<strong>init_report</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37
+38
+39
+40</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/reports/instrument_unavailable_reports_controller.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_init_report'>init_report</span>
+  <span class='ivar'>@rows</span> <span class='op'>=</span> <span class='id identifier rubyid_page_report'>page_report</span><span class='lparen'>(</span><span class='id identifier rubyid_reporter'>reporter</span><span class='period'>.</span><span class='id identifier rubyid_rows'>rows</span><span class='rparen'>)</span>
+  <span class='ivar'>@totals</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_reporter'>reporter</span><span class='period'>.</span><span class='id identifier rubyid_total_quantity'>total_quantity</span><span class='comma'>,</span> <span class='id identifier rubyid_reporter'>reporter</span><span class='period'>.</span><span class='id identifier rubyid_total_hours'>total_hours</span><span class='rbracket'>]</span>
+  <span class='ivar'>@numeric_columns</span> <span class='op'>=</span> <span class='id identifier rubyid_reporter'>reporter</span><span class='period'>.</span><span class='id identifier rubyid_numeric_columns'>numeric_columns</span>
+  <span class='ivar'>@label_columns</span> <span class='op'>=</span> <span class='ivar'>@headers</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="init_report_headers-instance_method">
+  
+    #<strong>init_report_headers</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+25
+26
+27
+28
+29
+30
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/reports/instrument_unavailable_reports_controller.rb', line 25</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_init_report_headers'>init_report_headers</span>
+  <span class='ivar'>@headers</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='id identifier rubyid_text'>text</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>controllers.reports/instrument_reports.instrument</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_text'>text</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>controllers.reports/instrument_reports.type</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_text'>text</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>controllers.reports/instrument_reports.category</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_text'>text</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>controllers.reports/instrument_reports.quantity</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_text'>text</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>controllers.reports/instrument_reports.reserved</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reporter-instance_method">
+  
+    #<strong>reporter</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+42
+43
+44
+45</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/reports/instrument_unavailable_reports_controller.rb', line 42</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reporter'>reporter</span>
+  <span class='ivar'>@reporter</span> <span class='op'>||=</span>
+    <span class='const'><span class='object_link'><a href="InstrumentUnavailableReport.html" title="Reports::InstrumentUnavailableReport (class)">InstrumentUnavailableReport</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="InstrumentUnavailableReport.html#initialize-instance_method" title="Reports::InstrumentUnavailableReport#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_current_facility'>current_facility</span><span class='comma'>,</span> <span class='ivar'>@date_start</span><span class='comma'>,</span> <span class='ivar'>@date_end</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="xhr_html_template-instance_method">
+  
+    #<strong>xhr_html_template</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/reports/instrument_unavailable_reports_controller.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_xhr_html_template'>xhr_html_template</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>reports/instrument_unavailable_reports/report_table</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr 13 09:52:18 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.12 (ruby-2.4.1).
+</div>
+
+    </div>
+  </body>
+</html>

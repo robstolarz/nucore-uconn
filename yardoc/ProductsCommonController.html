@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: ProductsCommonController
+  
+    &mdash; Documentation by YARD 0.9.12
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "ProductsCommonController";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (P)</a> &raquo;
+    
+    
+    <span class="title">ProductsCommonController</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: ProductsCommonController
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ActionController::Base</li>
+          
+            <li class="next"><span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></li>
+          
+            <li class="next">ProductsCommonController</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="TranslationHelper.html" title="TranslationHelper (module)">TranslationHelper</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/controllers/products_common_controller.rb</dd>
+  </dl>
+  
+</div>
+
+<div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="BundlesController.html" title="BundlesController (class)">BundlesController</a></span>, <span class='object_link'><a href="InstrumentsController.html" title="InstrumentsController (class)">InstrumentsController</a></span>, <span class='object_link'><a href="ItemsController.html" title="ItemsController (class)">ItemsController</a></span>, <span class='object_link'><a href="ServicesController.html" title="ServicesController (class)">ServicesController</a></span>, <span class='object_link'><a href="TimedServicesController.html" title="TimedServicesController (class)">TimedServicesController</a></span></p>
+</div>
+
+
+
+  <h2>Constant Summary</h2>
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="DateHelper.html" title="DateHelper (module)">DateHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DateHelper.html#USA_DATE_FORMAT-constant" title="DateHelper::USA_DATE_FORMAT (constant)">DateHelper::USA_DATE_FORMAT</a></span></p>
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="ApplicationController.html#active_tab-instance_method" title="ApplicationController#active_tab (method)">#active_tab</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#assert_product_is_accessible!-instance_method" title="#assert_product_is_accessible! (instance method)">#<strong>assert_product_is_accessible!</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create-instance_method" title="#create (instance method)">#<strong>create</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>POST /services.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#current_facility_products-instance_method" title="#current_facility_products (instance method)">#<strong>current_facility_products</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#destroy-instance_method" title="#destroy (instance method)">#<strong>destroy</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>DELETE /services/1.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#edit-instance_method" title="#edit (instance method)">#<strong>edit</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>GET /facilities/alpha/(items|services|instruments)/1/edit.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#index-instance_method" title="#index (instance method)">#<strong>index</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>GET /services.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#init_product-instance_method" title="#init_product (instance method)">#<strong>init_product</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Dynamically get the proper object from the database based on the controller
+name.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; ProductsCommonController </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of ProductsCommonController.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#manage-instance_method" title="#manage (instance method)">#<strong>manage</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new-instance_method" title="#new (instance method)">#<strong>new</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>GET /services/new.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#plural_object_name-instance_method" title="#plural_object_name (instance method)">#<strong>plural_object_name</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get the object name to work off of.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#price_policy_available_for_product%3F-instance_method" title="#price_policy_available_for_product? (instance method)">#<strong>price_policy_available_for_product?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#product_class-instance_method" title="#product_class (instance method)">#<strong>product_class</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#product_is_accessible%3F-instance_method" title="#product_is_accessible? (instance method)">#<strong>product_is_accessible?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#resource_params-instance_method" title="#resource_params (instance method)">#<strong>resource_params</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#session_user_can_override_restrictions%3F-instance_method" title="#session_user_can_override_restrictions? (instance method)">#<strong>session_user_can_override_restrictions?</strong>(product)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#show-instance_method" title="#show (instance method)">#<strong>show</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>GET
+/facilities/:facility_id/(services|items|bundles)/:(service|item|bundle)_id
+TODO InstrumentsController#show has a lot in common;
+refactor/extract/consolidate.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#singular_object_name-instance_method" title="#singular_object_name (instance method)">#<strong>singular_object_name</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update-instance_method" title="#update (instance method)">#<strong>update</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>PUT /services/1.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="TranslationHelper.html" title="TranslationHelper (module)">TranslationHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="TranslationHelper.html#t_boolean-instance_method" title="TranslationHelper#t_boolean (method)">#t_boolean</a></span>, <span class='object_link'><a href="TranslationHelper.html#t_create_model-instance_method" title="TranslationHelper#t_create_model (method)">#t_create_model</a></span>, <span class='object_link'><a href="TranslationHelper.html#t_create_models-instance_method" title="TranslationHelper#t_create_models (method)">#t_create_models</a></span>, <span class='object_link'><a href="TranslationHelper.html#t_manage_models-instance_method" title="TranslationHelper#t_manage_models (method)">#t_manage_models</a></span>, <span class='object_link'><a href="TranslationHelper.html#t_model_error-instance_method" title="TranslationHelper#t_model_error (method)">#t_model_error</a></span>, <span class='object_link'><a href="TranslationHelper.html#t_my-instance_method" title="TranslationHelper#t_my (method)">#t_my</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="ApplicationController.html#ability_resource-instance_method" title="ApplicationController#ability_resource (method)">#ability_resource</a></span>, <span class='object_link'><a href="ApplicationController.html#acting_as%3F-instance_method" title="ApplicationController#acting_as? (method)">#acting_as?</a></span>, <span class='object_link'><a href="ApplicationController.html#acting_user-instance_method" title="ApplicationController#acting_user (method)">#acting_user</a></span>, <span class='object_link'><a href="ApplicationController.html#after_sign_out_path_for-instance_method" title="ApplicationController#after_sign_out_path_for (method)">#after_sign_out_path_for</a></span>, <span class='object_link'><a href="ApplicationController.html#backend%3F-instance_method" title="ApplicationController#backend? (method)">#backend?</a></span>, <span class='object_link'><a href="ApplicationController.html#check_acting_as-instance_method" title="ApplicationController#check_acting_as (method)">#check_acting_as</a></span>, <span class='object_link'><a href="ApplicationController.html#check_billing_access-instance_method" title="ApplicationController#check_billing_access (method)">#check_billing_access</a></span>, <span class='object_link'><a href="ApplicationController.html#cross_facility%3F-instance_method" title="ApplicationController#cross_facility? (method)">#cross_facility?</a></span>, <span class='object_link'><a href="ApplicationController.html#current_ability-instance_method" title="ApplicationController#current_ability (method)">#current_ability</a></span>, <span class='object_link'><a href="ApplicationController.html#current_cart-instance_method" title="ApplicationController#current_cart (method)">#current_cart</a></span>, <span class='object_link'><a href="ApplicationController.html#current_facility-instance_method" title="ApplicationController#current_facility (method)">#current_facility</a></span>, <span class='object_link'><a href="ApplicationController.html#empty_params-instance_method" title="ApplicationController#empty_params (method)">#empty_params</a></span>, <span class='object_link'><a href="ApplicationController.html#init_current_account-instance_method" title="ApplicationController#init_current_account (method)">#init_current_account</a></span>, <span class='object_link'><a href="ApplicationController.html#init_current_facility-instance_method" title="ApplicationController#init_current_facility (method)">#init_current_facility</a></span>, <span class='object_link'><a href="ApplicationController.html#manageable_facilities-instance_method" title="ApplicationController#manageable_facilities (method)">#manageable_facilities</a></span>, <span class='object_link'><a href="ApplicationController.html#open_or_facility_path-instance_method" title="ApplicationController#open_or_facility_path (method)">#open_or_facility_path</a></span>, <span class='object_link'><a href="ApplicationController.html#operable_facilities-instance_method" title="ApplicationController#operable_facilities (method)">#operable_facilities</a></span>, <span class='object_link'><a href="ApplicationController.html#render_403-instance_method" title="ApplicationController#render_403 (method)">#render_403</a></span>, <span class='object_link'><a href="ApplicationController.html#render_404-instance_method" title="ApplicationController#render_404 (method)">#render_404</a></span>, <span class='object_link'><a href="ApplicationController.html#render_acting_error-instance_method" title="ApplicationController#render_acting_error (method)">#render_acting_error</a></span>, <span class='object_link'><a href="ApplicationController.html#session_user-instance_method" title="ApplicationController#session_user (method)">#session_user</a></span>, <span class='object_link'><a href="ApplicationController.html#store_fullpath_in_session-instance_method" title="ApplicationController#store_fullpath_in_session (method)">#store_fullpath_in_session</a></span>, <span class='object_link'><a href="ApplicationController.html#with_dropped_params-instance_method" title="ApplicationController#with_dropped_params (method)">#with_dropped_params</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="NavTab.html" title="NavTab (module)">NavTab</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="NavTab.html#admin_tab%3F-instance_method" title="NavTab#admin_tab? (method)">#admin_tab?</a></span>, <span class='object_link'><a href="NavTab.html#global_link_collection-instance_method" title="NavTab#global_link_collection (method)">#global_link_collection</a></span>, <span class='object_link'><a href="NavTab.html#global_navigation_links-instance_method" title="NavTab#global_navigation_links (method)">#global_navigation_links</a></span>, <span class='object_link'><a href="NavTab.html#link_collection-instance_method" title="NavTab#link_collection (method)">#link_collection</a></span>, <span class='object_link'><a href="NavTab.html#navigation_links-instance_method" title="NavTab#navigation_links (method)">#navigation_links</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="DateHelper.html" title="DateHelper (module)">DateHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DateHelper.html#format_usa_date-instance_method" title="DateHelper#format_usa_date (method)">#format_usa_date</a></span>, <span class='object_link'><a href="DateHelper.html#format_usa_datetime-instance_method" title="DateHelper#format_usa_datetime (method)">#format_usa_datetime</a></span>, <span class='object_link'><a href="DateHelper.html#hour_options-instance_method" title="DateHelper#hour_options (method)">#hour_options</a></span>, <span class='object_link'><a href="DateHelper.html#human_date-instance_method" title="DateHelper#human_date (method)">#human_date</a></span>, <span class='object_link'><a href="DateHelper.html#human_time-instance_method" title="DateHelper#human_time (method)">#human_time</a></span>, <span class='object_link'><a href="DateHelper.html#join_time_select_values-instance_method" title="DateHelper#join_time_select_values (method)">#join_time_select_values</a></span>, <span class='object_link'><a href="DateHelper.html#minute_options-instance_method" title="DateHelper#minute_options (method)">#minute_options</a></span>, <span class='object_link'><a href="DateHelper.html#parse_mmddyyyy_in_current_zone!-instance_method" title="DateHelper#parse_mmddyyyy_in_current_zone! (method)">#parse_mmddyyyy_in_current_zone!</a></span>, <span class='object_link'><a href="DateHelper.html#parse_usa_date-instance_method" title="DateHelper#parse_usa_date (method)">#parse_usa_date</a></span>, <span class='object_link'><a href="DateHelper.html#parse_usa_import_date-instance_method" title="DateHelper#parse_usa_import_date (method)">#parse_usa_import_date</a></span>, <span class='object_link'><a href="DateHelper.html#time_ceil-instance_method" title="DateHelper#time_ceil (method)">#time_ceil</a></span>, <span class='object_link'><a href="DateHelper.html#time_floor-instance_method" title="DateHelper#time_floor (method)">#time_floor</a></span>, <span class='object_link'><a href="DateHelper.html#time_select-instance_method" title="DateHelper#time_select (method)">#time_select</a></span>, <span class='object_link'><a href="DateHelper.html#time_select24-instance_method" title="DateHelper#time_select24 (method)">#time_select24</a></span>, <span class='object_link'><a href="DateHelper.html#time_select_tag-instance_method" title="DateHelper#time_select_tag (method)">#time_select_tag</a></span>, <span class='object_link'><a href="DateHelper.html#usa_formatted_date%3F-instance_method" title="DateHelper#usa_formatted_date? (method)">#usa_formatted_date?</a></span></p>
+
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="ProductsCommonController (class)">ProductsCommonController</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of ProductsCommonController</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/products_common_controller.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
+  <span class='ivar'>@active_tab</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>admin_products</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>super</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="assert_product_is_accessible!-instance_method">
+  
+    #<strong>assert_product_is_accessible!</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="NUCore/PermissionDenied.html" title="NUCore::PermissionDenied (class)">NUCore::PermissionDenied</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+168
+169
+170</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/products_common_controller.rb', line 168</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_assert_product_is_accessible!'>assert_product_is_accessible!</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NUCore.html" title="NUCore (module)">NUCore</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="NUCore/PermissionDenied.html" title="NUCore::PermissionDenied (class)">PermissionDenied</a></span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_product_is_accessible?'>product_is_accessible?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create-instance_method">
+  
+    #<strong>create</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>POST /services</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/products_common_controller.rb', line 104</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span>
+  <span class='ivar'>@product</span> <span class='op'>=</span> <span class='id identifier rubyid_current_facility_products'>current_facility_products</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_resource_params'>resource_params</span><span class='rparen'>)</span>
+  <span class='ivar'>@product</span><span class='period'>.</span><span class='id identifier rubyid_initial_order_status_id'>initial_order_status_id</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="OrderStatus.html" title="OrderStatus (class)">OrderStatus</a></span></span><span class='period'>.</span><span class='id identifier rubyid_default_order_status'><span class='object_link'><a href="OrderStatus.html#default_order_status-class_method" title="OrderStatus.default_order_status (method)">default_order_status</a></span></span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span>
+
+  <span class='kw'>if</span> <span class='ivar'>@product</span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span>
+    <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:notice</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@product</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> was successfully created.</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_redirect_to'>redirect_to</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='symbol'>:manage</span><span class='comma'>,</span> <span class='id identifier rubyid_current_facility'>current_facility</span><span class='comma'>,</span> <span class='ivar'>@product</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_render'>render</span> <span class='label'>action:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="current_facility_products-instance_method">
+  
+    #<strong>current_facility_products</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+177
+178
+179</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/products_common_controller.rb', line 177</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_current_facility_products'>current_facility_products</span>
+  <span class='id identifier rubyid_product_class'>product_class</span><span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='label'>facility:</span> <span class='id identifier rubyid_current_facility'>current_facility</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_alphabetized'>alphabetized</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="destroy-instance_method">
+  
+    #<strong>destroy</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>DELETE /services/1</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+133
+134
+135
+136
+137
+138
+139
+140</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/products_common_controller.rb', line 133</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_destroy'>destroy</span>
+  <span class='kw'>if</span> <span class='ivar'>@product</span><span class='period'>.</span><span class='id identifier rubyid_destroy'>destroy</span>
+    <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:notice</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@product</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> was successfully deleted</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:error</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>There was a problem deleting the </span><span class='embexpr_beg'>#{</span><span class='ivar'>@product</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_lower'>to_lower</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='lbracket'>[</span><span class='id identifier rubyid_current_facility'>current_facility</span><span class='comma'>,</span> <span class='id identifier rubyid_plural_object_name'>plural_object_name</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="edit-instance_method">
+  
+    #<strong>edit</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>GET /facilities/alpha/(items|services|instruments)/1/edit</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+117
+118</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/products_common_controller.rb', line 117</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_edit'>edit</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="index-instance_method">
+  
+    #<strong>index</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>GET /services</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/products_common_controller.rb', line 24</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span>
+  <span class='ivar'>@archived_product_count</span>     <span class='op'>=</span> <span class='id identifier rubyid_current_facility_products'>current_facility_products</span><span class='period'>.</span><span class='id identifier rubyid_archived'>archived</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
+  <span class='ivar'>@not_archived_product_count</span> <span class='op'>=</span> <span class='id identifier rubyid_current_facility_products'>current_facility_products</span><span class='period'>.</span><span class='id identifier rubyid_not_archived'>not_archived</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
+  <span class='ivar'>@products</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:archived</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>||</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:archived</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>true</span><span class='tstring_end'>&quot;</span></span>
+                <span class='id identifier rubyid_current_facility_products'>current_facility_products</span><span class='period'>.</span><span class='id identifier rubyid_not_archived'>not_archived</span>
+              <span class='kw'>else</span>
+                <span class='id identifier rubyid_current_facility_products'>current_facility_products</span><span class='period'>.</span><span class='id identifier rubyid_archived'>archived</span>
+              <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_render'>render</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>admin/products/index</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="init_product-instance_method">
+  
+    #<strong>init_product</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Dynamically get the proper object from the database based on the controller
+name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+187
+188
+189</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/products_common_controller.rb', line 187</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_init_product'>init_product</span>
+  <span class='ivar'>@product</span> <span class='op'>=</span> <span class='id identifier rubyid_current_facility_products'>current_facility_products</span><span class='period'>.</span><span class='id identifier rubyid_find_by!'>find_by!</span><span class='lparen'>(</span><span class='label'>url_name:</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:#{</span><span class='id identifier rubyid_singular_object_name'>singular_object_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>_id</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="manage-instance_method">
+  
+    #<strong>manage</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+142
+143
+144
+145</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/products_common_controller.rb', line 142</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_manage'>manage</span>
+  <span class='id identifier rubyid_authorize!'>authorize!</span> <span class='symbol'>:view_details</span><span class='comma'>,</span> <span class='ivar'>@product</span>
+  <span class='ivar'>@active_tab</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>admin_products</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="new-instance_method">
+  
+    #<strong>new</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>GET /services/new</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+99
+100
+101</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/products_common_controller.rb', line 99</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_new'>new</span>
+  <span class='ivar'>@product</span> <span class='op'>=</span> <span class='id identifier rubyid_current_facility_products'>current_facility_products</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='label'>account:</span> <span class='const'>Settings</span><span class='period'>.</span><span class='id identifier rubyid_accounts'>accounts</span><span class='period'>.</span><span class='id identifier rubyid_product_default'>product_default</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="plural_object_name-instance_method">
+  
+    #<strong>plural_object_name</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get the object name to work off of. E.g. In ServicesController, this
+returns “services”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+197
+198
+199</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/products_common_controller.rb', line 197</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_plural_object_name'>plural_object_name</span>
+  <span class='id identifier rubyid_singular_object_name'>singular_object_name</span><span class='period'>.</span><span class='id identifier rubyid_pluralize'>pluralize</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="price_policy_available_for_product?-instance_method">
+  
+    #<strong>price_policy_available_for_product?</strong>  &#x21d2; <tt>Boolean</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+181
+182
+183
+184</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/products_common_controller.rb', line 181</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_price_policy_available_for_product?'>price_policy_available_for_product?</span>
+  <span class='id identifier rubyid_groups'>groups</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_acting_user'>acting_user</span><span class='period'>.</span><span class='id identifier rubyid_price_groups'>price_groups</span> <span class='op'>+</span> <span class='id identifier rubyid_acting_user'>acting_user</span><span class='period'>.</span><span class='id identifier rubyid_account_price_groups'>account_price_groups</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span><span class='period'>.</span><span class='id identifier rubyid_uniq'>uniq</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:id</span><span class='rparen'>)</span>
+  <span class='ivar'>@product</span><span class='period'>.</span><span class='id identifier rubyid_can_purchase?'>can_purchase?</span><span class='lparen'>(</span><span class='id identifier rubyid_groups'>groups</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="product_class-instance_method">
+  
+    #<strong>product_class</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+191
+192
+193</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/products_common_controller.rb', line 191</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_product_class'>product_class</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Controller$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_singularize'>singularize</span><span class='period'>.</span><span class='id identifier rubyid_constantize'>constantize</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="product_is_accessible?-instance_method">
+  
+    #<strong>product_is_accessible?</strong>  &#x21d2; <tt>Boolean</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+172
+173
+174
+175</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/products_common_controller.rb', line 172</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_product_is_accessible?'>product_is_accessible?</span>
+  <span class='id identifier rubyid_is_operator'>is_operator</span> <span class='op'>=</span> <span class='id identifier rubyid_session_user'>session_user</span><span class='op'>&amp;.</span><span class='id identifier rubyid_operator_of?'>operator_of?</span><span class='lparen'>(</span><span class='id identifier rubyid_current_facility'>current_facility</span><span class='rparen'>)</span>
+  <span class='op'>!</span><span class='lparen'>(</span><span class='ivar'>@product</span><span class='period'>.</span><span class='id identifier rubyid_is_archived?'>is_archived?</span> <span class='op'>||</span> <span class='lparen'>(</span><span class='ivar'>@product</span><span class='period'>.</span><span class='id identifier rubyid_is_hidden?'>is_hidden?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_is_operator'>is_operator</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="resource_params-instance_method">
+  
+    #<strong>resource_params</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/products_common_controller.rb', line 155</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_resource_params'>resource_params</span>
+  <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_require'>require</span><span class='lparen'>(</span><span class='symbol'>:#{</span><span class='id identifier rubyid_singular_object_name'>singular_object_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_permit'>permit</span><span class='lparen'>(</span><span class='symbol'>:name</span><span class='comma'>,</span> <span class='symbol'>:url_name</span><span class='comma'>,</span> <span class='symbol'>:contact_email</span><span class='comma'>,</span> <span class='symbol'>:description</span><span class='comma'>,</span>
+                                                    <span class='symbol'>:facility_account_id</span><span class='comma'>,</span> <span class='symbol'>:account</span><span class='comma'>,</span> <span class='symbol'>:initial_order_status_id</span><span class='comma'>,</span>
+                                                    <span class='symbol'>:requires_approval</span><span class='comma'>,</span> <span class='symbol'>:training_request_contacts</span><span class='comma'>,</span>
+                                                    <span class='symbol'>:is_archived</span><span class='comma'>,</span> <span class='symbol'>:is_hidden</span><span class='comma'>,</span> <span class='symbol'>:order_notification_recipient</span><span class='comma'>,</span>
+                                                    <span class='symbol'>:user_notes_field_mode</span><span class='comma'>,</span> <span class='symbol'>:user_notes_label</span><span class='comma'>,</span> <span class='symbol'>:show_details</span><span class='comma'>,</span>
+                                                    <span class='symbol'>:schedule_id</span><span class='comma'>,</span> <span class='symbol'>:control_mechanism</span><span class='comma'>,</span> <span class='symbol'>:reserve_interval</span><span class='comma'>,</span>
+                                                    <span class='symbol'>:min_reserve_mins</span><span class='comma'>,</span> <span class='symbol'>:max_reserve_mins</span><span class='comma'>,</span> <span class='symbol'>:min_cancel_hours</span><span class='comma'>,</span>
+                                                    <span class='symbol'>:auto_cancel_mins</span><span class='comma'>,</span> <span class='symbol'>:lock_window</span><span class='comma'>,</span> <span class='symbol'>:cutoff_hours</span><span class='comma'>,</span>
+                                                    <span class='label'>relay_attributes:</span> <span class='lbracket'>[</span><span class='symbol'>:ip</span><span class='comma'>,</span> <span class='symbol'>:port</span><span class='comma'>,</span> <span class='symbol'>:username</span><span class='comma'>,</span> <span class='symbol'>:password</span><span class='comma'>,</span> <span class='symbol'>:type</span><span class='comma'>,</span>
+                                                                       <span class='symbol'>:auto_logout</span><span class='comma'>,</span> <span class='symbol'>:auto_logout_minutes</span><span class='comma'>,</span> <span class='symbol'>:id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="session_user_can_override_restrictions?-instance_method">
+  
+    #<strong>session_user_can_override_restrictions?</strong>(product)  &#x21d2; <tt>Boolean</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+207
+208
+209</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/products_common_controller.rb', line 207</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_session_user_can_override_restrictions?'>session_user_can_override_restrictions?</span><span class='lparen'>(</span><span class='id identifier rubyid_product'>product</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_session_user'>session_user</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_session_user'>session_user</span><span class='period'>.</span><span class='id identifier rubyid_can_override_restrictions?'>can_override_restrictions?</span><span class='lparen'>(</span><span class='id identifier rubyid_product'>product</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="show-instance_method">
+  
+    #<strong>show</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>GET
+/facilities/:facility_id/(services|items|bundles)/:(service|item|bundle)_id
+TODO InstrumentsController#show has a lot in common;
+refactor/extract/consolidate</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/products_common_controller.rb', line 38</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_show'>show</span>
+  <span class='id identifier rubyid_assert_product_is_accessible!'>assert_product_is_accessible!</span>
+  <span class='id identifier rubyid_add_to_cart'>add_to_cart</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='ivar'>@login_required</span> <span class='op'>=</span> <span class='kw'>false</span>
+
+  <span class='comment'># does the product have active price policies?
+</span>  <span class='kw'>unless</span> <span class='ivar'>@product</span><span class='period'>.</span><span class='id identifier rubyid_available_for_purchase?'>available_for_purchase?</span>
+    <span class='id identifier rubyid_add_to_cart'>add_to_cart</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='ivar'>@error</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>not_available</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># is user logged in?
+</span>  <span class='kw'>if</span> <span class='id identifier rubyid_add_to_cart'>add_to_cart</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_acting_user'>acting_user</span><span class='period'>.</span><span class='id identifier rubyid_blank?'>blank?</span>
+    <span class='ivar'>@login_required</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='id identifier rubyid_add_to_cart'>add_to_cart</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># when ordering on behalf of, does the staff have permissions for this facility?
+</span>  <span class='kw'>if</span> <span class='id identifier rubyid_add_to_cart'>add_to_cart</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_acting_as?'>acting_as?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_session_user'>session_user</span><span class='period'>.</span><span class='id identifier rubyid_operator_of?'>operator_of?</span><span class='lparen'>(</span><span class='ivar'>@product</span><span class='period'>.</span><span class='id identifier rubyid_facility'>facility</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_add_to_cart'>add_to_cart</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='ivar'>@error</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>not_authorized_acting_as</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># does the user have a valid payment source for purchasing this reservation?
+</span>  <span class='kw'>if</span> <span class='id identifier rubyid_add_to_cart'>add_to_cart</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_acting_user'>acting_user</span><span class='period'>.</span><span class='id identifier rubyid_accounts_for_product'>accounts_for_product</span><span class='lparen'>(</span><span class='ivar'>@product</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_blank?'>blank?</span>
+    <span class='id identifier rubyid_add_to_cart'>add_to_cart</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='ivar'>@error</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>no_accounts</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># does the product have any price policies for any of the groups the user is a member of?
+</span>  <span class='kw'>if</span> <span class='id identifier rubyid_add_to_cart'>add_to_cart</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_price_policy_available_for_product?'>price_policy_available_for_product?</span>
+    <span class='id identifier rubyid_add_to_cart'>add_to_cart</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='ivar'>@error</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>not_in_price_group</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># is the user approved?
+</span>  <span class='kw'>if</span> <span class='id identifier rubyid_add_to_cart'>add_to_cart</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='ivar'>@product</span><span class='period'>.</span><span class='id identifier rubyid_can_be_used_by?'>can_be_used_by?</span><span class='lparen'>(</span><span class='id identifier rubyid_acting_user'>acting_user</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_session_user_can_override_restrictions?'>session_user_can_override_restrictions?</span><span class='lparen'>(</span><span class='ivar'>@product</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="SettingsHelper.html" title="SettingsHelper (module)">SettingsHelper</a></span></span><span class='period'>.</span><span class='id identifier rubyid_feature_on?'><span class='object_link'><a href="SettingsHelper.html#feature_on%3F-class_method" title="SettingsHelper.feature_on? (method)">feature_on?</a></span></span><span class='lparen'>(</span><span class='symbol'>:training_requests</span><span class='rparen'>)</span>
+      <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="TrainingRequest.html" title="TrainingRequest (class)">TrainingRequest</a></span></span><span class='period'>.</span><span class='id identifier rubyid_submitted?'><span class='object_link'><a href="TrainingRequest.html#submitted%3F-class_method" title="TrainingRequest.submitted? (method)">submitted?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_session_user'>session_user</span><span class='comma'>,</span> <span class='ivar'>@product</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:notice</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_text'>text</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.already_requested_access</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>product:</span> <span class='ivar'>@product</span><span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='id identifier rubyid_facility_path'>facility_path</span><span class='lparen'>(</span><span class='id identifier rubyid_current_facility'>current_facility</span><span class='rparen'>)</span>
+      <span class='kw'>else</span>
+        <span class='kw'>return</span> <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='id identifier rubyid_new_facility_product_training_request_path'>new_facility_product_training_request_path</span><span class='lparen'>(</span><span class='id identifier rubyid_current_facility'>current_facility</span><span class='comma'>,</span> <span class='ivar'>@product</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_add_to_cart'>add_to_cart</span> <span class='op'>=</span> <span class='kw'>false</span>
+      <span class='ivar'>@error</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>requires_approval</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='ivar'>@error</span>
+    <span class='id identifier rubyid_flash'>flash</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='lbracket'>[</span><span class='symbol'>:notice</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_text'>text</span><span class='lparen'>(</span><span class='ivar'>@error</span><span class='comma'>,</span> <span class='label'>singular:</span> <span class='ivar'>@product</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_model_name'>model_name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='comma'>,</span>
+                                      <span class='label'>plural:</span> <span class='ivar'>@product</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_model_name'>model_name</span><span class='period'>.</span><span class='id identifier rubyid_human'>human</span><span class='lparen'>(</span><span class='label'>count:</span> <span class='int'>2</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='ivar'>@add_to_cart</span> <span class='op'>=</span> <span class='id identifier rubyid_add_to_cart'>add_to_cart</span>
+  <span class='ivar'>@active_tab</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>home</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_render'>render</span> <span class='label'>layout:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>application</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="singular_object_name-instance_method">
+  
+    #<strong>singular_object_name</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+202
+203
+204</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/products_common_controller.rb', line 202</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_singular_object_name'>singular_object_name</span>
+  <span class='id identifier rubyid_product_class'>product_class</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_underscore'>underscore</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update-instance_method">
+  
+    #<strong>update</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>PUT /services/1</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/products_common_controller.rb', line 121</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span>
+  <span class='id identifier rubyid_respond_to'>respond_to</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_format'>format</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='ivar'>@product</span><span class='period'>.</span><span class='id identifier rubyid_update_attributes'>update_attributes</span><span class='lparen'>(</span><span class='id identifier rubyid_resource_params'>resource_params</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:notice</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@product</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_capitalize'>capitalize</span><span class='embexpr_end'>}</span><span class='tstring_content'> was successfully updated.</span><span class='tstring_end'>&quot;</span></span>
+      <span class='id identifier rubyid_format'>format</span><span class='period'>.</span><span class='id identifier rubyid_html'>html</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_redirect_to'>redirect_to</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='symbol'>:manage</span><span class='comma'>,</span> <span class='id identifier rubyid_current_facility'>current_facility</span><span class='comma'>,</span> <span class='ivar'>@product</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_format'>format</span><span class='period'>.</span><span class='id identifier rubyid_html'>html</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_render'>render</span> <span class='label'>action:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>edit</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr 13 09:52:11 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.12 (ruby-2.4.1).
+</div>
+
+    </div>
+  </body>
+</html>

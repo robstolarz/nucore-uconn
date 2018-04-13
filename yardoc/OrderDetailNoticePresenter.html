@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: OrderDetailNoticePresenter
+  
+    &mdash; Documentation by YARD 0.9.12
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "OrderDetailNoticePresenter";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (O)</a> &raquo;
+    
+    
+    <span class="title">OrderDetailNoticePresenter</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: OrderDetailNoticePresenter
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="OrderDetail.html" title="OrderDetail (class)">OrderDetail</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ActiveRecord::Base</li>
+          
+            <li class="next"><span class='object_link'><a href="OrderDetail.html" title="OrderDetail (class)">OrderDetail</a></span></li>
+          
+            <li class="next">OrderDetailNoticePresenter</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd>ActionView::Helpers::OutputSafetyHelper, ActionView::Helpers::TagHelper</dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/presenters/order_detail_notice_presenter.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="OrderDetailNoticePresenter/Notice.html" title="OrderDetailNoticePresenter::Notice (class)">Notice</a></span>
+    
+  
+</p>
+
+
+
+  <h2>Constant Summary</h2>
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="OrderDetail.html" title="OrderDetail (class)">OrderDetail</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="OrderDetail.html#CANCELABLE_STATES-constant" title="OrderDetail::CANCELABLE_STATES (constant)">OrderDetail::CANCELABLE_STATES</a></span></p>
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="OrderDetail.html" title="OrderDetail (class)">OrderDetail</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="OrderDetail.html#being_purchased_by_admin-instance_method" title="OrderDetail#being_purchased_by_admin (method)">#being_purchased_by_admin</a></span>, <span class='object_link'><a href="OrderDetail.html#editing_time_data-instance_method" title="OrderDetail#editing_time_data (method)">#editing_time_data</a></span>, <span class='object_link'><a href="OrderDetail.html#estimated_price_policy-instance_method" title="OrderDetail#estimated_price_policy (method)">#estimated_price_policy</a></span>, <span class='object_link'><a href="OrderDetail.html#order_status_updated_by-instance_method" title="OrderDetail#order_status_updated_by (method)">#order_status_updated_by</a></span>, <span class='object_link'><a href="OrderDetail.html#resolve_dispute-instance_method" title="OrderDetail#resolve_dispute (method)">#resolve_dispute</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#alerts_to_html-instance_method" title="#alerts_to_html (instance method)">#<strong>alerts_to_html</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#badges_to_html-instance_method" title="#badges_to_html (instance method)">#<strong>badges_to_html</strong>(only: [:status, :warning])  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Filter to only status or warnings by passing `only: :status` or `only:
+:warning`.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#build_alert-instance_method" title="#build_alert (instance method)">#<strong>build_alert</strong>(notices, severity_class)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#notices-instance_method" title="#notices (instance method)">#<strong>notices</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#statuses-instance_method" title="#statuses (instance method)">#<strong>statuses</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#warnings-instance_method" title="#warnings (instance method)">#<strong>warnings</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="OrderDetail.html" title="OrderDetail (class)">OrderDetail</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="OrderDetail.html#account_unreconciled-class_method" title="OrderDetail.account_unreconciled (method)">account_unreconciled</a></span>, <span class='object_link'><a href="OrderDetail.html#account_usable_by_order_owner%3F-instance_method" title="OrderDetail#account_usable_by_order_owner? (method)">#account_usable_by_order_owner?</a></span>, <span class='object_link'><a href="OrderDetail.html#actual_costs_differ_from_calculated%3F-instance_method" title="OrderDetail#actual_costs_differ_from_calculated? (method)">#actual_costs_differ_from_calculated?</a></span>, <span class='object_link'><a href="OrderDetail.html#actual_costs_match_calculated%3F-instance_method" title="OrderDetail#actual_costs_match_calculated? (method)">#actual_costs_match_calculated?</a></span>, <span class='object_link'><a href="OrderDetail.html#actual_total-instance_method" title="OrderDetail#actual_total (method)">#actual_total</a></span>, <span class='object_link'><a href="OrderDetail.html#all_movable-class_method" title="OrderDetail.all_movable (method)">all_movable</a></span>, <span class='object_link'><a href="OrderDetail.html#assign_actual_price-instance_method" title="OrderDetail#assign_actual_price (method)">#assign_actual_price</a></span>, <span class='object_link'><a href="OrderDetail.html#assign_estimated_price-instance_method" title="OrderDetail#assign_estimated_price (method)">#assign_estimated_price</a></span>, <span class='object_link'><a href="OrderDetail.html#assign_estimated_price!-instance_method" title="OrderDetail#assign_estimated_price! (method)">#assign_estimated_price!</a></span>, <span class='object_link'><a href="OrderDetail.html#assign_estimated_price_from_policy-instance_method" title="OrderDetail#assign_estimated_price_from_policy (method)">#assign_estimated_price_from_policy</a></span>, <span class='object_link'><a href="OrderDetail.html#assign_price_policy-instance_method" title="OrderDetail#assign_price_policy (method)">#assign_price_policy</a></span>, <span class='object_link'><a href="OrderDetail.html#auto_reassign_pricing%3F-instance_method" title="OrderDetail#auto_reassign_pricing? (method)">#auto_reassign_pricing?</a></span>, <span class='object_link'><a href="OrderDetail.html#available_accounts-instance_method" title="OrderDetail#available_accounts (method)">#available_accounts</a></span>, <span class='object_link'><a href="OrderDetail.html#awaiting_payment%3F-instance_method" title="OrderDetail#awaiting_payment? (method)">#awaiting_payment?</a></span>, <span class='object_link'><a href="OrderDetail.html#backdate_to_complete!-instance_method" title="OrderDetail#backdate_to_complete! (method)">#backdate_to_complete!</a></span>, <span class='object_link'><a href="OrderDetail.html#bundled%3F-instance_method" title="OrderDetail#bundled? (method)">#bundled?</a></span>, <span class='object_link'><a href="OrderDetail.html#by_ordered_at-instance_method" title="OrderDetail#by_ordered_at (method)">#by_ordered_at</a></span>, <span class='object_link'><a href="OrderDetail.html#can_be_assigned_to_account%3F-instance_method" title="OrderDetail#can_be_assigned_to_account? (method)">#can_be_assigned_to_account?</a></span>, <span class='object_link'><a href="OrderDetail.html#can_be_viewed_by%3F-instance_method" title="OrderDetail#can_be_viewed_by? (method)">#can_be_viewed_by?</a></span>, <span class='object_link'><a href="OrderDetail.html#can_dispute%3F-instance_method" title="OrderDetail#can_dispute? (method)">#can_dispute?</a></span>, <span class='object_link'><a href="OrderDetail.html#can_reconcile%3F-instance_method" title="OrderDetail#can_reconcile? (method)">#can_reconcile?</a></span>, <span class='object_link'><a href="OrderDetail.html#can_reconcile_journaled%3F-instance_method" title="OrderDetail#can_reconcile_journaled? (method)">#can_reconcile_journaled?</a></span>, <span class='object_link'><a href="OrderDetail.html#cancel_reservation-instance_method" title="OrderDetail#cancel_reservation (method)">#cancel_reservation</a></span>, <span class='object_link'><a href="OrderDetail.html#cancel_with_fee-instance_method" title="OrderDetail#cancel_with_fee (method)">#cancel_with_fee</a></span>, <span class='object_link'><a href="OrderDetail.html#cancelable%3F-instance_method" title="OrderDetail#cancelable? (method)">#cancelable?</a></span>, <span class='object_link'><a href="OrderDetail.html#cancellation_fee-instance_method" title="OrderDetail#cancellation_fee (method)">#cancellation_fee</a></span>, <span class='object_link'><a href="OrderDetail.html#change_status!-instance_method" title="OrderDetail#change_status! (method)">#change_status!</a></span>, <span class='object_link'><a href="OrderDetail.html#clear_costs-instance_method" title="OrderDetail#clear_costs (method)">#clear_costs</a></span>, <span class='object_link'><a href="OrderDetail.html#clear_statement-instance_method" title="OrderDetail#clear_statement (method)">#clear_statement</a></span>, <span class='object_link'><a href="OrderDetail.html#complete!-instance_method" title="OrderDetail#complete! (method)">#complete!</a></span>, <span class='object_link'><a href="OrderDetail.html#complete_for_facility_and_account-class_method" title="OrderDetail.complete_for_facility_and_account (method)">complete_for_facility_and_account</a></span>, <span class='object_link'><a href="OrderDetail.html#cost-instance_method" title="OrderDetail#cost (method)">#cost</a></span>, <span class='object_link'><a href="OrderDetail.html#cost_estimated%3F-instance_method" title="OrderDetail#cost_estimated? (method)">#cost_estimated?</a></span>, <span class='object_link'><a href="OrderDetail.html#current_journal_rows-instance_method" title="OrderDetail#current_journal_rows (method)">#current_journal_rows</a></span>, <span class='object_link'><a href="OrderDetail.html#customer_account_changeable%3F-instance_method" title="OrderDetail#customer_account_changeable? (method)">#customer_account_changeable?</a></span>, <span class='object_link'><a href="OrderDetail.html#description-instance_method" title="OrderDetail#description (method)">#description</a></span>, <span class='object_link'><a href="OrderDetail.html#estimated_price_group-instance_method" title="OrderDetail#estimated_price_group (method)">#estimated_price_group</a></span>, <span class='object_link'><a href="OrderDetail.html#estimated_total-instance_method" title="OrderDetail#estimated_total (method)">#estimated_total</a></span>, <span class='object_link'><a href="OrderDetail.html#for_facility-class_method" title="OrderDetail.for_facility (method)">for_facility</a></span>, <span class='object_link'><a href="OrderDetail.html#for_facility_id-class_method" title="OrderDetail.for_facility_id (method)">for_facility_id</a></span>, <span class='object_link'><a href="OrderDetail.html#for_facility_url-class_method" title="OrderDetail.for_facility_url (method)">for_facility_url</a></span>, <span class='object_link'><a href="OrderDetail.html#force_complete!-instance_method" title="OrderDetail#force_complete! (method)">#force_complete!</a></span>, <span class='object_link'><a href="OrderDetail.html#has_subsidies%3F-instance_method" title="OrderDetail#has_subsidies? (method)">#has_subsidies?</a></span>, <span class='object_link'><a href="OrderDetail.html#has_uncanceled_reservation%3F-instance_method" title="OrderDetail#has_uncanceled_reservation? (method)">#has_uncanceled_reservation?</a></span>, <span class='object_link'><a href="OrderDetail.html#in_closed_journal%3F-instance_method" title="OrderDetail#in_closed_journal? (method)">#in_closed_journal?</a></span>, <span class='object_link'><a href="OrderDetail.html#in_dispute-class_method" title="OrderDetail.in_dispute (method)">in_dispute</a></span>, <span class='object_link'><a href="OrderDetail.html#in_dispute%3F-instance_method" title="OrderDetail#in_dispute? (method)">#in_dispute?</a></span>, <span class='object_link'><a href="OrderDetail.html#in_open_journal%3F-instance_method" title="OrderDetail#in_open_journal? (method)">#in_open_journal?</a></span>, <span class='object_link'><a href="OrderDetail.html#in_review%3F-instance_method" title="OrderDetail#in_review? (method)">#in_review?</a></span>, <span class='object_link'><a href="OrderDetail.html#joins_relay-class_method" title="OrderDetail.joins_relay (method)">joins_relay</a></span>, <span class='object_link'><a href="OrderDetail.html#journal_or_statement_date-instance_method" title="OrderDetail#journal_or_statement_date (method)">#journal_or_statement_date</a></span>, <span class='object_link'><a href="OrderDetail.html#journaled_or_statemented_in_date_range-class_method" title="OrderDetail.journaled_or_statemented_in_date_range (method)">journaled_or_statemented_in_date_range</a></span>, <span class='object_link'><a href="OrderDetail.html#long_description-instance_method" title="OrderDetail#long_description (method)">#long_description</a></span>, <span class='object_link'><a href="OrderDetail.html#make_complete-instance_method" title="OrderDetail#make_complete (method)">#make_complete</a></span>, <span class='object_link'><a href="OrderDetail.html#manual_fulfilled_at=-instance_method" title="OrderDetail#manual_fulfilled_at= (method)">#manual_fulfilled_at=</a></span>, <span class='object_link'><a href="OrderDetail.html#manually_priced!-instance_method" title="OrderDetail#manually_priced! (method)">#manually_priced!</a></span>, <span class='object_link'><a href="OrderDetail.html#mark_dispute_resolved-instance_method" title="OrderDetail#mark_dispute_resolved (method)">#mark_dispute_resolved</a></span>, <span class='object_link'><a href="OrderDetail.html#order_number-instance_method" title="OrderDetail#order_number (method)">#order_number</a></span>, <span class='object_link'><a href="OrderDetail.html#ordered_or_reserved_in_range-class_method" title="OrderDetail.ordered_or_reserved_in_range (method)">ordered_or_reserved_in_range</a></span>, <span class='object_link'><a href="OrderDetail.html#outside_cancellation_window%3F-instance_method" title="OrderDetail#outside_cancellation_window? (method)">#outside_cancellation_window?</a></span>, <span class='object_link'><a href="OrderDetail.html#price_groups-instance_method" title="OrderDetail#price_groups (method)">#price_groups</a></span>, <span class='object_link'><a href="OrderDetail.html#problem_description_key-instance_method" title="OrderDetail#problem_description_key (method)">#problem_description_key</a></span>, <span class='object_link'><a href="OrderDetail.html#problem_order%3F-instance_method" title="OrderDetail#problem_order? (method)">#problem_order?</a></span>, <span class='object_link'><a href="OrderDetail.html#problem_orders-class_method" title="OrderDetail.problem_orders (method)">problem_orders</a></span>, <span class='object_link'><a href="OrderDetail.html#purchased_active_reservations-class_method" title="OrderDetail.purchased_active_reservations (method)">purchased_active_reservations</a></span>, <span class='object_link'><a href="OrderDetail.html#quantity_locked_by_survey%3F-instance_method" title="OrderDetail#quantity_locked_by_survey? (method)">#quantity_locked_by_survey?</a></span>, <span class='object_link'><a href="OrderDetail.html#ready_for_journal%3F-instance_method" title="OrderDetail#ready_for_journal? (method)">#ready_for_journal?</a></span>, <span class='object_link'><a href="OrderDetail.html#ready_for_statement%3F-instance_method" title="OrderDetail#ready_for_statement? (method)">#ready_for_statement?</a></span>, <span class='object_link'><a href="OrderDetail.html#reassign_account!-class_method" title="OrderDetail.reassign_account! (method)">reassign_account!</a></span>, <span class='object_link'><a href="OrderDetail.html#reassign_price-instance_method" title="OrderDetail#reassign_price (method)">#reassign_price</a></span>, <span class='object_link'><a href="OrderDetail.html#recently_reviewed-class_method" title="OrderDetail.recently_reviewed (method)">recently_reviewed</a></span>, <span class='object_link'><a href="OrderDetail.html#removable_from_journal%3F-instance_method" title="OrderDetail#removable_from_journal? (method)">#removable_from_journal?</a></span>, <span class='object_link'><a href="OrderDetail.html#require_pricing_note-instance_method" title="OrderDetail#require_pricing_note (method)">#require_pricing_note</a></span>, <span class='object_link'><a href="OrderDetail.html#reset_dispute-instance_method" title="OrderDetail#reset_dispute (method)">#reset_dispute</a></span>, <span class='object_link'><a href="OrderDetail.html#response_set!-instance_method" title="OrderDetail#response_set! (method)">#response_set!</a></span>, <span class='object_link'><a href="OrderDetail.html#reviewed%3F-instance_method" title="OrderDetail#reviewed? (method)">#reviewed?</a></span>, <span class='object_link'><a href="OrderDetail.html#safe_group_id-instance_method" title="OrderDetail#safe_group_id (method)">#safe_group_id</a></span>, <span class='object_link'><a href="OrderDetail.html#save_as_user-instance_method" title="OrderDetail#save_as_user (method)">#save_as_user</a></span>, <span class='object_link'><a href="OrderDetail.html#save_as_user!-instance_method" title="OrderDetail#save_as_user! (method)">#save_as_user!</a></span>, <span class='object_link'><a href="OrderDetail.html#set_default_status!-instance_method" title="OrderDetail#set_default_status! (method)">#set_default_status!</a></span>, <span class='object_link'><a href="OrderDetail.html#set_problem_order-instance_method" title="OrderDetail#set_problem_order (method)">#set_problem_order</a></span>, <span class='object_link'><a href="OrderDetail.html#set_reconciled_at-instance_method" title="OrderDetail#set_reconciled_at (method)">#set_reconciled_at</a></span>, <span class='object_link'><a href="OrderDetail.html#state_is_cancelable%3F-instance_method" title="OrderDetail#state_is_cancelable? (method)">#state_is_cancelable?</a></span>, <span class='object_link'><a href="OrderDetail.html#statement_date-instance_method" title="OrderDetail#statement_date (method)">#statement_date</a></span>, <span class='object_link'><a href="OrderDetail.html#subsidy-instance_method" title="OrderDetail#subsidy (method)">#subsidy</a></span>, <span class='object_link'><a href="OrderDetail.html#survey_completed%3F-instance_method" title="OrderDetail#survey_completed? (method)">#survey_completed?</a></span>, <span class='object_link'><a href="OrderDetail.html#time_data-instance_method" title="OrderDetail#time_data (method)">#time_data</a></span>, <span class='object_link'><a href="OrderDetail.html#time_data=-instance_method" title="OrderDetail#time_data= (method)">#time_data=</a></span>, <span class='object_link'><a href="OrderDetail.html#time_data_completeable%3F-instance_method" title="OrderDetail#time_data_completeable? (method)">#time_data_completeable?</a></span>, <span class='object_link'><a href="OrderDetail.html#time_for_policy_lookup-instance_method" title="OrderDetail#time_for_policy_lookup (method)">#time_for_policy_lookup</a></span>, <span class='object_link'><a href="OrderDetail.html#to_notice-instance_method" title="OrderDetail#to_notice (method)">#to_notice</a></span>, <span class='object_link'><a href="OrderDetail.html#total-instance_method" title="OrderDetail#total (method)">#total</a></span>, <span class='object_link'><a href="OrderDetail.html#translation_scope-instance_method" title="OrderDetail#translation_scope (method)">#translation_scope</a></span>, <span class='object_link'><a href="OrderDetail.html#unreconciled-class_method" title="OrderDetail.unreconciled (method)">unreconciled</a></span>, <span class='object_link'><a href="OrderDetail.html#update_fulfilled_at_on_resolve-instance_method" title="OrderDetail#update_fulfilled_at_on_resolve (method)">#update_fulfilled_at_on_resolve</a></span>, <span class='object_link'><a href="OrderDetail.html#update_journal_row_amounts-instance_method" title="OrderDetail#update_journal_row_amounts (method)">#update_journal_row_amounts</a></span>, <span class='object_link'><a href="OrderDetail.html#update_order_status!-instance_method" title="OrderDetail#update_order_status! (method)">#update_order_status!</a></span>, <span class='object_link'><a href="OrderDetail.html#valid_for_purchase%3F-instance_method" title="OrderDetail#valid_for_purchase? (method)">#valid_for_purchase?</a></span>, <span class='object_link'><a href="OrderDetail.html#valid_manual_fulfilled_at-instance_method" title="OrderDetail#valid_manual_fulfilled_at (method)">#valid_manual_fulfilled_at</a></span>, <span class='object_link'><a href="OrderDetail.html#valid_reservation%3F-instance_method" title="OrderDetail#valid_reservation? (method)">#valid_reservation?</a></span>, <span class='object_link'><a href="OrderDetail.html#valid_service_meta%3F-instance_method" title="OrderDetail#valid_service_meta? (method)">#valid_service_meta?</a></span>, <span class='object_link'><a href="OrderDetail.html#validate_for_purchase-instance_method" title="OrderDetail#validate_for_purchase (method)">#validate_for_purchase</a></span>, <span class='object_link'><a href="OrderDetail.html#validate_reservation-instance_method" title="OrderDetail#validate_reservation (method)">#validate_reservation</a></span>, <span class='object_link'><a href="OrderDetail.html#validate_service_meta-instance_method" title="OrderDetail#validate_service_meta (method)">#validate_service_meta</a></span>, <span class='object_link'><a href="OrderDetail.html#validate_survey-instance_method" title="OrderDetail#validate_survey (method)">#validate_survey</a></span>, <span class='object_link'><a href="OrderDetail.html#validate_uploaded_files-instance_method" title="OrderDetail#validate_uploaded_files (method)">#validate_uploaded_files</a></span>, <span class='object_link'><a href="OrderDetail.html#with_actual_costs-class_method" title="OrderDetail.with_actual_costs (method)">with_actual_costs</a></span>, <span class='object_link'><a href="OrderDetail.html#with_estimated_costs-class_method" title="OrderDetail.with_estimated_costs (method)">with_estimated_costs</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="OrderDetail/Accessorized.html" title="OrderDetail::Accessorized (module)">OrderDetail::Accessorized</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="OrderDetail/Accessorized.html#accessories%3F-instance_method" title="OrderDetail::Accessorized#accessories? (method)">#accessories?</a></span>, <span class='object_link'><a href="OrderDetail/Accessorized.html#add_accessories%3F-instance_method" title="OrderDetail::Accessorized#add_accessories? (method)">#add_accessories?</a></span>, <span class='object_link'><a href="OrderDetail/Accessorized.html#decorated_self-instance_method" title="OrderDetail::Accessorized#decorated_self (method)">#decorated_self</a></span>, <span class='object_link'><a href="OrderDetail/Accessorized.html#update_children-instance_method" title="OrderDetail::Accessorized#update_children (method)">#update_children</a></span>, <span class='object_link'><a href="OrderDetail/Accessorized.html#updated_children-instance_method" title="OrderDetail::Accessorized#updated_children (method)">#updated_children</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="NotificationSubject.html" title="NotificationSubject (module)">NotificationSubject</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="NotificationSubject.html#default_url_options-instance_method" title="NotificationSubject#default_url_options (method)">#default_url_options</a></span>, <span class='object_link'><a href="NotificationSubject.html#to_notice-instance_method" title="NotificationSubject#to_notice (method)">#to_notice</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="TranslationHelper.html" title="TranslationHelper (module)">TranslationHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="TranslationHelper.html#t_boolean-instance_method" title="TranslationHelper#t_boolean (method)">#t_boolean</a></span>, <span class='object_link'><a href="TranslationHelper.html#t_create_model-instance_method" title="TranslationHelper#t_create_model (method)">#t_create_model</a></span>, <span class='object_link'><a href="TranslationHelper.html#t_create_models-instance_method" title="TranslationHelper#t_create_models (method)">#t_create_models</a></span>, <span class='object_link'><a href="TranslationHelper.html#t_manage_models-instance_method" title="TranslationHelper#t_manage_models (method)">#t_manage_models</a></span>, <span class='object_link'><a href="TranslationHelper.html#t_model_error-instance_method" title="TranslationHelper#t_model_error (method)">#t_model_error</a></span>, <span class='object_link'><a href="TranslationHelper.html#t_my-instance_method" title="TranslationHelper#t_my (method)">#t_my</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="NUCore/Database/SortHelper.html" title="NUCore::Database::SortHelper (module)">NUCore::Database::SortHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="NUCore/Database/SortHelper.html#included-class_method" title="NUCore::Database::SortHelper.included (method)">included</a></span></p>
+
+  
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="alerts_to_html-instance_method">
+  
+    #<strong>alerts_to_html</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41
+42
+43
+44
+45
+46
+47</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/presenters/order_detail_notice_presenter.rb', line 40</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_alerts_to_html'>alerts_to_html</span>
+  <span class='id identifier rubyid_blocks'>blocks</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='id identifier rubyid_build_alert'>build_alert</span><span class='lparen'>(</span><span class='id identifier rubyid_warnings'>warnings</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>error</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_build_alert'>build_alert</span><span class='lparen'>(</span><span class='id identifier rubyid_statuses'>statuses</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>info</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span>
+
+  <span class='id identifier rubyid_safe_join'>safe_join</span><span class='lparen'>(</span><span class='id identifier rubyid_blocks'>blocks</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="badges_to_html-instance_method">
+  
+    #<strong>badges_to_html</strong>(only: [:status, :warning])  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Filter to only status or warnings by passing `only: :status` or `only:
+:warning`</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34
+35
+36
+37
+38</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/presenters/order_detail_notice_presenter.rb', line 34</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_badges_to_html'>badges_to_html</span><span class='lparen'>(</span><span class='label'>only:</span> <span class='lbracket'>[</span><span class='symbol'>:status</span><span class='comma'>,</span> <span class='symbol'>:warning</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_filtered'>filtered</span> <span class='op'>=</span> <span class='id identifier rubyid_notices'>notices</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_notice'>notice</span><span class='op'>|</span> <span class='const'>Array</span><span class='lparen'>(</span><span class='id identifier rubyid_only'>only</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_notice'>notice</span><span class='period'>.</span><span class='id identifier rubyid_severity'>severity</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_safe_join'>safe_join</span><span class='lparen'>(</span><span class='id identifier rubyid_filtered'>filtered</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:badge_to_html</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="build_alert-instance_method">
+  
+    #<strong>build_alert</strong>(notices, severity_class)  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+51
+52
+53
+54
+55
+56</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/presenters/order_detail_notice_presenter.rb', line 51</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_build_alert'>build_alert</span><span class='lparen'>(</span><span class='id identifier rubyid_notices'>notices</span><span class='comma'>,</span> <span class='id identifier rubyid_severity_class'>severity_class</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_notices'>notices</span><span class='period'>.</span><span class='id identifier rubyid_none?'>none?</span>
+
+  <span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='id identifier rubyid_safe_join'>safe_join</span><span class='lparen'>(</span><span class='id identifier rubyid_notices'>notices</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:alert_text</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_content_tag'>content_tag</span><span class='lparen'>(</span><span class='symbol'>:br</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_content_tag'>content_tag</span><span class='lparen'>(</span><span class='symbol'>:div</span><span class='comma'>,</span> <span class='id identifier rubyid_text'>text</span><span class='comma'>,</span> <span class='label'>class:</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>alert</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>alert-</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_severity_class'>severity_class</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="notices-instance_method">
+  
+    #<strong>notices</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/presenters/order_detail_notice_presenter.rb', line 29</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_notices'>notices</span>
+  <span class='id identifier rubyid_statuses'>statuses</span> <span class='op'>+</span> <span class='id identifier rubyid_warnings'>warnings</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="statuses-instance_method">
+  
+    #<strong>statuses</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/presenters/order_detail_notice_presenter.rb', line 6</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_statuses'>statuses</span>
+  <span class='kw'>return</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_canceled?'>canceled?</span>
+  <span class='id identifier rubyid_statuses'>statuses</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_statuses'>statuses</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="OrderDetailNoticePresenter/Notice.html" title="OrderDetailNoticePresenter::Notice (class)">Notice</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="OrderDetailNoticePresenter/Notice.html#initialize-instance_method" title="OrderDetailNoticePresenter::Notice#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:in_review</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_in_review?'>in_review?</span>
+  <span class='id identifier rubyid_statuses'>statuses</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="OrderDetailNoticePresenter/Notice.html" title="OrderDetailNoticePresenter::Notice (class)">Notice</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="OrderDetailNoticePresenter/Notice.html#initialize-instance_method" title="OrderDetailNoticePresenter::Notice#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:in_dispute</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_in_dispute?'>in_dispute?</span>
+  <span class='id identifier rubyid_statuses'>statuses</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="OrderDetailNoticePresenter/Notice.html" title="OrderDetailNoticePresenter::Notice (class)">Notice</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="OrderDetailNoticePresenter/Notice.html#initialize-instance_method" title="OrderDetailNoticePresenter::Notice#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:can_reconcile</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_can_reconcile_journaled?'>can_reconcile_journaled?</span>
+  <span class='id identifier rubyid_statuses'>statuses</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="OrderDetailNoticePresenter/Notice.html" title="OrderDetailNoticePresenter::Notice (class)">Notice</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="OrderDetailNoticePresenter/Notice.html#initialize-instance_method" title="OrderDetailNoticePresenter::Notice#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:in_open_journal</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_in_open_journal?'>in_open_journal?</span>
+  <span class='id identifier rubyid_statuses'>statuses</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="OrderDetailNoticePresenter/Notice.html" title="OrderDetailNoticePresenter::Notice (class)">Notice</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="OrderDetailNoticePresenter/Notice.html#initialize-instance_method" title="OrderDetailNoticePresenter::Notice#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:ready_for_statement</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_ready_for_statement?'>ready_for_statement?</span>
+  <span class='id identifier rubyid_statuses'>statuses</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="OrderDetailNoticePresenter/Notice.html" title="OrderDetailNoticePresenter::Notice (class)">Notice</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="OrderDetailNoticePresenter/Notice.html#initialize-instance_method" title="OrderDetailNoticePresenter::Notice#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:ready_for_journal</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_ready_for_journal?'>ready_for_journal?</span> <span class='op'>&amp;&amp;</span> <span class='const'><span class='object_link'><a href="SettingsHelper.html" title="SettingsHelper (module)">SettingsHelper</a></span></span><span class='period'>.</span><span class='id identifier rubyid_feature_on?'><span class='object_link'><a href="SettingsHelper.html#feature_on%3F-class_method" title="SettingsHelper.feature_on? (method)">feature_on?</a></span></span><span class='lparen'>(</span><span class='symbol'>:ready_for_journal_notice</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_statuses'>statuses</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="OrderDetailNoticePresenter/Notice.html" title="OrderDetailNoticePresenter::Notice (class)">Notice</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="OrderDetailNoticePresenter/Notice.html#initialize-instance_method" title="OrderDetailNoticePresenter::Notice#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:awaiting_payment</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_awaiting_payment?'>awaiting_payment?</span>
+
+  <span class='id identifier rubyid_statuses'>statuses</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="warnings-instance_method">
+  
+    #<strong>warnings</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23
+24
+25
+26
+27</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/presenters/order_detail_notice_presenter.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_warnings'>warnings</span>
+  <span class='id identifier rubyid_warnings'>warnings</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_warnings'>warnings</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="OrderDetailNoticePresenter/Notice.html" title="OrderDetailNoticePresenter::Notice (class)">Notice</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="OrderDetailNoticePresenter/Notice.html#initialize-instance_method" title="OrderDetailNoticePresenter::Notice#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_problem_description_key'>problem_description_key</span><span class='comma'>,</span> <span class='symbol'>:warning</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_problem?'>problem?</span>
+
+  <span class='id identifier rubyid_warnings'>warnings</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr 13 09:52:13 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.12 (ruby-2.4.1).
+</div>
+
+    </div>
+  </body>
+</html>

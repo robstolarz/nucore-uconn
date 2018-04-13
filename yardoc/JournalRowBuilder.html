@@ -1,0 +1,2030 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: JournalRowBuilder
+  
+    &mdash; Documentation by YARD 0.9.12
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "JournalRowBuilder";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (J)</a> &raquo;
+    
+    
+    <span class="title">JournalRowBuilder</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: JournalRowBuilder
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">JournalRowBuilder</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/services/journal_row_builder.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Ported from Journal model. We should improve upon this logic.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#errors-instance_method" title="#errors (instance method)">#<strong>errors</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute errors.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#journal-instance_method" title="#journal (instance method)">#<strong>journal</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute journal.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#journal_rows-instance_method" title="#journal_rows (instance method)">#<strong>journal_rows</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute journal_rows.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#journaled_facility_ids-instance_method" title="#journaled_facility_ids (instance method)">#<strong>journaled_facility_ids</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute journaled_facility_ids.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#options-instance_method" title="#options (instance method)">#<strong>options</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute options.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#order_details-instance_method" title="#order_details (instance method)">#<strong>order_details</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute order_details.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#product_recharges-instance_method" title="#product_recharges (instance method)">#<strong>product_recharges</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute product_recharges.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#recharge_enabled-instance_method" title="#recharge_enabled (instance method)">#<strong>recharge_enabled</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute recharge_enabled.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_for_single_order_detail!-class_method" title="create_for_single_order_detail! (class method)">.<strong>create_for_single_order_detail!</strong>(journal, order_detail)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This is for when you need to create a journal row without all the
+additional validations and error checking.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_journal_rows_from_product_recharges-instance_method" title="#add_journal_rows_from_product_recharges (instance method)">#<strong>add_journal_rows_from_product_recharges</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>When you’re creating a journal, for a single order detail you’ll have one
+or more journal rows for money coming out of an account and one journal row
+for the money going into the recharge account.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#build-instance_method" title="#build (instance method)">#<strong>build</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Idempotent method that builds an array of new journal_rows.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#build_order_detail_journal_rows-instance_method" title="#build_order_detail_journal_rows (instance method)">#<strong>build_order_detail_journal_rows</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Builds journal rows based the order details coming back from the
+Transformer Does not do any validation.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create-instance_method" title="#create (instance method)">#<strong>create</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Creates journal rows for the given order_details.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(journal, order_details)  &#x21d2; JournalRowBuilder </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of JournalRowBuilder.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#order_detail_to_journal_row-instance_method" title="#order_detail_to_journal_row (instance method)">#<strong>order_detail_to_journal_row</strong>(order_detail)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Given an order detail, return an array of one or more new JournalRow
+objects.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pending_facility_ids-instance_method" title="#pending_facility_ids (instance method)">#<strong>pending_facility_ids</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Set an array of facility_ids with pending journals.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#product_to_journal_row-instance_method" title="#product_to_journal_row (instance method)">#<strong>product_to_journal_row</strong>(product, total)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Given a product and total, return an array of one or more new JournalRow
+objects.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reset-instance_method" title="#reset (instance method)">#<strong>reset</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Reset instance variables both on initialize and build.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#set_journal_for_order_details-instance_method" title="#set_journal_for_order_details (instance method)">#<strong>set_journal_for_order_details</strong>(journal, order_detail_ids)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Updates the journal_id of each order_detail.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_product_recharges-instance_method" title="#update_product_recharges (instance method)">#<strong>update_product_recharges</strong>(order_detail)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If recharge_enabled, then sum up the product_recharges by product so each
+product recharge can later be added as an additional journal_row.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#valid%3F-instance_method" title="#valid? (instance method)">#<strong>valid?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns true if errors are not present; otherwise false.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validate_account-instance_method" title="#validate_account (instance method)">#<strong>validate_account</strong>(order_detail)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Validate each journal_row account.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validate_facility_can_journal-instance_method" title="#validate_facility_can_journal (instance method)">#<strong>validate_facility_can_journal</strong>(order_detail)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Validate the order_details&#39;s facility doesn&#39;t currently have a
+pending journal.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validate_order_detail-instance_method" title="#validate_order_detail (instance method)">#<strong>validate_order_detail</strong>(order_detail)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Run all validations on an order detail.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validate_order_detail_unjournaled-instance_method" title="#validate_order_detail_unjournaled (instance method)">#<strong>validate_order_detail_unjournaled</strong>(order_detail)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Validate the order_detail hasn&#39;t already been journaled.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(journal, order_details)  &#x21d2; <tt><span class='object_link'><a href="" title="JournalRowBuilder (class)">JournalRowBuilder</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of JournalRowBuilder</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+17
+18
+19
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/journal_row_builder.rb', line 17</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_journal'>journal</span><span class='comma'>,</span> <span class='id identifier rubyid_order_details'>order_details</span><span class='rparen'>)</span>
+  <span class='ivar'>@order_details</span> <span class='op'>=</span> <span class='id identifier rubyid_order_details'>order_details</span>
+  <span class='ivar'>@journal</span> <span class='op'>=</span> <span class='id identifier rubyid_journal'>journal</span>
+  <span class='id identifier rubyid_reset'>reset</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="errors-instance_method">
+  
+    #<strong>errors</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute errors</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/journal_row_builder.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_errors'>errors</span>
+  <span class='ivar'>@errors</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="journal-instance_method">
+  
+    #<strong>journal</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute journal</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/journal_row_builder.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_journal'>journal</span>
+  <span class='ivar'>@journal</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="journal_rows-instance_method">
+  
+    #<strong>journal_rows</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute journal_rows</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/journal_row_builder.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_journal_rows'>journal_rows</span>
+  <span class='ivar'>@journal_rows</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="journaled_facility_ids-instance_method">
+  
+    #<strong>journaled_facility_ids</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute journaled_facility_ids</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/journal_row_builder.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_journaled_facility_ids'>journaled_facility_ids</span>
+  <span class='ivar'>@journaled_facility_ids</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="options-instance_method">
+  
+    #<strong>options</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute options</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/journal_row_builder.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='ivar'>@options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="order_details-instance_method">
+  
+    #<strong>order_details</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute order_details</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/journal_row_builder.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_order_details'>order_details</span>
+  <span class='ivar'>@order_details</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="product_recharges-instance_method">
+  
+    #<strong>product_recharges</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute product_recharges</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/journal_row_builder.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_product_recharges'>product_recharges</span>
+  <span class='ivar'>@product_recharges</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="recharge_enabled-instance_method">
+  
+    #<strong>recharge_enabled</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute recharge_enabled</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/journal_row_builder.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_recharge_enabled'>recharge_enabled</span>
+  <span class='ivar'>@recharge_enabled</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="create_for_single_order_detail!-class_method">
+  
+    .<strong>create_for_single_order_detail!</strong>(journal, order_detail)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This is for when you need to create a journal row without all the
+additional validations and error checking</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12
+13
+14
+15</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/journal_row_builder.rb', line 12</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_create_for_single_order_detail!'>create_for_single_order_detail!</span><span class='lparen'>(</span><span class='id identifier rubyid_journal'>journal</span><span class='comma'>,</span> <span class='id identifier rubyid_order_detail'>order_detail</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_journal_rows'>journal_rows</span> <span class='op'>=</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_journal'>journal</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='id identifier rubyid_order_detail'>order_detail</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_build_order_detail_journal_rows'>build_order_detail_journal_rows</span>
+  <span class='id identifier rubyid_journal_rows'>journal_rows</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:save!</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add_journal_rows_from_product_recharges-instance_method">
+  
+    #<strong>add_journal_rows_from_product_recharges</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>When you’re creating a journal, for a single order detail you’ll have one
+or more journal rows for money coming out of an account and one journal row
+for the money going into the recharge account. One journal row is positive
+and one is negative. Only builds journal_rows if the recharge_enabled
+feature is enabled.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+168
+169
+170
+171
+172
+173
+174</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/journal_row_builder.rb', line 168</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_journal_rows_from_product_recharges'>add_journal_rows_from_product_recharges</span>
+  <span class='id identifier rubyid_product_recharges'>product_recharges</span><span class='period'>.</span><span class='id identifier rubyid_each_pair'>each_pair</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_product_id'>product_id</span><span class='comma'>,</span> <span class='id identifier rubyid_total'>total</span><span class='op'>|</span>
+    <span class='id identifier rubyid_product'>product</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Product.html" title="Product (class)">Product</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_product_id'>product_id</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_new_journal_row'>new_journal_row</span> <span class='op'>=</span> <span class='id identifier rubyid_product_to_journal_row'>product_to_journal_row</span><span class='lparen'>(</span><span class='id identifier rubyid_product'>product</span><span class='comma'>,</span> <span class='id identifier rubyid_total'>total</span><span class='rparen'>)</span>
+    <span class='ivar'>@journal_rows</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_new_journal_row'>new_journal_row</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="build-instance_method">
+  
+    #<strong>build</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Idempotent method that builds an array of new journal_rows. Also adds to
+errors if any problems occur. Does not save anything to the database.
+Returns self to support chaining.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+49
+50
+51
+52
+53
+54
+55
+56
+57</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/journal_row_builder.rb', line 49</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_build'>build</span>
+  <span class='id identifier rubyid_build_order_detail_journal_rows'>build_order_detail_journal_rows</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_virtual_order_detail'>virtual_order_detail</span><span class='op'>|</span>
+    <span class='id identifier rubyid_validate_order_detail'>validate_order_detail</span><span class='lparen'>(</span><span class='id identifier rubyid_virtual_order_detail'>virtual_order_detail</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_order_details'>order_details</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_order_detail'>order_detail</span><span class='op'>|</span> <span class='id identifier rubyid_update_product_recharges'>update_product_recharges</span><span class='lparen'>(</span><span class='id identifier rubyid_order_detail'>order_detail</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_add_journal_rows_from_product_recharges'>add_journal_rows_from_product_recharges</span>
+  <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="build_order_detail_journal_rows-instance_method">
+  
+    #<strong>build_order_detail_journal_rows</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Builds journal rows based the order details coming back from the
+Transformer Does not do any validation.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/journal_row_builder.rb', line 34</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_build_order_detail_journal_rows'>build_order_detail_journal_rows</span>
+  <span class='id identifier rubyid_reset'>reset</span>
+
+  <span class='id identifier rubyid_virtual_order_details'>virtual_order_details</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="OrderDetailListTransformerFactory.html" title="OrderDetailListTransformerFactory (class)">OrderDetailListTransformerFactory</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="OrderDetailListTransformerFactory.html#instance-class_method" title="OrderDetailListTransformerFactory.instance (method)">instance</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_order_details'>order_details</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span>
+  <span class='id identifier rubyid_virtual_order_details'>virtual_order_details</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_virtual_order_detail'>virtual_order_detail</span><span class='op'>|</span>
+    <span class='kw'>yield</span> <span class='id identifier rubyid_virtual_order_detail'>virtual_order_detail</span> <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+    <span class='ivar'>@journal_rows</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_order_detail_to_journal_row'>order_detail_to_journal_row</span><span class='lparen'>(</span><span class='id identifier rubyid_virtual_order_detail'>virtual_order_detail</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_journal_rows'>journal_rows</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create-instance_method">
+  
+    #<strong>create</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Creates journal rows for the given order_details. Does not gracefully
+handle unexpected database failures. Wrapping everything in a transaction
+was not an option because oracle will only support 1000 transactions per
+request. Returns self to support chaining.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+64
+65
+66
+67
+68
+69
+70
+71</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/journal_row_builder.rb', line 64</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span>
+  <span class='id identifier rubyid_build'>build</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_valid?'>valid?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_journal_rows'>journal_rows</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+    <span class='id identifier rubyid_journal_rows'>journal_rows</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:save!</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_set_journal_for_order_details'>set_journal_for_order_details</span><span class='lparen'>(</span><span class='id identifier rubyid_journal'>journal</span><span class='comma'>,</span> <span class='id identifier rubyid_order_details'>order_details</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:id</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="order_detail_to_journal_row-instance_method">
+  
+    #<strong>order_detail_to_journal_row</strong>(order_detail)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Given an order detail, return an array of one or more new JournalRow
+objects.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+139
+140
+141
+142
+143</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/journal_row_builder.rb', line 139</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_order_detail_to_journal_row'>order_detail_to_journal_row</span><span class='lparen'>(</span><span class='id identifier rubyid_order_detail'>order_detail</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_klass'>klass</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Converters.html" title="Converters (module)">Converters</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Converters/ConverterFactory.html" title="Converters::ConverterFactory (class)">ConverterFactory</a></span></span><span class='period'>.</span><span class='id identifier rubyid_for'><span class='object_link'><a href="Converters/ConverterFactory.html#for-class_method" title="Converters::ConverterFactory.for (method)">for</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>order_detail_to_journal_rows</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='id identifier rubyid_klass'>klass</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_journal'>journal</span><span class='comma'>,</span> <span class='id identifier rubyid_order_detail'>order_detail</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_convert'>convert</span>
+  <span class='const'><span class='object_link'><a href="JournalRow.html" title="JournalRow (class)">JournalRow</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pending_facility_ids-instance_method">
+  
+    #<strong>pending_facility_ids</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Set an array of facility_ids with pending journals</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+80
+81
+82</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/journal_row_builder.rb', line 80</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_pending_facility_ids'>pending_facility_ids</span>
+  <span class='ivar'>@pending_facility_ids</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="Journal.html" title="Journal (class)">Journal</a></span></span><span class='period'>.</span><span class='id identifier rubyid_facility_ids_with_pending_journals'><span class='object_link'><a href="Journal.html#facility_ids_with_pending_journals-class_method" title="Journal.facility_ids_with_pending_journals (method)">facility_ids_with_pending_journals</a></span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="product_to_journal_row-instance_method">
+  
+    #<strong>product_to_journal_row</strong>(product, total)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Given a product and total, return an array of one or more new JournalRow
+objects.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+147
+148
+149
+150
+151</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/journal_row_builder.rb', line 147</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_product_to_journal_row'>product_to_journal_row</span><span class='lparen'>(</span><span class='id identifier rubyid_product'>product</span><span class='comma'>,</span> <span class='id identifier rubyid_total'>total</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_klass'>klass</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Converters.html" title="Converters (module)">Converters</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Converters/ConverterFactory.html" title="Converters::ConverterFactory (class)">ConverterFactory</a></span></span><span class='period'>.</span><span class='id identifier rubyid_for'><span class='object_link'><a href="Converters/ConverterFactory.html#for-class_method" title="Converters::ConverterFactory.for (method)">for</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>product_to_journal_rows</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='id identifier rubyid_klass'>klass</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_journal'>journal</span><span class='comma'>,</span> <span class='id identifier rubyid_product'>product</span><span class='comma'>,</span> <span class='id identifier rubyid_total'>total</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_convert'>convert</span>
+  <span class='const'><span class='object_link'><a href="JournalRow.html" title="JournalRow (class)">JournalRow</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reset-instance_method">
+  
+    #<strong>reset</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Reset instance variables both on initialize and build.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+24
+25
+26
+27
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/journal_row_builder.rb', line 24</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reset'>reset</span>
+  <span class='ivar'>@errors</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@journal_rows</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@journaled_facility_ids</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='ivar'>@product_recharges</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='ivar'>@recharge_enabled</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SettingsHelper.html" title="SettingsHelper (module)">SettingsHelper</a></span></span><span class='period'>.</span><span class='id identifier rubyid_feature_on?'><span class='object_link'><a href="SettingsHelper.html#feature_on%3F-class_method" title="SettingsHelper.feature_on? (method)">feature_on?</a></span></span><span class='lparen'>(</span><span class='symbol'>:recharge_accounts</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="set_journal_for_order_details-instance_method">
+  
+    #<strong>set_journal_for_order_details</strong>(journal, order_detail_ids)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Updates the journal_id of each order_detail.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+177
+178
+179</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/journal_row_builder.rb', line 177</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_set_journal_for_order_details'>set_journal_for_order_details</span><span class='lparen'>(</span><span class='id identifier rubyid_journal'>journal</span><span class='comma'>,</span> <span class='id identifier rubyid_order_detail_ids'>order_detail_ids</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="OrderDetail.html" title="OrderDetail (class)">OrderDetail</a></span></span><span class='period'>.</span><span class='id identifier rubyid_where_ids_in'>where_ids_in</span><span class='lparen'>(</span><span class='id identifier rubyid_order_detail_ids'>order_detail_ids</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_update_all'>update_all</span><span class='lparen'>(</span><span class='label'>journal_id:</span> <span class='id identifier rubyid_journal'>journal</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_product_recharges-instance_method">
+  
+    #<strong>update_product_recharges</strong>(order_detail)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If recharge_enabled, then sum up the product_recharges by product so each
+product recharge can later be added as an additional journal_row.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+155
+156
+157
+158
+159
+160
+161</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/journal_row_builder.rb', line 155</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_product_recharges'>update_product_recharges</span><span class='lparen'>(</span><span class='id identifier rubyid_order_detail'>order_detail</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_recharge_enabled'>recharge_enabled</span>
+    <span class='id identifier rubyid_product_id'>product_id</span> <span class='op'>=</span> <span class='id identifier rubyid_order_detail'>order_detail</span><span class='period'>.</span><span class='id identifier rubyid_product_id'>product_id</span>
+    <span class='id identifier rubyid_product_recharges'>product_recharges</span><span class='lbracket'>[</span><span class='id identifier rubyid_product_id'>product_id</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_product_recharges'>product_recharges</span><span class='lbracket'>[</span><span class='id identifier rubyid_product_id'>product_id</span><span class='rbracket'>]</span> <span class='op'>+=</span> <span class='id identifier rubyid_order_detail'>order_detail</span><span class='period'>.</span><span class='id identifier rubyid_total'>total</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="valid?-instance_method">
+  
+    #<strong>valid?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns true if errors are not present; otherwise false. Best to use this
+incase errors implementation changes.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+75
+76
+77</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/journal_row_builder.rb', line 75</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_valid?'>valid?</span>
+  <span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_blank?'>blank?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate_account-instance_method">
+  
+    #<strong>validate_account</strong>(order_detail)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Validate each journal_row account. This is necessary because an
+order_detail may generate multiple journal_rows with different accounts,
+and we need to validate them all.</p>
+
+<p>TODO: we may need to add a validator factory for split_accounts. Otherwise
+we assume a product account can not be a split account.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/journal_row_builder.rb', line 124</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_validate_account'>validate_account</span><span class='lparen'>(</span><span class='id identifier rubyid_order_detail'>order_detail</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_account'>account</span> <span class='op'>=</span> <span class='id identifier rubyid_order_detail'>order_detail</span><span class='period'>.</span><span class='id identifier rubyid_account'>account</span>
+  <span class='kw'>begin</span>
+    <span class='const'><span class='object_link'><a href="ValidatorFactory.html" title="ValidatorFactory (class)">ValidatorFactory</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance'><span class='object_link'><a href="ValidatorFactory.html#instance-class_method" title="ValidatorFactory.instance (method)">instance</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_account'>account</span><span class='period'>.</span><span class='id identifier rubyid_account_number'>account_number</span><span class='comma'>,</span> <span class='id identifier rubyid_order_detail'>order_detail</span><span class='period'>.</span><span class='id identifier rubyid_product'>product</span><span class='period'>.</span><span class='id identifier rubyid_account'>account</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_account_is_open!'>account_is_open!</span><span class='lparen'>(</span><span class='id identifier rubyid_order_detail'>order_detail</span><span class='period'>.</span><span class='id identifier rubyid_fulfilled_at'>fulfilled_at</span><span class='rparen'>)</span>
+  <span class='kw'>rescue</span> <span class='const'><span class='object_link'><a href="ValidatorError.html" title="ValidatorError (class)">ValidatorError</a></span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+    <span class='ivar'>@errors</span> <span class='op'>&lt;&lt;</span> <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>activerecord.errors.models.journal.invalid_account</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='label'>account_number:</span> <span class='id identifier rubyid_account'>account</span><span class='period'>.</span><span class='id identifier rubyid_account_number_to_s'>account_number_to_s</span><span class='comma'>,</span>
+      <span class='label'>validation_error:</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span><span class='comma'>,</span>
+    <span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate_facility_can_journal-instance_method">
+  
+    #<strong>validate_facility_can_journal</strong>(order_detail)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Validate the order_details&#39;s facility doesn&#39;t currently have a
+pending journal.</p>
+
+<p>Ported from original journal model logic. Consider replacing the raised
+error with a push to `@errors` instead.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/journal_row_builder.rb', line 103</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_validate_facility_can_journal'>validate_facility_can_journal</span><span class='lparen'>(</span><span class='id identifier rubyid_order_detail'>order_detail</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_facility_id'>facility_id</span> <span class='op'>=</span> <span class='id identifier rubyid_order_detail'>order_detail</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='period'>.</span><span class='id identifier rubyid_facility_id'>facility_id</span>
+  <span class='kw'>unless</span> <span class='id identifier rubyid_journaled_facility_ids'>journaled_facility_ids</span><span class='period'>.</span><span class='id identifier rubyid_member?'>member?</span><span class='lparen'>(</span><span class='id identifier rubyid_facility_id'>facility_id</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_pending_facility_ids'>pending_facility_ids</span><span class='period'>.</span><span class='id identifier rubyid_member?'>member?</span><span class='lparen'>(</span><span class='id identifier rubyid_facility_id'>facility_id</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='op'>::</span><span class='const'><span class='object_link'><a href="Journal.html" title="Journal (class)">Journal</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Journal/CreationError.html" title="Journal::CreationError (class)">CreationError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span>
+                                           <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>activerecord.errors.models.journal.pending_overlap</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                                           <span class='label'>label:</span> <span class='id identifier rubyid_order_detail'>order_detail</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span>
+                                           <span class='label'>facility:</span> <span class='const'><span class='object_link'><a href="Facility.html" title="Facility (class)">Facility</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_facility_id'>facility_id</span><span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_journaled_facility_ids'>journaled_facility_ids</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_facility_id'>facility_id</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate_order_detail-instance_method">
+  
+    #<strong>validate_order_detail</strong>(order_detail)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Run all validations on an order detail</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+85
+86
+87
+88
+89</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/journal_row_builder.rb', line 85</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_validate_order_detail'>validate_order_detail</span><span class='lparen'>(</span><span class='id identifier rubyid_order_detail'>order_detail</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_validate_order_detail_unjournaled'>validate_order_detail_unjournaled</span><span class='lparen'>(</span><span class='id identifier rubyid_order_detail'>order_detail</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_validate_facility_can_journal'>validate_facility_can_journal</span><span class='lparen'>(</span><span class='id identifier rubyid_order_detail'>order_detail</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_validate_account'>validate_account</span><span class='lparen'>(</span><span class='id identifier rubyid_order_detail'>order_detail</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate_order_detail_unjournaled-instance_method">
+  
+    #<strong>validate_order_detail_unjournaled</strong>(order_detail)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Validate the order_detail hasn&#39;t already been journaled</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95
+96</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/journal_row_builder.rb', line 92</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_validate_order_detail_unjournaled'>validate_order_detail_unjournaled</span><span class='lparen'>(</span><span class='id identifier rubyid_order_detail'>order_detail</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_order_detail'>order_detail</span><span class='period'>.</span><span class='id identifier rubyid_journal_id'>journal_id</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+    <span class='ivar'>@errors</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_order_detail'>order_detail</span><span class='embexpr_end'>}</span><span class='tstring_content'> is already journaled in journal </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_order_detail'>order_detail</span><span class='period'>.</span><span class='id identifier rubyid_journal_id'>journal_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr 13 09:52:04 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.12 (ruby-2.4.1).
+</div>
+
+    </div>
+  </body>
+</html>

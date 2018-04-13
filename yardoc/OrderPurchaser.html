@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: OrderPurchaser
+  
+    &mdash; Documentation by YARD 0.9.12
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "OrderPurchaser";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (O)</a> &raquo;
+    
+    
+    <span class="title">OrderPurchaser</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: OrderPurchaser
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">OrderPurchaser</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/services/order_purchaser.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#acting_as-instance_method" title="#acting_as (instance method)">#<strong>acting_as</strong>  &#x21d2; Object </a>
+    
+
+    
+      (also: #acting_as?)
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute acting_as.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#backdate_to-instance_method" title="#backdate_to (instance method)">#<strong>backdate_to</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute backdate_to.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#order-instance_method" title="#order (instance method)">#<strong>order</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute order.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#order_in_past-instance_method" title="#order_in_past (instance method)">#<strong>order_in_past</strong>  &#x21d2; Object </a>
+    
+
+    
+      (also: #order_in_past?)
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute order_in_past.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#params-instance_method" title="#params (instance method)">#<strong>params</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute params.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#user-instance_method" title="#user (instance method)">#<strong>user</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute user.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#backdate_order_details!-instance_method" title="#backdate_order_details! (instance method)">#<strong>backdate_order_details!</strong>(update_by, order_status)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#can_backdate_order_details%3F-instance_method" title="#can_backdate_order_details? (instance method)">#<strong>can_backdate_order_details?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#complete_past_reservations!-instance_method" title="#complete_past_reservations! (instance method)">#<strong>complete_past_reservations!</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#do_additional_validations-instance_method" title="#do_additional_validations (instance method)">#<strong>do_additional_validations</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#errors-instance_method" title="#errors (instance method)">#<strong>errors</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(acting_as:, order:, order_in_past:, params:, user:)  &#x21d2; OrderPurchaser </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of OrderPurchaser.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#order_detail_updater-instance_method" title="#order_detail_updater (instance method)">#<strong>order_detail_updater</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#order_in_the_past!-instance_method" title="#order_in_the_past! (instance method)">#<strong>order_in_the_past!</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#order_status-instance_method" title="#order_status (instance method)">#<strong>order_status</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#order_update_params-instance_method" title="#order_update_params (instance method)">#<strong>order_update_params</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#purchase!-instance_method" title="#purchase! (instance method)">#<strong>purchase!</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#purchase_order!-instance_method" title="#purchase_order! (instance method)">#<strong>purchase_order!</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#quantities-instance_method" title="#quantities (instance method)">#<strong>quantities</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#send_purchase_notifications-instance_method" title="#send_purchase_notifications (instance method)">#<strong>send_purchase_notifications</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#success%3F-instance_method" title="#success? (instance method)">#<strong>success?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#validate_order!-instance_method" title="#validate_order! (instance method)">#<strong>validate_order!</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(acting_as:, order:, order_in_past:, params:, user:)  &#x21d2; <tt><span class='object_link'><a href="" title="OrderPurchaser (class)">OrderPurchaser</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of OrderPurchaser</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/order_purchaser.rb', line 11</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='label'>acting_as:</span><span class='comma'>,</span> <span class='label'>order:</span><span class='comma'>,</span> <span class='label'>order_in_past:</span><span class='comma'>,</span> <span class='label'>params:</span><span class='comma'>,</span> <span class='label'>user:</span><span class='rparen'>)</span>
+  <span class='ivar'>@acting_as</span> <span class='op'>=</span> <span class='id identifier rubyid_acting_as'>acting_as</span>
+  <span class='ivar'>@order</span> <span class='op'>=</span> <span class='id identifier rubyid_order'>order</span>
+  <span class='ivar'>@order_in_past</span> <span class='op'>=</span> <span class='id identifier rubyid_order_in_past'>order_in_past</span>
+  <span class='ivar'>@params</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span>
+  <span class='ivar'>@user</span> <span class='op'>=</span> <span class='id identifier rubyid_user'>user</span>
+  <span class='ivar'>@success</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='ivar'>@errors</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="acting_as-instance_method">
+  
+    #<strong>acting_as</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='acting_as?-instance_method'>acting_as?</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute acting_as</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3
+4
+5</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/order_purchaser.rb', line 3</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_acting_as'>acting_as</span>
+  <span class='ivar'>@acting_as</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="backdate_to=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="backdate_to-instance_method">
+  
+    #<strong>backdate_to</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute backdate_to</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4
+5
+6</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/order_purchaser.rb', line 4</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_backdate_to'>backdate_to</span>
+  <span class='ivar'>@backdate_to</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="order-instance_method">
+  
+    #<strong>order</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute order</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3
+4
+5</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/order_purchaser.rb', line 3</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_order'>order</span>
+  <span class='ivar'>@order</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="order_in_past-instance_method">
+  
+    #<strong>order_in_past</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='order_in_past?-instance_method'>order_in_past?</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute order_in_past</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3
+4
+5</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/order_purchaser.rb', line 3</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_order_in_past'>order_in_past</span>
+  <span class='ivar'>@order_in_past</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="params-instance_method">
+  
+    #<strong>params</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute params</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3
+4
+5</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/order_purchaser.rb', line 3</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_params'>params</span>
+  <span class='ivar'>@params</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="user-instance_method">
+  
+    #<strong>user</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute user</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3
+4
+5</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/order_purchaser.rb', line 3</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_user'>user</span>
+  <span class='ivar'>@user</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="backdate_order_details!-instance_method">
+  
+    #<strong>backdate_order_details!</strong>(update_by, order_status)  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/order_purchaser.rb', line 73</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_backdate_order_details!'>backdate_order_details!</span><span class='lparen'>(</span><span class='id identifier rubyid_update_by'>update_by</span><span class='comma'>,</span> <span class='id identifier rubyid_order_status'>order_status</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_order'>order</span><span class='period'>.</span><span class='id identifier rubyid_order_details'>order_details</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_od'>od</span><span class='op'>|</span>
+    <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_od'>od</span><span class='period'>.</span><span class='id identifier rubyid_reservation'>reservation</span> <span class='comment'># reservations should always have order_status dictated by their dates
+</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_order_status'>order_status</span><span class='period'>.</span><span class='id identifier rubyid_root'>root</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="OrderStatus.html" title="OrderStatus (class)">OrderStatus</a></span></span><span class='period'>.</span><span class='id identifier rubyid_complete'><span class='object_link'><a href="OrderStatus.html#complete-class_method" title="OrderStatus.complete (method)">complete</a></span></span>
+      <span class='id identifier rubyid_od'>od</span><span class='period'>.</span><span class='id identifier rubyid_backdate_to_complete!'>backdate_to_complete!</span><span class='lparen'>(</span><span class='id identifier rubyid_order'>order</span><span class='period'>.</span><span class='id identifier rubyid_ordered_at'>ordered_at</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_od'>od</span><span class='period'>.</span><span class='id identifier rubyid_update_order_status!'>update_order_status!</span><span class='lparen'>(</span><span class='id identifier rubyid_update_by'>update_by</span><span class='comma'>,</span> <span class='id identifier rubyid_order_status'>order_status</span><span class='comma'>,</span> <span class='label'>admin:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="can_backdate_order_details?-instance_method">
+  
+    #<strong>can_backdate_order_details?</strong>  &#x21d2; <tt>Boolean</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+69
+70
+71</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/order_purchaser.rb', line 69</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_can_backdate_order_details?'>can_backdate_order_details?</span>
+  <span class='id identifier rubyid_order'>order</span><span class='period'>.</span><span class='id identifier rubyid_ordered_at'>ordered_at</span> <span class='op'>&lt;=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_zone'>zone</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="complete_past_reservations!-instance_method">
+  
+    #<strong>complete_past_reservations!</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+85
+86
+87
+88
+89</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/order_purchaser.rb', line 85</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_complete_past_reservations!'>complete_past_reservations!</span>
+  <span class='id identifier rubyid_order'>order</span><span class='period'>.</span><span class='id identifier rubyid_order_details'>order_details</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_od'>od</span><span class='op'>|</span> <span class='id identifier rubyid_od'>od</span><span class='period'>.</span><span class='id identifier rubyid_reservation'>reservation</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_od'>od</span><span class='period'>.</span><span class='id identifier rubyid_reservation'>reservation</span><span class='period'>.</span><span class='id identifier rubyid_reserve_end_at'>reserve_end_at</span> <span class='op'>&lt;</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_zone'>zone</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_od'>od</span><span class='op'>|</span>
+    <span class='id identifier rubyid_od'>od</span><span class='period'>.</span><span class='id identifier rubyid_backdate_to_complete!'>backdate_to_complete!</span> <span class='id identifier rubyid_od'>od</span><span class='period'>.</span><span class='id identifier rubyid_reservation'>reservation</span><span class='period'>.</span><span class='id identifier rubyid_reserve_end_at'>reserve_end_at</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="do_additional_validations-instance_method">
+  
+    #<strong>do_additional_validations</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+131
+132
+133
+134
+135
+136
+137
+138
+139</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/order_purchaser.rb', line 131</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_do_additional_validations'>do_additional_validations</span>
+  <span class='id identifier rubyid_validator'>validator</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="OrderPurchaseValidator.html" title="OrderPurchaseValidator (class)">OrderPurchaseValidator</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="OrderPurchaseValidator.html#initialize-instance_method" title="OrderPurchaseValidator#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='ivar'>@order</span><span class='period'>.</span><span class='id identifier rubyid_order_details'>order_details</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_validator'>validator</span><span class='period'>.</span><span class='id identifier rubyid_valid?'>valid?</span>
+    <span class='kw'>true</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@errors</span> <span class='op'>=</span> <span class='id identifier rubyid_validator'>validator</span><span class='period'>.</span><span class='id identifier rubyid_errors'>errors</span>
+    <span class='kw'>false</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="errors-instance_method">
+  
+    #<strong>errors</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/order_purchaser.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_errors'>errors</span>
+  <span class='ivar'>@errors</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span><span class='period'>.</span><span class='id identifier rubyid_uniq'>uniq</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="order_detail_updater-instance_method">
+  
+    #<strong>order_detail_updater</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/order_purchaser.rb', line 53</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_order_detail_updater'>order_detail_updater</span>
+  <span class='ivar'>@order_detail_updater</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="OrderDetailUpdater.html" title="OrderDetailUpdater (class)">OrderDetailUpdater</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="OrderDetailUpdater.html#initialize-instance_method" title="OrderDetailUpdater#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_order'>order</span><span class='comma'>,</span> <span class='id identifier rubyid_order_update_params'>order_update_params</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="order_in_the_past!-instance_method">
+  
+    #<strong>order_in_the_past!</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/order_purchaser.rb', line 57</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_order_in_the_past!'>order_in_the_past!</span>
+  <span class='kw'>unless</span> <span class='id identifier rubyid_can_backdate_order_details?'>can_backdate_order_details?</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NUCore.html" title="NUCore (module)">NUCore</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="NUCore/PurchaseException.html" title="NUCore::PurchaseException (class)">PurchaseException</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>controllers.orders.purchase.future_dating_error</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># update order detail statuses if you&#39;ve changed it while acting as
+</span>  <span class='kw'>if</span> <span class='id identifier rubyid_acting_as?'>acting_as?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_order_status'>order_status</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+    <span class='id identifier rubyid_backdate_order_details!'>backdate_order_details!</span><span class='lparen'>(</span><span class='id identifier rubyid_user'>user</span><span class='comma'>,</span> <span class='id identifier rubyid_order_status'>order_status</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_complete_past_reservations!'>complete_past_reservations!</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="order_status-instance_method">
+  
+    #<strong>order_status</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+91
+92
+93</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/order_purchaser.rb', line 91</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_order_status'>order_status</span>
+  <span class='const'><span class='object_link'><a href="OrderStatus.html" title="OrderStatus (class)">OrderStatus</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:order_status_id</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:order_status_id</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="order_update_params-instance_method">
+  
+    #<strong>order_update_params</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+95
+96
+97</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/order_purchaser.rb', line 95</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_order_update_params'>order_update_params</span>
+  <span class='ivar'>@order_update_params</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="OrderDetailUpdateParamHashExtractor.html" title="OrderDetailUpdateParamHashExtractor (class)">OrderDetailUpdateParamHashExtractor</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="OrderDetailUpdateParamHashExtractor.html#initialize-instance_method" title="OrderDetailUpdateParamHashExtractor#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_h'><span class='object_link'><a href="OrderDetailUpdateParamHashExtractor.html#to_h-instance_method" title="OrderDetailUpdateParamHashExtractor#to_h (method)">to_h</a></span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="purchase!-instance_method">
+  
+    #<strong>purchase!</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/order_purchaser.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_purchase!'>purchase!</span>
+  <span class='id identifier rubyid_order_detail_updater'>order_detail_updater</span><span class='period'>.</span><span class='id identifier rubyid_update!'>update!</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_order_detail_updater'>order_detail_updater</span><span class='period'>.</span><span class='id identifier rubyid_quantities_changed?'>quantities_changed?</span>
+    <span class='ivar'>@errors</span> <span class='op'>&lt;&lt;</span> <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>controllers.orders.purchase.quantities_changed</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>return</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_order'>order</span><span class='period'>.</span><span class='id identifier rubyid_ordered_at'>ordered_at</span> <span class='op'>=</span> <span class='id identifier rubyid_backdate_to'>backdate_to</span> <span class='kw'>if</span> <span class='id identifier rubyid_backdate_to'>backdate_to</span>
+
+  <span class='id identifier rubyid_validate_order!'>validate_order!</span>
+  <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_do_additional_validations'>do_additional_validations</span>
+  <span class='id identifier rubyid_purchase_order!'>purchase_order!</span>
+
+  <span class='id identifier rubyid_order_in_the_past!'>order_in_the_past!</span> <span class='kw'>if</span> <span class='id identifier rubyid_order_in_past?'>order_in_past?</span>
+
+  <span class='id identifier rubyid_send_purchase_notifications'>send_purchase_notifications</span>
+
+  <span class='ivar'>@success</span> <span class='op'>=</span> <span class='kw'>true</span>
+<span class='kw'>rescue</span> <span class='const'><span class='object_link'><a href="NUCore.html" title="NUCore (module)">NUCore</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="NUCore/OrderDetailUpdateException.html" title="NUCore::OrderDetailUpdateException (class)">OrderDetailUpdateException</a></span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+  <span class='ivar'>@errors</span> <span class='op'>=</span> <span class='id identifier rubyid_order'>order</span><span class='period'>.</span><span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_full_messages'>full_messages</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="purchase_order!-instance_method">
+  
+    #<strong>purchase_order!</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="NUCore/PurchaseException.html" title="NUCore::PurchaseException (class)">NUCore::PurchaseException</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+126
+127
+128
+129</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/order_purchaser.rb', line 126</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_purchase_order!'>purchase_order!</span>
+  <span class='comment'># Empty because validate_order! and purchase! don&#39;t give useful error messages
+</span>  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NUCore.html" title="NUCore (module)">NUCore</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="NUCore/PurchaseException.html" title="NUCore::PurchaseException (class)">PurchaseException</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_order'>order</span><span class='period'>.</span><span class='id identifier rubyid_purchase!'>purchase!</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="quantities-instance_method">
+  
+    #<strong>quantities</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+99
+100
+101</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/order_purchaser.rb', line 99</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_quantities'>quantities</span>
+  <span class='id identifier rubyid_order'>order</span><span class='period'>.</span><span class='id identifier rubyid_order_details'>order_details</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>order_details.id</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_pluck'>pluck</span><span class='lparen'>(</span><span class='symbol'>:quantity</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="send_purchase_notifications-instance_method">
+  
+    #<strong>send_purchase_notifications</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/order_purchaser.rb', line 103</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_send_purchase_notifications'>send_purchase_notifications</span>
+  <span class='id identifier rubyid_should_send_receipt'>should_send_receipt</span> <span class='op'>=</span> <span class='op'>!</span><span class='id identifier rubyid_acting_as?'>acting_as?</span> <span class='op'>||</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:send_notification</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_should_send_order_notification'>should_send_order_notification</span> <span class='op'>=</span> <span class='id identifier rubyid_order_notification_recipient'>order_notification_recipient</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_acting_as?'>acting_as?</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_should_send_receipt'>should_send_receipt</span>
+    <span class='const'><span class='object_link'><a href="PurchaseNotifier.html" title="PurchaseNotifier (class)">PurchaseNotifier</a></span></span><span class='period'>.</span><span class='id identifier rubyid_order_receipt'><span class='object_link'><a href="PurchaseNotifier.html#order_receipt-instance_method" title="PurchaseNotifier#order_receipt (method)">order_receipt</a></span></span><span class='lparen'>(</span><span class='label'>user:</span> <span class='id identifier rubyid_order'>order</span><span class='period'>.</span><span class='id identifier rubyid_user'>user</span><span class='comma'>,</span> <span class='label'>order:</span> <span class='id identifier rubyid_order'>order</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_deliver_later'>deliver_later</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_should_send_order_notification'>should_send_order_notification</span>
+    <span class='const'><span class='object_link'><a href="PurchaseNotifier.html" title="PurchaseNotifier (class)">PurchaseNotifier</a></span></span><span class='period'>.</span><span class='id identifier rubyid_order_notification'><span class='object_link'><a href="PurchaseNotifier.html#order_notification-instance_method" title="PurchaseNotifier#order_notification (method)">order_notification</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_order'>order</span><span class='comma'>,</span> <span class='id identifier rubyid_order_notification_recipient'>order_notification_recipient</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_deliver_later'>deliver_later</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_order'>order</span><span class='period'>.</span><span class='id identifier rubyid_order_details'>order_details</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_order_detail'>order_detail</span><span class='op'>|</span>
+    <span class='kw'>next</span> <span class='kw'>unless</span> <span class='id identifier rubyid_order_detail'>order_detail</span><span class='period'>.</span><span class='id identifier rubyid_product'>product</span><span class='period'>.</span><span class='id identifier rubyid_order_notification_recipient?'>order_notification_recipient?</span>
+    <span class='const'><span class='object_link'><a href="PurchaseNotifier.html" title="PurchaseNotifier (class)">PurchaseNotifier</a></span></span><span class='period'>.</span><span class='id identifier rubyid_product_order_notification'><span class='object_link'><a href="PurchaseNotifier.html#product_order_notification-instance_method" title="PurchaseNotifier#product_order_notification (method)">product_order_notification</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_order_detail'>order_detail</span><span class='comma'>,</span> <span class='id identifier rubyid_order_detail'>order_detail</span><span class='period'>.</span><span class='id identifier rubyid_product'>product</span><span class='period'>.</span><span class='id identifier rubyid_order_notification_recipient'>order_notification_recipient</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_deliver_later'>deliver_later</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="success?-instance_method">
+  
+    #<strong>success?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+43
+44
+45</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/order_purchaser.rb', line 43</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_success?'>success?</span>
+  <span class='ivar'>@success</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate_order!-instance_method">
+  
+    #<strong>validate_order!</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="NUCore/PurchaseException.html" title="NUCore::PurchaseException (class)">NUCore::PurchaseException</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+121
+122
+123
+124</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/order_purchaser.rb', line 121</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_validate_order!'>validate_order!</span>
+  <span class='comment'># Empty because validate_order! and purchase! don&#39;t give useful error messages
+</span>  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="NUCore.html" title="NUCore (module)">NUCore</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="NUCore/PurchaseException.html" title="NUCore::PurchaseException (class)">PurchaseException</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_order'>order</span><span class='period'>.</span><span class='id identifier rubyid_validate_order!'>validate_order!</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr 13 09:52:01 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.12 (ruby-2.4.1).
+</div>
+
+    </div>
+  </body>
+</html>
