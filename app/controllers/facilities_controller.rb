@@ -42,7 +42,7 @@ class FacilitiesController < ApplicationController
     raise ActiveRecord::RecordNotFound unless current_facility.try(:is_active?)
     @order_form = nil
     @order_form = Order.new if acting_user && current_facility.accepts_multi_add?
-    @active_tab = "home"
+    @active_tab = "use"
     render layout: "application"
   end
 
