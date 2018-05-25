@@ -1,1 +1,3 @@
 # use this file for school-specific settings overrides
+feature:
+  uconn_design: true
