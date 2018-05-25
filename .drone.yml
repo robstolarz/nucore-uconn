@@ -1,0 +1,20 @@
+pipeline:
+  compile:
+    image: juicymo/drone-ruby
+    environment:
+      - RAILS_ENV=test
+    commands:
+      - bundle install
+      - source ./rakeSecret.sh
+      - rake db:setup
+      - rake demo:seed
+
+  test:
+    image: juicymo/drone-ruby
+    commands:
+      - rspec
+
+  run:
+    image: juicymo/drone-ruby
+    commands:
+      - bin/rails s
