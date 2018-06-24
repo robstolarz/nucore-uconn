@@ -1,0 +1,32 @@
+version: '3'
+services:
+  db:
+    image: mysql:5.7
+    expose:
+      - "3306"
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+  setup:
+    links:
+      - db
+    build:
+      context: .
+    command: "./docker/migrate.sh"
+    ports:
+      - "8000"
+    expose:
+      - "8000"
+    environment:
+      - DEMO_DATA=yes
+      - MYSQL_HOST=db
+  nucore:
+    links:
+      - db
+      - setup
+    build:
+      context: .
+    environment:
+      - MYSQL_HOST=db
+    ports:
+      - "80:3000"
+    command: "./docker/serve.sh"
