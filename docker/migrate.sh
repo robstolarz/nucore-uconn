@@ -6,7 +6,7 @@ set -x
 ./docker/setup.sh
 
 # wait for db to be up
-wait-for-it db:3306 -t 0
+wait-for-it "${MYSQL_HOST}:3306" -t 0
 # try migrating the db if it exists, load schema otherwise
 if rake db:migrate:status &> /dev/null; then
 	rake db:environment:set RAILS_ENV=development

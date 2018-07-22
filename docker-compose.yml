@@ -27,6 +27,7 @@ services:
       context: .
     environment:
       - MYSQL_HOST=db
+      - SETUP_HOST=setup
     ports:
       - "80:3000"
     command: "./docker/serve.sh"
