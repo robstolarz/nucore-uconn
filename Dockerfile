@@ -27,7 +27,9 @@ RUN curl https://cdn.rawgit.com/vishnubob/wait-for-it/8ed92e8cab83cfed76ff012ed4
 
 # install tools for coordinating containers and databases
 RUN apt-get update && apt-get install -y netcat mysql-client
-USER nucore
+
+# install cron for "whenever" container
+RUN apt-get update && apt-get install -y cron
 
 # grab the rest of the files (and save some rebuild time!!)
 USER root

@@ -31,3 +31,36 @@ services:
     ports:
       - "80:3000"
     command: "./docker/serve.sh"
+  auto_cancel:
+    deploy:
+      replicas: 1 # and only one
+    links:
+      - db
+      - setup
+    build:
+      context: .
+    environment:
+      - MYSQL_HOST=db
+      - SETUP_HOST=setup
+    command: "./docker/auto_cancel.sh"
+  delayed_job:
+    links:
+      - db
+      - setup
+    build:
+      context: .
+    environment:
+      - MYSQL_HOST=db
+      - SETUP_HOST=setup
+    command: "./docker/delayed_job.sh"
+  whenever:
+    links:
+      - db
+      - setup
+    build:
+      context: .
+    environment:
+      - MYSQL_HOST=db
+      - SETUP_HOST=setup
+    command: "./docker/whenever.sh"
+    user: root # TODO: figure out how to get cron not to need root
