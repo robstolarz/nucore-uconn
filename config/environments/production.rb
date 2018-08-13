@@ -62,11 +62,11 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.delivery_method       = :smtp
   Rails.application.routes.default_url_options =
-    config.action_mailer.default_url_options   = { host: "nucore.example.com", protocol: "https" }
+    config.action_mailer.default_url_options   = { host: ENV["SMTP_URL_HOST"] || "nucore.example.com", protocol: ENV["SMTP_URL_PROTOCOL"] || "https" }
   config.action_mailer.smtp_settings         = {
-    address: "mail.example.com",
-    port: 25,
-    domain: "example.com",
+    address: ENV["SMTP_SERVER_ADDRESS"] || "mail.example.com",
+    port: ENV["SMTP_SERVER_PORT"] || 25,
+    domain: ENV["SMTP_SEND_DOMAIN"] || "example.com",
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to

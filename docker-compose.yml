@@ -17,7 +17,6 @@ services:
     expose:
       - "8000"
     environment:
-      - DEMO_DATA=yes
       - MYSQL_HOST=db
   nucore:
     links:

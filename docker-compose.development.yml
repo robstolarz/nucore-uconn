@@ -1,0 +1,18 @@
+version: '3'
+services:
+  nucore:
+    environment:
+      - RAILS_ENV=development
+  setup:
+    environment:
+      - RAILS_ENV=development
+      - DEMO_DATA=yes
+  auto_cancel:
+    environment:
+      - RAILS_ENV=development
+  delayed_job:
+    environment:
+      - RAILS_ENV=development
+  whenever:
+    environment:
+      - RAILS_ENV=development

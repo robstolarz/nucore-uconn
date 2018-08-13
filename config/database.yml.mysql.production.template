@@ -1,0 +1,3 @@
+production:
+  <<: *defaults
+  database: nucore_open_production
