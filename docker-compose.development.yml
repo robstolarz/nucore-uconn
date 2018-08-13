@@ -1,5 +1,8 @@
 version: '3'
 services:
+  nginx:
+    environment:
+      - NGINX_ASSET_CACHE_TIME=60s
   nucore:
     environment:
       - RAILS_ENV=development

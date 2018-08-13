@@ -1,5 +1,22 @@
 version: '3'
+volumes:
+  assets:
+
 services:
+  nginx:
+    links:
+      - nucore
+      - setup
+    build:
+      context: ./docker/nginx
+    ports:
+      - "80:80"
+    environment:
+      - NGINX_ASSET_CACHE_TIME=1y
+      - NUCORE_HOST=nucore
+      - NUCORE_PORT=3000
+    volumes:
+      - assets:/var/www/assets
   db:
     image: mysql:5.7
     expose:
@@ -12,12 +29,12 @@ services:
     build:
       context: .
     command: "./docker/migrate.sh"
-    ports:
-      - "8000"
     expose:
       - "8000"
     environment:
       - MYSQL_HOST=db
+    volumes:
+      - assets:/var/www/app/public/assets
   nucore:
     links:
       - db
@@ -27,9 +44,11 @@ services:
     environment:
       - MYSQL_HOST=db
       - SETUP_HOST=setup
-    ports:
-      - "80:3000"
+    expose:
+      - "3000"
     command: "./docker/serve.sh"
+    volumes:
+      - assets:/var/www/app/public/assets
   auto_cancel:
     deploy:
       replicas: 1 # and only one

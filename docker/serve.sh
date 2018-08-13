@@ -7,9 +7,6 @@ set -e
 # TODO: set up proper logging by directing logging to stdout
 
 source ./docker/setup.sh
-if [ "$RAILS_ENV" != "development" ]; then
-  bundle exec rake assets:precompile
-fi
 wait-for-it "${SETUP_HOST}:8000" -t 0
 
 ### run nucore
