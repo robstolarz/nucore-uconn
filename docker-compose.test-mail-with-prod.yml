@@ -1,0 +1,16 @@
+version: "3"
+services:
+  mailslurper:
+    image: marcopas/docker-mailslurper
+    expose:
+      - "25"
+    ports:
+      - "18080:18080"
+      - "18085:18085"
+    volumes:
+      - ./docker/mailslurper.config.json:/opt/mailslurper/config.json
+  delayed_job:
+    environment:
+      SMTP_URL_PROTOCOL: http
+      SMTP_URL_HOST: localhost
+      SMTP_SERVER_ADDRESS: mailslurper
