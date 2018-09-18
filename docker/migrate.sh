@@ -2,6 +2,8 @@
 
 # let's print everything to the console
 set -x
+# blow up on errors
+set -e
 
 source ./docker/setup.sh
 
