@@ -23,6 +23,7 @@ EOF
 ## database: we configure, setup, and migrate a DB
 export MYSQL_USER="${MYSQL_USER:-root}"
 export MYSQL_PASS="${MYSQL_PASS:-}" # set to a blank string
+export MYSQL_PASSWORD="${MYSQL_PASSWORD:-${MYSQL_PASS}}" # TODO: this is bad.
 export MYSQL_HOST="${MYSQL_HOST:-localhost}"
 cat config/database.yml.mysql.template > config/database.yml
 cat config/database.yml.mysql.production.template >> config/database.yml
