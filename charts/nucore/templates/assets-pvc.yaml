@@ -1,0 +1,30 @@
+{{- if not .Values.persistence.assets.existingClaim }}
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: {{ template "nucore.fullname" . }}-assets
+{{- with .Values.persistence.assets.annotations  }}
+  annotations:
+{{ toYaml . | indent 4 }}
+{{- end }}
+  labels:
+    app: {{ include "nucore.name" . }}
+    chart: {{ include "nucore.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  accessModes: # TODO: i dunno
+    - ReadWriteMany
+    - ReadWriteOnce
+    - ReadOnlyMany
+  resources:
+    requests:
+      storage: {{ .Values.persistence.assets.size | quote }}
+{{- if .Values.persistence.assets.storageClass }}
+{{- if (eq "-" .Values.persistence.assets.storageClass) }}
+  storageClassName: ""
+{{- else }}
+  storageClassName: "{{ .Values.persistence.assets.storageClass }}"
+{{- end }}
+{{- end }}
+{{- end }}

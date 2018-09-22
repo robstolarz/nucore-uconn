@@ -1,0 +1,63 @@
+# based on default deployment &
+# https://github.com/helm/charts/blob/master/stable/mysql/templates/deployment.yaml &
+# https://github.com/kubernetes/k8s.io/blob/master/k8s.io/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "nucore.fullname" . }}-nginx
+  labels:
+    app: {{ include "nucore.name" . }}
+    chart: {{ include "nucore.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ include "nucore.name" . }}
+      release: {{ .Release.Name }}
+      container: nginx
+  template:
+    metadata:
+      labels:
+        app: {{ include "nucore.name" . }}
+        release: {{ .Release.Name }}
+        container: nginx
+    spec:
+      volumes:
+        - name: assets
+          persistentVolumeClaim:
+            claimName: {{ .Values.persistence.assets.existingClaim | default (list (include "nucore.fullname" .) "assets" | join "-") }}
+        - name: nginx-conf
+          configMap:
+            name: {{ include "nucore.fullname" . }}-nginx-conf
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.nginx.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.nginx.image.pullPolicy }}
+          volumeMounts:
+            - name: nginx-conf
+              mountPath: /etc/nginx/conf.d
+              readOnly: true
+            - name: assets
+              mountPath: /var/www/app/public/assets
+              readOnly: true
+          # TODO: liveness
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
+    {{- with .Values.nodeSelector }}
+      nodeSelector:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+{{ toYaml . | indent 8 }}
+    {{- end }}

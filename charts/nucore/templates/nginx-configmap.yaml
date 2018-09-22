@@ -1,0 +1,35 @@
+# based on https://github.com/kubernetes/k8s.io/blob/master/k8s.io/configmap-nginx.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "nucore.fullname" . }}-nginx-conf
+  labels:
+    app: {{ include "nucore.name" . }}
+    chart: {{ include "nucore.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+data:
+  nginx.conf: |
+    server {
+      listen 80;
+      root /var/www/app/public;
+
+      location ~ ^/assets/ {
+        expires 1y;
+        add_header Cache-Control public;
+        add_header ETag "";
+        try_files $uri @app_server;
+      }
+
+      location / {
+        try_files _ @app_server;
+      }
+
+      location @app_server {
+        proxy_set_header Host $http_host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_pass http://{{ include "nucore.fullname" . }}-nucore;
+      }
+    }

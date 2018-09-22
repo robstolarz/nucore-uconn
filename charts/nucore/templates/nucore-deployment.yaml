@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "nucore.fullname" . }}-nucore
+  labels:
+    app: {{ include "nucore.name" . }}
+    chart: {{ include "nucore.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ include "nucore.name" . }}
+      release: {{ .Release.Name }}
+      container: nucore
+  template:
+    metadata:
+      labels:
+        app: {{ include "nucore.name" . }}
+        release: {{ .Release.Name }}
+        container: nucore
+    spec:
+      volumes:
+        - name: assets
+          persistentVolumeClaim:
+            claimName: {{ .Values.persistence.assets.existingClaim | default (list (include "nucore.fullname" .) "assets" | join "-") }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          command: ["./docker/serve.sh"]
+          env:
+            - name: MYSQL_HOST
+              value: {{ .Values.mysql.host }}
+            - name: MYSQL_PASS
+              value: {{ .Values.mysql.pass }}
+            - name: SETUP_HOST
+              value: {{ include "nucore.fullname" . }}-setup
+          ports:
+            - name: http
+              containerPort: 3000
+              protocol: TCP
+          volumeMounts:
+            - name: assets
+              mountPath: /var/www/app/public/assets
+          # TODO: liveness
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
+    {{- with .Values.nodeSelector }}
+      nodeSelector:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+{{ toYaml . | indent 8 }}
+    {{- end }}

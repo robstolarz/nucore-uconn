@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "nucore.fullname" . }}-delayed-job
+  labels:
+    app: {{ include "nucore.name" . }}
+    chart: {{ include "nucore.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ include "nucore.name" . }}
+      release: {{ .Release.Name }}
+      container: delayed-job
+  template:
+    metadata:
+      labels:
+        app: {{ include "nucore.name" . }}
+        release: {{ .Release.Name }}
+        container: delayed-job
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          command: ["./docker/delayed_job.sh"]
+          env:
+            - name: MYSQL_HOST
+              value: {{ .Values.mysql.host }}
+            - name: MYSQL_PASS
+              value: {{ .Values.mysql.pass }}
+            - name: SETUP_HOST
+              value: {{ include "nucore.fullname" . }}-setup
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
+    {{- with .Values.nodeSelector }}
+      nodeSelector:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+{{ toYaml . | indent 8 }}
+    {{- end }}
