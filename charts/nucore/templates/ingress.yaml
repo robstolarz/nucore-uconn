@@ -1,10 +1,8 @@
 {{- if .Values.ingress.enabled -}}
-{{- $fullName := include "nucore.fullname" . -}}
-{{- $ingressPath := .Values.ingress.path -}}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: {{ $fullName }}
+  name: {{ include "nucore.fullname" . }}
   labels:
     app: {{ include "nucore.name" . }}
     chart: {{ include "nucore.chart" . }}
@@ -26,13 +24,15 @@ spec:
   {{- end }}
 {{- end }}
   rules:
+  {{- $path := .Values.ingress.path -}}
+  {{- $fullname := list (include "nucore.fullname" .) "nginx" | join "-" -}}
   {{- range .Values.ingress.hosts }}
     - host: {{ . | quote }}
       http:
         paths:
-          - path: {{ $ingressPath }}
+          - path: {{ $path }}
             backend:
-              serviceName: {{ $fullName }}
+              serviceName: {{ $fullname }}
               servicePort: http
   {{- end }}
 {{- end }}
